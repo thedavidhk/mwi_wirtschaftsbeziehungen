@@ -1,9 +1,19 @@
-// Add custom sass code here to overwrite defaults (including theme defaults)
+.reveal {
+  section {
+    font-size: 20px;
+  }
 
-.reveal section {
-  font-size: 30px;
+  table {
+    td {
+      padding: 1em 0.5em;
+    }
+    td, th {
+      border: none;
+    }
+  }
+
+  h1 {
+    word-wrap: normal;
+  }
 }
 
-.reveal h1 {
-  word-wrap: normal;
-}
