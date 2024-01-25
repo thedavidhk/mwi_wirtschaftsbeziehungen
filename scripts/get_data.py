@@ -65,9 +65,10 @@ def get_imf_data(indicators, country_codes, start_date, end_date, freq="A", db="
 
 
 def get_wdi_data(indicators, country_codes, start_year=1980, end_year=2023):
-    indicators = ';'.join(indicators)
+    indicators_url = ';'.join(indicators)
     country_codes = ';'.join(country_codes)
-    url = f"http://api.worldbank.org/v2/country/{country_codes}/indicator/{indicators}"
+    url = f"http://api.worldbank.org/v2/country/{country_codes}/indicator/{indicators_url}?source=2"
+    print(url)
     params = {
         "format": "json",
         "date": f"{start_year}:{end_year}",
@@ -77,12 +78,13 @@ def get_wdi_data(indicators, country_codes, start_year=1980, end_year=2023):
     data = response.json()[1]  # The actual data is in the second item of the response
     df = pd.DataFrame(data)
     df["date"] = pd.to_datetime(df["date"])
-    df_pivot = df.pivot(index='date', columns='countryiso3code', values='value')
+    print(df.head())
+    df_pivot = df.pivot(index='date', columns='countryiso3code', values=indicators)
     return df_pivot
 
 
 
-def create_plot(data, xlabel, ylabel, data_source=None, secondary_y=None, secondary_y_label=None, plot_type="line", bar_width=50, ymin=None):
+def create_plot(data, xlabel, ylabel, data_source=None, secondary_y=None, secondary_y_label=None, plot_type="line", bar_width=50, ymin=None, legend=False):
     print(f"Plot type: {plot_type}")
     primary_colors = [
         '#cc241d',
@@ -157,6 +159,7 @@ def create_plot(data, xlabel, ylabel, data_source=None, secondary_y=None, second
         lines2, labels2 = ax2.get_legend_handles_labels()
         lines += lines2
         labels += labels2
+    if legend or secondary_y:
         ax.legend(lines, labels)
 
     if data_source:
@@ -208,9 +211,10 @@ def india_tech(file_path):
     fig.savefig(file_path, format='svg')
 
 
-def csv_plot(csv_path, output_path):
+def csv_plot(csv_path, output_path, xlabel, ylabel, source, y2=None, y2label=None):
     df = pd.read_csv(csv_path, index_col=0)
-    fig = create_plot(df, "Jahr", "% des BIP", "United Nations Conference on Trade and Development (UNCTAD) statistical data")
+    df.index = pd.to_datetime(df.index)
+    fig = create_plot(df, xlabel, ylabel, source, y2, y2label)
     fig.savefig(output_path, format='svg')
 
 
@@ -278,17 +282,56 @@ def thailand_gdp_per_capita(file_path):
     fig = create_plot(df, "Jahr", "USD", "World Bank national accounts data, and OECD National Accounts data files.")
     fig.savefig(file_path, format='svg')
 
+    
+def world_co2(file_path):
+    indicators = {
+        "EN.ATM.CO2E.PC": "CO2-Emissionen (links)",
+        "EN.ATM.CO2E.PP.GD": "CO2-Effizienz (rechts)",
+    }
+    df = get_wdi_data(indicators.keys(), ["1W"], 1990, 2022)
+    df.rename(columns=indicators, inplace=True)
+    fig = create_plot(
+        df,
+        "Jahr",
+        "t pro Kopf",
+        "Climate Watch",
+        secondary_y=[indicators["EN.ATM.CO2E.PP.GD"]],
+        secondary_y_label="kg pro USD BIP in KKP"
+    )
+    fig.savefig(file_path, format='svg')
+
+
+def raw_materials(file_path):
+    df = pd.read_csv("data/raw_materials.csv", index_col=0)
+    df.index = pd.to_datetime(df.index)
+    print(df.head())
+    first_row = df.iloc[0]
+    df['Kupfer'] = df['copper'] / first_row['copper'] * 100
+    df['Steinkohle'] = df['coal'] / first_row['coal'] * 100
+    df['Erdöl'] = df['oil'] / first_row['oil'] * 100
+    df = df[['Kupfer', 'Steinkohle', 'Erdöl']]
+    fig = create_plot(df, "Jahr", "Index (1990: 100)", "Federal Reserve Bank of Saint Louis", legend=True)
+    fig.savefig(file_path, format='svg')
+
 
 if __name__ == '__main__':
     data_path = "data/"
     image_path = "images/"
-    india_catch_up(image_path + 'india_catch_up.svg')
-    csv_plot(data_path + 'india_fdi_gdp.csv', image_path + 'india_fdi_gdp.svg')
-    india_tech(image_path + 'india_tech_exports.svg')
-    thailand_ca_balance(image_path + 'thailand_ca_balance.svg')
-    thailand_forex(image_path + 'thailand_forex.svg')
-    thailand_ext_debt(image_path + 'thailand_ext_debt.svg')
-    thailand_gdp_per_capita(image_path + 'thailand_gdp_per_capita.svg')
+    # india_catch_up(image_path + 'india_catch_up.svg')
+    # csv_plot(data_path + 'india_fdi_gdp.csv', image_path + 'india_fdi_gdp.svg', "Jahr", "% des BIP", "United Nations Conference on Trade and Development (UNCTAD) statistical data")
+    # india_tech(image_path + 'india_tech_exports.svg')
+    # thailand_ca_balance(image_path + 'thailand_ca_balance.svg')
+    # thailand_forex(image_path + 'thailand_forex.svg')
+    # thailand_ext_debt(image_path + 'thailand_ext_debt.svg')
+    # thailand_gdp_per_capita(image_path + 'thailand_gdp_per_capita.svg')
+    # csv_plot(
+    #     data_path + 'world_co2.csv',
+    #     image_path + 'world_co2.svg',
+    #     "Jahr",
+    #     "kt",
+    #     "Climate Watch"
+    # )
+    raw_materials(image_path + 'raw_materials.svg')
     plt.show()
     
 

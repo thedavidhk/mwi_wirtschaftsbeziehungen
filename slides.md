@@ -7,13 +7,13 @@
 
 # Zeitplan
 
-|                 |                                                |
-|:---------------:|:-----------------------------------------------|
-| 08:30 - 09:15   | Außenhandel und Wirtschaftliche Entwicklung    |
-| 09:15 - 10:00   | Finanzmärkte und Wirtschaftliche Entwicklung   |
-| *10:00 - 10:30* | *Pause*                                        |
-| 10:30 - 11:15   | Wechselkurse, Währungspolitik und Finanzkrisen |
-| 11:15 - 12:00   | Aktuelle Herausforderungen                     |
+|                 |                                                     |
+|:---------------:|:----------------------------------------------------|
+| 08:30 - 09:15   | Außenhandel und Wirtschaftliche Entwicklung         |
+| 09:15 - 10:00   | Finanzmärkte und Wirtschaftliche Entwicklung        |
+| *10:00 - 10:30* | *Pause*                                             |
+| 10:30 - 11:15   | Wechselkurse, Währungspolitik und Finanzkrisen      |
+| 11:15 - 12:00   | Nachhaltigkeit, Resilienz und Versorgungssicherheit |
 
 ---
 <!-- .slide: data-background-image="images/trading-dock.png" -->
@@ -506,7 +506,48 @@ Notes:
 
 ---
 
-# Aktuelle Herausforderungen
+<!-- .slide: data-background-image="images/fragility.png" -->
+# Nachhaltigkeit, Resilienz und Versorgungssicherheit
+
+--
+
+## Globale Lieferketten während Covid-19
+
+<img src="images/shipping-costs.png" height="499"/> \
+*Abbildung 15: Durchschnittliche 40ft² Container-Transportkosten*
+
+Notes:
+- Abbildung?
+
+--
+
+## Klimawandel und Energiewende
+
+![Welt CO2-Emmissionen](images/world_co2.svg) \
+*Abbildung 16: Weltweite CO2-Emmissionen*
+
+Notes:
+- Abbildung?
+- Konflikt zwischen Außenhandel und Klimaschutz
+- Alte und neue Abhängigkeiten
+
+--
+
+## Geopolitische Spannungen und Versorgungssicherheit
+
+![Rohstoffabhängigkeiten](images/raw_materials.svg) \
+*Abbildung 17: Rohstoffpreise*
+
+Notes:
+- Abbildung?
+- Abhängigkeiten z.B. zu Russland und China reduzieren
+
+--
+
+## Wie kann eine nachhaltige Versorgungssicherheit sichergestellt werden?
+
+Notes:
+- Diskussion
 
 ---
 
@@ -520,3 +561,4 @@ Notes:
 - Datei im .pdf-, .docx- oder .odt-Format abgeben
 - Namen und Matrikelnummer angeben
 - Wortanzahl vermerken
+- Abgabe bis 31.03.2024 an david.herok@hs-anhalt.de
