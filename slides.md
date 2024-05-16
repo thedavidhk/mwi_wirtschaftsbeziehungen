@@ -463,11 +463,23 @@ Notes:
 - Plötzlich haben wir ein Ungleichgewicht: S < I
 - **Was würde passieren, wenn A über dem lokalen Gleichgewicht liegen würde?**
 - **Warum liegt A unter dem inländischen Gleichgewicht?**
+- **Was ist besser? Kapitalzuflüsse oder -abflüsse?**
+
+--
+
+![Globale Leistungsbilanzsaldi](images/global_ca_balances.svg) \
+*Abbildung 7: Globale Leistungsbilanzsaldi*
+
+Notes:
+- Jedem Kapitalexport steht ein Kapitalimport im Rest der Welt gegenüber
+- Länder können aus den verschiedensten Gründen netto Kapital exportieren oder importieren
+- **Was bedeutet eigentlich ein Leistungsbilanzdefizit oder -überschuss?**
+- **Welche Gründe könnte es geben?**
 
 --
 
 ![Indien Direktinvestitionen](images/india_fdi_gdp.svg) \
-*Abbildung 7: Direktinvestitionen in Indien*
+*Abbildung 8: Direktinvestitionen in Indien*
 
 Notes:
 - Anteil der Direktinvestitionen am BIP in Indien
@@ -484,7 +496,7 @@ investiert
 --
 
 ![Indien Aufholprozess](images/india_catch_up.svg) \
-*Abbildung 8: Pro-Kopf Einkommen in Indien*
+*Abbildung 9: Pro-Kopf Einkommen in Indien*
 
 Notes:
 - Interessante Statistik: Pro Kopf Einkommen relativ zu USA
@@ -496,7 +508,7 @@ Notes:
 --
 
 ![Indien Technologietransfer](images/india_tech_exports.svg) \
-*Abbildung 9: Medium- und High-Tech Exporte in Indien*
+*Abbildung 10: Medium- und High-Tech Exporte in Indien*
 
 Notes:
 - Anteil der Medium- und High-Tech Exporte an den gesamten Exporten von Industriegütern
@@ -516,7 +528,7 @@ Haushalte zum formalen Bankensektor hat sich stark verbessert.
 --
 
 ![Thailand Leistungsbilanzsaldo](images/thailand_ca_balance.svg) \
-*Abbildung 10: Leistungsbilanzsaldo in Thailand*
+*Abbildung 11: Leistungsbilanzsaldo in Thailand*
 
 Notes:
 - Leistungsbilanzsaldo in Thailand in den 1990er und frühen 2000er Jahren
@@ -761,7 +773,7 @@ Notes:
     </g>
   </g>
 </svg> \
-*Abbildung 11: Kapitalmarktdynamik*
+*Abbildung 12: Kapitalmarktdynamik*
 
 
 Notes:
@@ -780,7 +792,7 @@ Notes:
 --
 
 ![Geldwechsel](images/currency_exchange.jpg) \
-*Abbildung 12: Wechselkurse*
+*Abbildung 13: Wechselkurse*
 
 Notes:
 - Was sind Wechselkurse und warum sind sie wichtig?
@@ -797,7 +809,7 @@ Notes:
 --
 
 ![Auslandsverschuldung in USD und THB](images/thailand_ext_debt.svg) \
-*Abbildung 13: Auslandsverschuldung Thailand*
+*Abbildung 14: Auslandsverschuldung Thailand*
 
 Notes:
 - Auslandsverschuldung aus Sicht des Weltmarkts (rot)
@@ -831,7 +843,7 @@ Notes:
 --
 
 ![Thailand Währungsreserven](images/thailand_forex.svg) \
-*Abbildung 14: Währungsreserven der Thailändischen Zentralbank*
+*Abbildung 15: Währungsreserven der Thailändischen Zentralbank*
 
 Notes:
 - Rot: Währungsreserven der thailändischen Zentralbank
@@ -844,7 +856,7 @@ Notes:
 --
 
 ![Thailand BIP pro Kopf](images/thailand_gdp_per_capita.svg) \
-*Abbildung 15: Pro Kopf Einkommen in Thailand*
+*Abbildung 16: Pro Kopf Einkommen in Thailand*
 
 Notes:
 - **Welche Auswirkungen hat das ganze auf die Realwirtschaft?**
@@ -874,7 +886,7 @@ Notes:
 ## Globale Lieferketten während Covid-19
 
 <img src="images/shipping-costs.png" height="499"/> \
-*Abbildung 16: Global beobachtete 40ft² Container-Transportkosten (Quelle: BIZ)*
+*Abbildung 17: Global beobachtete 40ft² Container-Transportkosten (Quelle: BIZ)*
 
 Notes:
 - **Was waren die Ursachen für die massiven Unterbrechungen der globalen Lieferketten?**
@@ -891,7 +903,7 @@ Notes:
 ## Klimawandel und Energiewende
 
 ![Welt CO2-Emmissionen](images/world_co2.svg) \
-*Abbildung 17: Weltweite CO2-Emmissionen*
+*Abbildung 18: Weltweite CO2-Emmissionen*
 
 Notes:
 - Abbildung: Globale CO2-Emmissionen
@@ -912,7 +924,7 @@ größeren CO2-Emmissionen einhergeht
 ## Alte und neue Abhängigkeiten
 
 ![Rohstoffabhängigkeiten](images/raw_materials.svg) \
-*Abbildung 18: Rohstoffpreise*
+*Abbildung 19: Rohstoffpreise*
 
 Notes:
 - Die Abhängigkeit von einigen (häufig politisch instabilen) ölexportierenden Ländern hat schon in der Vergangenheit oft für Konflikte gesorgt
