@@ -9,11 +9,11 @@
 
 |                 |                                                     |
 |:---------------:|:----------------------------------------------------|
-| 08:30 - 09:15   | Außenhandel und Wirtschaftliche Entwicklung         |
-| 09:15 - 10:00   | Finanzmärkte und Wirtschaftliche Entwicklung        |
-| *10:00 - 10:30* | *Pause*                                             |
-| 10:30 - 11:15   | Wechselkurse, Währungspolitik und Finanzkrisen      |
-| 11:15 - 12:00   | Nachhaltigkeit, Resilienz und Versorgungssicherheit |
+| 10:30 - 11:15   | Außenhandel und Wirtschaftliche Entwicklung         |
+| 11:15 - 12:00   | Finanzmärkte und Wirtschaftliche Entwicklung        |
+| *12:00 - 12:30* | *Pause*                                             |
+| 12:30 - 13:15   | Wechselkurse, Währungspolitik und Finanzkrisen      |
+| 13:15 - 14:00   | Nachhaltigkeit, Resilienz und Versorgungssicherheit |
 
 Notes:
 - In den ersten beiden Teilen erkunden wir, wie Globalisierung zu wirtschaftlicher Entwicklung beiträgt:
@@ -953,7 +953,7 @@ Notes:
 - Datei im .pdf-, .docx- oder .odt-Format abgeben
 - Namen und Matrikelnummer angeben
 - Wortanzahl vermerken
-- Abgabe bis 31.03.2024 an david.herok@hs-anhalt.de
+- Abgabe bis 30.06.2024 über Moodle
 
 --
 
