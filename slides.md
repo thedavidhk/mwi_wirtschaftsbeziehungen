@@ -414,8 +414,16 @@ Notes:
     - Versorgungssicherheit?
     - Armutsbekämpfung?
 - **Welche Rolle spielt Handel?**
+    - Größere Diversifizierung und Inklusion von mehr Handelspartnern (z.B. Afrika)
+    - Hedging gegen regionale Versorgungsengpässe
 - **Welche Rolle spielen Finanzmärkte?**
+    - Versicherungen zugägnglicher machen
+    - Katastrophenanleihen (sog. Cat Bonds)
+    - Rohstoff- und Nahrungsmittelhandel an Finanzmärkten kann regionale Volatilität dämpfen
 - **In welche Richtung bewegen wir uns gerade?**
+    - Geopolitische Spannungen neben Klimawandel die größte aktuelle Herausforderung
+    - Dennoch steigende internationale Kooperation auf anderen Ebenen (z.B. Klima-Commitments)
+    - "Coopetition": Intensive Rivalität mit intensiver Diplomatie (z.B. USA und China)
 
 ---
 
