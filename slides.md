@@ -62,10 +62,10 @@ Anteil an der Bevölkerung, der unterernährt ist
 
 --
 
-|||
-|:-:|:-:|
-|<img src="images/AdamSmith.jpg" height="512">|<img src="images/DavidRicardo.jpg" height="512">|
-|*Adam Smith (1723-1790)*|*David Ricardo (1772-1823)*|
+|                                               |                                                  |
+| :-:                                           | :-:                                              |
+| <img src="images/AdamSmith.jpg" height="512"> | <img src="images/DavidRicardo.jpg" height="512"> |
+| *Adam Smith (1723-1790)*                      | *David Ricardo (1772-1823)*                      |
 
 Notes:
 - Im 17. und 18. Jh. war der Merkantilismus die gängige handelspolitische Strategie
@@ -109,10 +109,10 @@ Notes:
 
 --
 
-|||
-|:-:|:-:|
-|![](images/trade-as-share-of-gdp-asia.svg)|![](images/gdp-per-capita-asia.svg)|
-|*Abbildung 4: Außenhandelsquote in asiatischen Schwellenländern*|*Abbildung 5: BIP pro Kopf in asiatischen Schwellenländern*|
+|                                                                  |                                                             |
+| :-:                                                              | :-:                                                         |
+| ![](images/trade-as-share-of-gdp-asia.svg)                       | ![](images/gdp-per-capita-asia.svg)                         |
+| *Abbildung 4: Außenhandelsquote in asiatischen Schwellenländern* | *Abbildung 5: BIP pro Kopf in asiatischen Schwellenländern* |
 
 Notes:
 - Links: Außenhandelsquote in Südkorea, Indien und China seit 1960
