@@ -133,12 +133,16 @@ Notes:
 <!-- .slide: data-background-image="images/currency-exchange-trade.png" -->
 # Finanzmärkte und Wirtschaftliche Entwicklung
 
+Notes:
+- Im ersten Abschnitt haben wir gesehen, welche Rolle Außenhandel für die wirtschaftliche Entwicklung spielt.
+- Jetzt verschieben wir den Fokus auf die Finanzmärkte.
+
 --
 
 ## Führt finanzielle Globalisierung zu wirtschaftlicher Entwicklung?
 
 Notes:
-- Was meinen Sie? Was sind die Kanäle?
+- **Was meinen Sie? Was sind die Kanäle?**
 - Für langfristige Entwicklung ist die Produktivität entscheidend
 - Welchen Einfluss haben globale Finanzströme auf die Produktivität in der Realwirtschaft?
 
@@ -160,7 +164,7 @@ Notes:
 - Plötzlich haben wir ein Ungleichgewicht: S < I
 - **Was würde passieren, wenn A über dem lokalen Gleichgewicht liegen würde?**
 - **Warum liegt A unter dem inländischen Gleichgewicht?**
-- **Was ist besser? Kapitalzuflüsse oder -abflüsse?**
+- **Wo kommt die Differenz her? Welche Bedeutung hat sie?**
 
 --
 
@@ -216,11 +220,19 @@ Notes:
 - Auch der Zugang der ansässigen kleinen und mittelständischen Unternehmen und
 Haushalte zum formalen Bankensektor hat sich stark verbessert.
 - **Pause!**
+- Pünktlich um 12:30 geht es weiter
 
 ---
 
 <!-- .slide: data-background-image="images/financial_crises.png" -->
 # Wechselkurse, Währungspolitik und Finanzkrisen
+
+Notes:
+- Vor der Pause haben wir gesehen wie die Öffnung von Güter- und Finanzmärkten gegenüber dem Ausland die wirtschaftliche Entwicklung fördert.
+- Wenn Globalisierung so ein wichtiger Treiber für die wirtschaftliche Entwicklung und die Bekämpfung von Armut ist, warum ist der Globalisierungstrend gebrochen?
+- Global vernetzte Märkte können einige Arten von Risiken (z.B. lokale und regionale Schocks) dämpfen, birgen aber dafür andere Risiken.
+- In der zweiten Hälfte der Vorlesung wollen wir uns mit diesen Risiken beschäftigen.
+- Zunächst einmal mit Blick auf die Finanzmärkte
 
 --
 
@@ -250,7 +262,7 @@ Notes:
 - Plötzlich sind die zuvor im Inland getätigten Investitionen nicht mehr rentabel und Kapital wird abgezogen
 - S liegt über I
 - Vereinfachung: Es können sich natürlich auch die I und S Kurven selbst verschieben, wenn sich die zugrundeliegenden Variablen in der Realwirtschaft ändern
-- **Wie schnell wird Kapital abgezogen?**
+- **Was bedeutet "Kapitalflucht" und wie schnell kann Kapital abgezogen werden?**
 - Nicht alle Investitionen sind langfristige Direktinvestitionen
 - Verschuldung spielt eine zentrale Rolle
 - Selbst Eigenkapital kann volatil sein
@@ -263,11 +275,11 @@ Notes:
 
 Notes:
 - Was sind Wechselkurse und warum sind sie wichtig?
-- Was passiert bei einer Aufwertung der Währung?
+- **Was passiert bei einer Aufwertung der Währung?**
     - Importe werden günstiger, Exporte teurer
     - Gerade für Schwellenländer ist der Exportsektor meist besonders wichtig (warum?)
     - Wirkt oft wachstumshemmend und kann zu Arbeitslosigkeit führen
-- Was passiert bei einer Abwertung der Währung?
+- **Was passiert bei einer Abwertung der Währung?**
     - Exporte werden günstiger
     - Kann das Wachstum befördern
     - Importe werden teurer -> Inflation
@@ -319,6 +331,7 @@ Notes:
 - Reserven sind kontinuierlich angestiegen
 - **Was hat die Zentralbank in der ersten Hälfte der 1990er gemacht?**
 - **Was ist danach passiert?**
+- **Das sind doch nur Finanzmärkte. Betrifft das überhaupt die Realwirtschaft?**
 
 --
 
