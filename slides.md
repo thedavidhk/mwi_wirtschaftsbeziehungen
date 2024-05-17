@@ -376,6 +376,10 @@ Notes:
 - Aber auch durch Wirtschaftswachstum selbst: wir erreichen jetzt erst langsam
 global einen Punkt an dem zusätzlicher Wohlstand nicht notwendigerweise mit
 größeren CO2-Emmissionen einhergeht
+- **Was sind die Effekte des Klimawandels auf die Weltwirtschaft?**
+- Mehr Naturkatastrophen
+- Möglicherweise Gefährdung der Versorgunssicherheit und Armut (zumindest regional)
+- Aktuelles Beispiel: Geringe Wassertiefe im Panama-Kanal (El Nino)
 - **Was bedeutet die Energiewende für die Weltwirtschaft?**
 - Alte Rohstoffabhängigkeiten werden durch neue abgelöst (Z.B. Lithium und Kupfer statt Kohle und Erdöl)
 - No-Growth-Diskussion ist meiner Meinung nach häufig sehr einseitig
@@ -429,7 +433,7 @@ Notes:
 - Datei im .pdf-, .docx- oder .odt-Format abgeben
 - Namen und Matrikelnummer angeben
 - Wortanzahl vermerken
-- Abgabe bis 30.06.2024 über Moodle
+- Abgabe bis 14.07.2024 über Moodle
 
 --
 
