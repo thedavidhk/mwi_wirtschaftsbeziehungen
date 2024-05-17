@@ -106,6 +106,9 @@ Notes:
 - Beispiel: England sollte Tuch, Portugal Wein produzieren, trotz Portugals absoluter Effizienz in beidem.
 - Spezialisierung führt zu größerer Gesamtproduktion
 - Fazit: Handel fördert globale Effizienz, Wohlstand durch Nutzung komparativer Vorteile.
+- **Reminder:** Dieses sehr vereinfachende Modell abstrahiert von jeglichen Transaktionskosten des Handels
+- Es betrachtet jedoch auch ausschließlich den statischen Produktionsgewinn durch Spezialisierung
+- Mittel- und langfristig fallen Produktionsgewinne durch Skaleneffekte, Innovationen und Technologietransfer meist noch wesentlich größer aus.
 
 --
 
