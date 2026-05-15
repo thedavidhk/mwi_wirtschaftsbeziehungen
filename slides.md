@@ -112,6 +112,22 @@ Notes:
 
 --
 
+## Warum handeln Länder dann nicht einfach immer frei?
+
+- Handel schafft Effizienzgewinne, aber auch Verteilungskonflikte
+- Manche Branchen gelten als strategisch: Energie, Chips, Verteidigung, Pharma
+- Staaten wollen Abhängigkeiten von Rivalen begrenzen
+- Zölle können politisches Druckmittel sein
+- Klima, Arbeitsstandards und Subventionen verzerren Märkte
+
+Notes:
+- Ricardo erklärt, warum Handel gesamtwirtschaftlich Wohlstand schaffen kann.
+- Das Modell sagt aber wenig darüber, wer gewinnt und wer verliert.
+- Außerdem berücksichtigt es kaum geopolitische Risiken.
+- Genau hier setzen heutige Debatten über Zölle, Industriepolitik und Friendshoring an.
+
+--
+
 |                                                                  |                                                             |
 | :-:                                                              | :-:                                                         |
 | ![](images/trade-as-share-of-gdp-asia.svg)                       | ![](images/gdp-per-capita-asia.svg)                         |
@@ -243,7 +259,7 @@ Notes:
 - Leistungsbilanzsaldo in Thailand in den 1990er und frühen 2000er Jahren
 - Leistungsbilanzsaldo: Nettoaußenbeitrag durch Zahlungen für Exporte, Importe, Kapitaleinkommen und laufende Übertragungen
 - Negativer Leistungsbilanzsaldo: Land baut Nettoverbindlichkeiten gegenüber dem Ausland auf ("Kapitalzuflüsse")
-- Negativer Leistungsbilanzsaldo: Land baut Nettoforderungen gegenüber dem Ausland auf ("Kapitalabflüsse")
+- Positiver Leistungsbilanzsaldo: Land baut Nettoforderungen gegenüber dem Ausland auf ("Kapitalabflüsse")
 - Vor 1998 starke Kapitalzuflüsse, danach eine heftige Umkehr
 - **Was kann so eine plötzliche Umkehr von ausländischen Investitionen auslösen?**
 - Es hilft, sich das ganze nochmal theoretisch anzusehen
@@ -366,7 +382,7 @@ Notes:
 ## Globale Lieferketten während Covid-19
 
 <img src="images/shipping-costs.png" height="499"/> \
-*Abbildung 17: Global beobachtete 40ft² Container-Transportkosten (Quelle: BIZ)*
+*Abbildung 17: Global beobachtete 40-Fuß Container-Transportkosten (Quelle: BIZ)*
 
 Notes:
 - **Was waren die Ursachen für die massiven Unterbrechungen der globalen Lieferketten?**
@@ -380,26 +396,52 @@ Notes:
 
 --
 
-## Klimawandel und Energiewende
+## Geopolitische Spannungen, Klimawandel und Engpässe
 
-![Welt CO2-Emmissionen](images/world_co2.svg) \
-*Abbildung 18: Weltweite CO2-Emmissionen*
+![Transport durch globale Engpässe](images/transit_volume_chokepoints.png) \
+*Abbildung 18: Handelsvolumen durch globale Engpässe*
+
+--
+
+## Straße von Hormus: Geopolitik wird zum Preisschock
+
+![Ölpreise Iran/Hormus 2026](images/oil_prices_iran_2026.svg) \
+*Abbildung 19: Brent- und WTI-Ölpreise während der Iran-/Hormus-Krise 2026*
 
 Notes:
-- Abbildung: Globale CO2-Emmissionen
+- Die Straße von Hormus ist einer der wichtigsten Energie-Chokepoints der Welt.
+- Ein Ausfall oder auch nur ein glaubwürdiges Risiko kann sofort Ölpreise bewegen.
+- Der Effekt betrifft nicht nur direkte Importeure aus der Golfregion.
+- Öl ist ein global gehandelter Rohstoff: Knappheits- und Risikoprämien schlagen weltweit durch.
+- Transmissionskanäle:
+    - höhere Energie- und Transportkosten
+    - Inflationsdruck
+    - schlechtere Leistungsbilanz für Netto-Energieimporteure
+    - Belastung energieintensiver Industrien
+    - politische Reaktionen: Reserven, Subventionen, Zinspolitik
+
+--
+
+## Klimawandel und Energiewende
+
+![Welt CO2-Emissionen](images/world_co2.svg) \
+*Abbildung 20: Weltweite CO2-Emissionen*
+
+Notes:
+- Abbildung: Globale CO2-Emissionen
 - **Was sind die Effekte von Globalisierung auf den Klimawandel?**
-- Erhöhte CO2-Emmissionen durch Transport
+- Erhöhte CO2-Emissionen durch Transport
 - Aber auch durch Wirtschaftswachstum selbst: wir erreichen jetzt erst langsam
 global einen Punkt an dem zusätzlicher Wohlstand nicht notwendigerweise mit
-größeren CO2-Emmissionen einhergeht
+größeren CO2-Emissionen einhergeht
 - **Was sind die Effekte des Klimawandels auf die Weltwirtschaft?**
 - Mehr Naturkatastrophen
-- Möglicherweise Gefährdung der Versorgunssicherheit und Armut (zumindest regional)
+- Möglicherweise Gefährdung der Versorgungssicherheit und Armut (zumindest regional)
 - Aktuelles Beispiel: Geringe Wassertiefe im Panama-Kanal (El Nino)
 - **Was bedeutet die Energiewende für die Weltwirtschaft?**
 - Alte Rohstoffabhängigkeiten werden durch neue abgelöst (Z.B. Lithium und Kupfer statt Kohle und Erdöl)
 - No-Growth-Diskussion ist meiner Meinung nach häufig sehr einseitig
-- Globalisierung und wirtschaftliche Entwicklung haben milliarden von Menschen aus der Armut gehoben
+- Globalisierung und wirtschaftliche Entwicklung haben Milliarden von Menschen aus der Armut gehoben
 - Dennoch: Wirtschaftswachstum ist kein Selbstzweck
 - Good News: Nachhaltiges Wachstum ist möglich, aber wir müssen wahrscheinlich unsere Erwartungen dämpfen
 
@@ -408,7 +450,7 @@ größeren CO2-Emmissionen einhergeht
 ## Alte und neue Abhängigkeiten
 
 ![Rohstoffabhängigkeiten](images/raw_materials.svg) \
-*Abbildung 19: Rohstoffpreise*
+*Abbildung 21: Rohstoffpreise*
 
 Notes:
 - Die Abhängigkeit von einigen (häufig politisch instabilen) ölexportierenden Ländern hat schon in der Vergangenheit oft für Konflikte gesorgt
@@ -433,7 +475,7 @@ Notes:
     - Größere Diversifizierung und Inklusion von mehr Handelspartnern (z.B. Afrika)
     - Hedging gegen regionale Versorgungsengpässe
 - **Welche Rolle spielen Finanzmärkte?**
-    - Versicherungen zugägnglicher machen
+    - Versicherungen zugänglicher machen
     - Katastrophenanleihen (sog. Cat Bonds)
     - Rohstoff- und Nahrungsmittelhandel an Finanzmärkten kann regionale Volatilität dämpfen
 - **In welche Richtung bewegen wir uns gerade?**
