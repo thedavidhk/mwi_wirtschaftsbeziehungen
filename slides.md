@@ -7,13 +7,13 @@
 
 # Zeitplan
 
-|                 |                                                     |
-|:---------------:|:----------------------------------------------------|
-| 10:30 - 11:15   | Außenhandel und Wirtschaftliche Entwicklung         |
-| 11:15 - 12:00   | Finanzmärkte und Wirtschaftliche Entwicklung        |
-| *12:00 - 12:30* | *Pause*                                             |
-| 12:30 - 13:15   | Wechselkurse, Währungspolitik und Finanzkrisen      |
-| 13:15 - 14:00   | Versorgungssicherheit in einer fragmentierten Weltwirtschaft |
+|                 |                                                              |
+|:---------------:|:-------------------------------------------------------------|
+|  09:30 - 10:15  | Außenhandel und Wirtschaftliche Entwicklung                  |
+| 10:15 - 11:00   | Finanzmärkte und Wirtschaftliche Entwicklung                 |
+| *11:00 - 11:30* | *Pause*                                                      |
+| 11:30 - 12:15   | Wechselkurse, Währungspolitik und Finanzkrisen               |
+| 12:15 - 13:00   | Versorgungssicherheit in einer fragmentierten Weltwirtschaft |
 
 Notes:
 - In den ersten beiden Teilen erkunden wir, wie Globalisierung zu wirtschaftlicher Entwicklung beiträgt:
@@ -543,14 +543,16 @@ Notes:
 
 ## Themenvorschläge
 
-#### Die Zukunft der Globalisierung in einer post-pandemischen Welt
-#### Der Einfluss von Handelskriegen auf die globale Wirtschaftsordnung
-#### Klimawandel und wirtschaftliche Entwicklung
-#### Die Rolle digitaler Technologien in der modernen Globalisierung
-#### Einkommensungleichheit im Zeitalter der Globalisierung
-#### Der Ressourcenfluch: Warum sind rohstoffreiche Länder oft arm?
-#### Die Rolle internationaler Organisationen in der globalen Wirtschaft
+#### US-Zölle seit 2025: Handel, Preise, Unsicherheit
+#### Lieferketten nach COVID-19: Schock oder neues Regime?
+#### Friend-shoring und Versorgungssicherheit
+#### Suez, Hormus und globale Energiemärkte
+#### Klimawandel, Handel und CO₂-Entkopplung
+#### Energiewende: neue Rohstoffabhängigkeiten
+#### Thailand 1997: Finanzkrise in Schwellenländern
+#### Der Ressourcenfluch: Warum bleiben rohstoffreiche Länder oft arm?
 
 Notes:
-- Denken Sie sich gern ein eigenes Thema aus und schicken Sie es mir per E-Mail
-- Solange es zur Vorlesung passt, kein Problem
+- Themen bauen auf der Vorlesung auf; Schwerpunkt aktuelle Herausforderungen (Lieferketten, Geopolitik, Klima, Zölle)
+- Daten und Grafiken aus der Vorlesung dürfen genutzt werden — Quellen klar angeben
+- Eigenes Thema gern per E-Mail vorschlagen, solange es zur Vorlesung passt
