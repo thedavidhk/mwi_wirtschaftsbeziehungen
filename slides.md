@@ -361,7 +361,7 @@ Notes:
 - Im letzten Teil: Versorgungssicherheit unter Bedingungen fragmentierter Handels- und Lieferketten
 - Globalisierung hat Milliarden aus der Armut geholfen und bleibt ein Hebel für globale Problemlösung
 - Seit COVID-19 hat sich die Lage aber spürbar verschärft — die nächste Folie fasst das als Überblick zusammen
-- Anschließend: geopolitische Engpässe, Energie, Klima, Rohstoffe — und am Ende: Was heißt „nachhaltig“ und „resilient“?
+- Anschließend: geopolitische Engpässe, Energie, Klima, Rohstoffe — Abschluss: Diskussion zur Versorgungssicherheit
 - Keine Patentlösungen; Ziel ist Denken und Diskutieren
 
 --
@@ -502,24 +502,24 @@ Notes:
 --
 
 <!-- .slide: data-background-image="images/healing_world.png" -->
-## Wie kann ein nachhaltiges Wirtschaftssystem gestaltet werden?
+## Wie sichert man Versorgung in einer fragmentierten Weltwirtschaft?
+
+- Effizienz vs. Resilienz — was priorisieren?
+- Zölle, Unsicherheit, Friend-shoring
+- Energie, Klima, Rohstoffe — alte und neue Abhängigkeiten
+- Welche Rolle für Handel — und wofür Finanzmärkte?
 
 Notes:
-- **Was ist ein nachhaltiges Wirtschaftssystem?**
-    - Klimaschutz?
-    - Versorgungssicherheit?
-    - Armutsbekämpfung?
-- **Welche Rolle spielt Handel?**
-    - Größere Diversifizierung und Inklusion von mehr Handelspartnern (z. B. Afrika)
-    - Hedging gegen regionale Versorgungsengpässe
-- **Welche Rolle spielen Finanzmärkte?**
-    - Versicherungen zugänglicher machen
-    - Katastrophenanleihen (sog. Cat Bonds)
-    - Rohstoff- und Nahrungsmittelhandel an Finanzmärkten kann regionale Volatilität dämpfen
-- **In welche Richtung bewegen wir uns gerade?**
-    - Geopolitische Spannungen sind neben dem Klimawandel die größte aktuelle Herausforderung
-    - Dennoch steigende internationale Kooperation auf anderen Ebenen (z. B. Klima-Commitments)
-    - "Coopetition": Intensive Rivalität mit intensiver Diplomatie (z. B. USA und China)
+- Leitfrage: Versorgung sichern, ohne die Vorteile des Welthandels zu verlieren — Spannungsfeld Effizienz vs. Resilienz (Abb. 17)
+- Teurere Logistik, Lager, Doppelbeschaffung, Reshoring: wer trägt die Kosten, wer profitiert?
+- Zölle und handelspolitische Unsicherheit (Abb. 5, Trump II): Schutzindustrie, Druckmittel, Preise, Gegenmaßnahmen
+- Friend-shoring und Fragmentierung: weniger Exposure oder neue Abhängigkeiten?
+- Suez, Hormus, Ölpreise (Abb. 18–20): lokales Risiko, globale Märkte; Versorgung vs. Inflation
+- Klima und Rohstoffe (Abb. 21–23): Emissionen trotz grünerem Wachstum; Öl, Gas, Lithium, seltene Erden
+- Handel: mehr Partner und Diversifikation — oder weniger Handel und mehr Eigenversorgung?
+- Finanzmärkte: Versicherungen, Cat Bonds, Rohstoffmärkte — Stabilisator oder zusätzliches Risiko?
+- Globalisierung als Entwicklungsmotor; heute Rivalität und Kooperation zugleich (z. B. USA–China, Klima)
+- Klimaschutz und Armut mitdenken, aber Fokus Versorgungssicherheit unter Fragmentierung
 
 ---
 
