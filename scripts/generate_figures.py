@@ -318,11 +318,12 @@ def get_wdi_data(
             raise ValueError(f"Unexpected or empty World Bank response for {indicator}: {payload!r}")
 
         for item in payload[1]:
+            country = item.get("countryiso3code") or (item.get("country") or {}).get("id")
             rows.append(
                 {
                     "date": pd.to_datetime(item["date"]),
                     "indicator": indicator,
-                    "country": item.get("countryiso3code"),
+                    "country": country,
                     "value": item.get("value"),
                 }
             )
@@ -652,6 +653,132 @@ def apply_rolling_and_index(
 # Figure-specific functions
 # -----------------------------------------------------------------------------
 
+# World Bank income-group aggregates use non-ISO3 ids (XM, XN, XT, XD); see country/LIC etc.
+INCOME_GROUP_CODES = {
+    "XM": "Länder mit niedrigem Einkommen",
+    "XN": "Länder mit unterem Mittel einkommen",
+    "XT": "Länder mit oberem Mittel einkommen",
+    "XD": "Länder mit hohem Einkommen",
+    "WLD": "Welt",
+}
+
+ASIA_COUNTRY_CODES = {
+    "KOR": "Südkorea",
+    "IND": "Indien",
+    "CHN": "China",
+}
+
+TRADE_OPENNESS_INDICATOR = "NE.TRD.GNFS.ZS"
+POVERTY_HEADCOUNT_INDICATOR = "SI.POV.DDAY"
+GDP_PER_CAPITA_REAL_INDICATOR = "NY.GDP.PCAP.KD"
+
+
+def index_to_year(data: pd.DataFrame, year: int) -> pd.DataFrame:
+    """Index all columns to 100 in the given calendar year."""
+    baseline_date = pd.to_datetime(str(year))
+    if baseline_date not in data.index:
+        raise ValueError(f"Baseline year {year} not in data index.")
+    baseline = data.loc[baseline_date]
+    invalid = baseline.isna() | (baseline == 0)
+    if invalid.any():
+        raise ValueError(f"Invalid baseline for {year}: {baseline[invalid].to_dict()}")
+    return data.divide(baseline).multiply(100)
+
+
+def wdi_labeled_frame(
+    indicator: str,
+    code_to_label: Mapping[str, str],
+    *,
+    start_year: int,
+    end_year: int = 2025,
+    force: bool = False,
+) -> pd.DataFrame:
+    """Fetch WDI series and return a DataFrame with human-readable column names."""
+    df = get_wdi_data(
+        [indicator],
+        list(code_to_label.keys()),
+        start_year=start_year,
+        end_year=end_year,
+        force=force,
+    )
+    data = pd.DataFrame(index=df.index.sort_values())
+    for code, label in code_to_label.items():
+        col = (indicator, code)
+        if col in df.columns:
+            data[label] = df[col]
+    if data.empty:
+        raise ValueError(f"No WDI data for {indicator} and codes {list(code_to_label)}.")
+    return data
+
+
+def trade_openness_by_income_group(file_path: Path | str) -> None:
+    """Trade (% of GDP) by World Bank income group since 1980."""
+    data = wdi_labeled_frame(
+        TRADE_OPENNESS_INDICATOR,
+        INCOME_GROUP_CODES,
+        start_year=1980,
+    )
+    fig = create_plot(
+        data,
+        "Jahr",
+        "% des BIP",
+        "World Bank World Development Indicators; OECD National Accounts",
+        legend=True,
+    )
+    save_figure(fig, file_path)
+
+
+def poverty_by_income_group(file_path: Path | str) -> None:
+    """Extreme poverty headcount ($2.15/day, 2017 PPP) by World Bank income group."""
+    data = wdi_labeled_frame(
+        POVERTY_HEADCOUNT_INDICATOR,
+        INCOME_GROUP_CODES,
+        start_year=1980,
+    )
+    fig = create_plot(
+        data,
+        "Jahr",
+        "Anteil in extremer Armut (%)",
+        "World Bank Poverty and Inequality Platform (2,15 USD/Tag, KKP 2017)",
+        legend=True,
+    )
+    save_figure(fig, file_path)
+
+
+def asia_trade_openness(file_path: Path | str) -> None:
+    """Trade (% of GDP) for South Korea, India, and China since 1960."""
+    data = wdi_labeled_frame(
+        TRADE_OPENNESS_INDICATOR,
+        ASIA_COUNTRY_CODES,
+        start_year=1960,
+    )
+    fig = create_plot(
+        data,
+        "Jahr",
+        "% des BIP",
+        "World Bank World Development Indicators; OECD National Accounts",
+        legend=True,
+    )
+    save_figure(fig, file_path)
+
+
+def asia_gdp_per_capita(file_path: Path | str) -> None:
+    """Real GDP per capita indexed to 1960 = 100 for South Korea, India, and China."""
+    levels = wdi_labeled_frame(
+        GDP_PER_CAPITA_REAL_INDICATOR,
+        ASIA_COUNTRY_CODES,
+        start_year=1960,
+    )
+    data = index_to_year(levels, 1960)
+    fig = create_plot(
+        data,
+        "Jahr",
+        "BIP pro Kopf (1960 = 100)",
+        "World Bank national accounts data",
+        legend=True,
+    )
+    save_figure(fig, file_path)
+
 
 def india_catch_up(file_path: Path | str) -> None:
     """Plot Indian GDP per capita as a percentage of US GDP per capita."""
@@ -923,6 +1050,11 @@ def build_all_figures() -> None:
         "Climate Watch",
     )
     raw_materials(IMAGE_DIR / "raw_materials.svg")
+
+    trade_openness_by_income_group(IMAGE_DIR / "trade-as-share-of-gdp.svg")
+    poverty_by_income_group(IMAGE_DIR / "poverty-by-income-group.svg")
+    asia_trade_openness(IMAGE_DIR / "trade-as-share-of-gdp-asia.svg")
+    asia_gdp_per_capita(IMAGE_DIR / "gdp-per-capita-asia.svg")
 
     india_catch_up(IMAGE_DIR / "india_catch_up.svg")
     india_tech(IMAGE_DIR / "india_tech_exports.svg")
