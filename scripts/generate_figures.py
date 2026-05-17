@@ -527,6 +527,7 @@ def create_plot(
     *,
     secondary_y: Sequence[str] | None = None,
     secondary_y_label: str | None = None,
+    dashed: Sequence[str] | None = None,
     plot_type: str = "line",
     bar_width: float = 0.15,
     ymin: float | None = None,
@@ -537,6 +538,7 @@ def create_plot(
     fig, ax = plt.subplots(figsize=(12, 6))
 
     secondary_y = list(secondary_y or [])
+    dashed_cols = set(dashed or [])
     primary_cols = [col for col in data.columns if col not in secondary_y]
 
     if plot_type not in {"line", "bar"}:
@@ -548,8 +550,9 @@ def create_plot(
 
     for i, col in enumerate(primary_cols):
         color = PRIMARY_COLORS[i % len(PRIMARY_COLORS)]
+        linestyle = "--" if col in dashed_cols else "-"
         if plot_type == "line":
-            ax.plot(data.index, data[col], label=col, color=color)
+            ax.plot(data.index, data[col], label=col, color=color, linestyle=linestyle)
         else:
             offset = (i - len(primary_cols) / 2) * bar_width + bar_width / 2
             ax.bar(x_values + offset, data[col], label=col, color=color, width=bar_width)
@@ -569,8 +572,9 @@ def create_plot(
         ax2 = ax.twinx()
         for i, col in enumerate(secondary_y):
             color = SECONDARY_COLORS[i % len(SECONDARY_COLORS)]
+            linestyle = "--" if col in dashed_cols else "-"
             if plot_type == "line":
-                ax2.plot(data.index, data[col], label=col, color=color)
+                ax2.plot(data.index, data[col], label=col, color=color, linestyle=linestyle)
             else:
                 offset = (i - len(secondary_y) / 2) * bar_width + bar_width / 2
                 ax2.bar(x_values + offset, data[col], label=col, color=color, width=bar_width, alpha=0.7)
@@ -964,25 +968,100 @@ def world_co2(file_path: Path | str) -> None:
 
 
 
-def raw_materials(file_path: Path | str) -> None:
-    """Plot selected commodity-price indices normalized to 1990 = 100."""
-    df = pd.read_csv(DATA_DIR / "raw_materials.csv", index_col=0)
-    df.index = pd.to_datetime(df.index)
-    first_row = df.iloc[0]
-    data = pd.DataFrame(
-        {
-            "Kupfer": df["copper"] / first_row["copper"] * 100,
-            "Steinkohle": df["coal"] / first_row["coal"] * 100,
-            "Erdöl": df["oil"] / first_row["oil"] * 100,
-        },
-        index=df.index,
+IMF_COMMODITY_XLSX_URL = (
+    "https://www.imf.org/-/media/files/research/commodityprices/monthly/external-data.xlsx"
+)
+
+# IMF external-data.xlsx: row 0 = commodity codes, row 1 = descriptions, data from row 4.
+IMF_COMMODITY_SERIES: dict[str, tuple[str | None, str | None]] = {
+    "Erdöl (Brent)": ("POILBRE", None),
+    "Steinkohle": ("PCOALAU", None),
+    "Kupfer": ("PCOPP", None),
+    "Nickel": ("PNICK", None),
+    "Kobalt": ("PCOBA", None),
+    "Lithium": (None, "lithium"),
+    "Seltene Erden": (None, "rare earth"),
+}
+
+
+def load_imf_commodity_levels(*, force: bool = False) -> pd.DataFrame:
+    """Load monthly IMF primary commodity prices (USD/metric ton) from external-data.xlsx."""
+    cache_path = CACHE_DIR / "imf_external-data.xlsx"
+    download_file(IMF_COMMODITY_XLSX_URL, cache_path, force=force)
+    raw = pd.read_excel(cache_path, sheet_name="External", header=None)
+
+    code_row = raw.iloc[0].astype(str)
+    desc_row = raw.iloc[1].astype(str)
+    dates = pd.to_datetime(
+        raw.iloc[4:, 0].astype(str).str.replace("M", "-", regex=False),
+        format="%Y-%m",
     )
+    out: dict[str, pd.Series] = {}
+    for label, (code, desc_hint) in IMF_COMMODITY_SERIES.items():
+        col_idx: int | None = None
+        if code is not None:
+            matches = np.flatnonzero(code_row.values == code)
+            if len(matches) != 1:
+                raise ValueError(f"Expected one IMF column for {code}, found {len(matches)}.")
+            col_idx = int(matches[0])
+        elif desc_hint is not None:
+            hint = desc_hint.lower()
+            matches = [
+                i
+                for i in range(raw.shape[1])
+                if hint in desc_row.iloc[i].lower()
+            ]
+            if len(matches) != 1:
+                raise ValueError(
+                    f"Expected one IMF column matching {desc_hint!r}, found {len(matches)}."
+                )
+            col_idx = matches[0]
+        values = pd.to_numeric(raw.iloc[4:, col_idx], errors="coerce")
+        out[label] = pd.Series(values.to_numpy(), index=dates, name=label)
+    return pd.DataFrame(out).sort_index()
+
+
+def index_to_month(
+    series: pd.Series,
+    year: int,
+    month: int = 1,
+) -> pd.Series:
+    """Index a monthly series to 100 in the given year-month (first obs in period if needed)."""
+    s = series.dropna()
+    if s.empty:
+        raise ValueError(f"No data to index for {series.name!r}.")
+    mask = (s.index.year == year) & (s.index.month == month)
+    if mask.any():
+        baseline = float(s.loc[mask].iloc[0])
+    else:
+        in_year = s[s.index.year == year]
+        if in_year.empty:
+            raise ValueError(f"No observations in {year} for {series.name!r}.")
+        baseline = float(in_year.iloc[0])
+    if baseline == 0:
+        raise ValueError(f"Invalid baseline for {series.name!r} in {year}-{month:02d}.")
+    return s / baseline * 100
+
+
+def raw_materials(file_path: Path | str, *, force: bool = False) -> None:
+    """Commodity prices indexed to June 2012 = 100 (IMF primary commodity prices)."""
+    levels = load_imf_commodity_levels(force=force)
+    labels = (
+        "Erdöl (Brent)",
+        "Steinkohle",
+        "Kobalt",
+        "Lithium",
+        "Seltene Erden",
+    )
+    indexed = {label: index_to_month(levels[label], 2012, 6) for label in labels}
+    data = pd.DataFrame(indexed).sort_index()
     fig = create_plot(
         data,
         "Jahr",
-        "Index (1990: 100)",
-        "Federal Reserve Bank of St. Louis",
+        "Index (Jun. 2012 = 100)",
+        "IMF Primary Commodity Prices (external-data.xlsx)",
         legend=True,
+        ymin=0,
     )
     save_figure(fig, file_path)
 

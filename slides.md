@@ -490,9 +490,10 @@ größeren CO₂-Emissionen einhergeht
 *Abbildung 23: Rohstoffpreise*
 
 Notes:
-- Quelle: Federal Reserve Bank of St. Louis (Rohstoffpreisindizes, 1990 = 100)
-- Die Abhängigkeit von einigen (häufig politisch instabilen) ölexportierenden Ländern hat schon in der Vergangenheit oft für Konflikte gesorgt
-- Energiewende: Abhängigkeit von neuen Ressourcen (z. B. Kupfer, Lithium, seltene Erden, Kobalt)
+- Quelle: IMF Primary Commodity Prices (external-data.xlsx); alle Reihen: Index Jun. 2012 = 100 (gemeinsame Basis für Vergleich alter und neuer Abhängigkeiten)
+- **Alte Abhängigkeiten:** Erdöl und Steinkohle — weiter zentral; Preisschocks (z. B. Ukraine-Krieg) zeigen, dass wir sie nicht „abgeschlossen“ haben
+- **Neue Abhängigkeiten:** Kobalt, Lithium, Seltene Erden — stärkere Preisvolatilität (v. a. Lithium), hohe geografische Konzentration
+- Kupfer/Nickel nicht in der Grafik, aber ebenfalls zentral für Netze und Batterien
 - Diese Ressourcen sind häufig noch stärker geographisch konzentriert
 - Abhängigkeit von China:
     - 70% der seltenen Erden
