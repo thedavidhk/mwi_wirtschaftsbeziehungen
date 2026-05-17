@@ -45,15 +45,14 @@ Anteil des Internationalen Handels (Importe + Exporte) als Prozent des BIP
 
 --
 
-![Globale Unterernährung](images/prevalence-of-undernourishment.svg) \
-*Abbildung 2: Globale Unterernährung*
+![Armut nach Einkommensgruppe](images/poverty-by-income-group.svg) \
+*Abbildung 2: Extreme Armut nach Einkommensgruppe*
 
 Notes:
-Anteil an der Bevölkerung, der unterernährt ist
-- Leider nur Daten ab 2001 verfügbar
-- Wenn man sich vergleichbare Daten anschaut (wie z. B. absolute Armutsraten), sieht man seit 1980 einen klaren Abwärtstrend
-- Erst in den letzten Jahren wächst das Hungerproblem besonders in Entwicklungsländern
-- Natürlich hat das viele komplexe Ursachen (politische, ökologische, wirtschaftliche)
+Anteil der Bevölkerung unterhalb der internationalen Armutsgrenze (2,15 USD/Tag, KKP)
+- Seit 1980 deutlicher Abwärtstrend in allen Einkommensgruppen (Daten für ärmste Länder erst ab ca. 2002)
+- Passt zur weltweit steigenden Handelsöffnung in Abbildung 1 — natürlich mit vielen weiteren Einflussfaktoren
+- Natürlich hat Armut viele komplexe Ursachen (politische, ökologische, wirtschaftliche)
 - Außenhandel erfüllt eine zentrale Rolle bei der wirtschaftlichen Entwicklung
 - **Wie sieht diese Rolle aus?**
     - Versorgung mit kritischen Gütern robuster gegen lokale Schocks
@@ -131,11 +130,11 @@ Notes:
 |                                                                  |                                                             |
 | :-:                                                              | :-:                                                         |
 | ![](images/trade-as-share-of-gdp-asia.svg)                       | ![](images/gdp-per-capita-asia.svg)                         |
-| *Abbildung 4: Außenhandelsquote in asiatischen Schwellenländern* | *Abbildung 5: BIP pro Kopf in asiatischen Schwellenländern* |
+| *Abbildung 4: Außenhandelsquote in asiatischen Schwellenländern* | *Abbildung 5: BIP pro Kopf in asiatischen Schwellenländern (1960 = 100)* |
 
 Notes:
 - Links: Außenhandelsquote in Südkorea, Indien und China seit 1960
-- Rechts: Reales BIP pro Kopf (in USD) in Südkorea, Indien und China
+- Rechts: Reales BIP pro Kopf in Südkorea, Indien und China, indexiert (1960 = 100)
 - Südkorea: Schon seit den 1960ern und 1970ern stärkerer Fokus auf Außenhandel
 - China: seit Ende der 1970er Jahre graduelle Öffnung der Märkte (jedoch nach wie vor streng staatlich kontrolliert)
 - Indien: besonders seit den 1990er Jahren Reformprogramme zur Liberalisierung des Außenhandels und der Finanzmärkte (dazu später mehr)
