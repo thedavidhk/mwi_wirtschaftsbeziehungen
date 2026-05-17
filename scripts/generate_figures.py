@@ -671,6 +671,7 @@ ASIA_COUNTRY_CODES = {
 TRADE_OPENNESS_INDICATOR = "NE.TRD.GNFS.ZS"
 POVERTY_HEADCOUNT_INDICATOR = "SI.POV.DDAY"
 GDP_PER_CAPITA_REAL_INDICATOR = "NY.GDP.PCAP.KD"
+TOTAL_CO2_EMISSIONS_INDICATOR = "EN.GHG.CO2.MT.CE.AR5"
 
 
 def index_to_year(data: pd.DataFrame, year: int) -> pd.DataFrame:
@@ -914,6 +915,27 @@ def thailand_gdp_per_capita(file_path: Path | str) -> None:
 
 
 
+def world_co2_total(file_path: Path | str) -> None:
+    """Plot global total CO2 emissions excluding LULUCF (Gt CO2e)."""
+    df = get_wdi_data(
+        [TOTAL_CO2_EMISSIONS_INDICATOR],
+        ["WLD"],
+        start_year=1990,
+        end_year=2025,
+        source=None,
+    )
+    emissions_gt = df[(TOTAL_CO2_EMISSIONS_INDICATOR, "WLD")] / 1000
+    data = pd.DataFrame({"Welt": emissions_gt})
+    fig = create_plot(
+        data,
+        "Jahr",
+        "Gt CO₂e",
+        "World Bank World Development Indicators; EDGAR/JRC; IEA",
+        ymin=20,
+    )
+    save_figure(fig, file_path)
+
+
 def world_co2(file_path: Path | str) -> None:
     """Plot global per-capita CO2 emissions and CO2 intensity of GDP."""
     indicators = {
@@ -964,6 +986,42 @@ def raw_materials(file_path: Path | str) -> None:
     )
     save_figure(fig, file_path)
 
+
+
+TRADE_POLICY_UNCERTAINTY_FRED = "EPUTRADE"
+DEEP_SEA_FREIGHT_FRED = "PCU483111483111"
+
+
+def trade_policy_uncertainty(file_path: Path | str) -> None:
+    """Trade-policy uncertainty from US newspaper coverage (Baker, Bloom, Davis; monthly)."""
+    df = get_fred_series(TRADE_POLICY_UNCERTAINTY_FRED, start_date="2005-01-01")
+    data = df.rename(columns={TRADE_POLICY_UNCERTAINTY_FRED: "Handelspolitische Unsicherheit"})
+    fig = create_plot(
+        data,
+        "Datum",
+        "Index",
+        "Baker, Bloom, Davis; Economic Policy Uncertainty via FRED (EPUTRADE)",
+        ymin=0,
+    )
+    save_figure(fig, file_path)
+
+
+def container_freight_costs(file_path: Path | str) -> None:
+    """Deep sea freight PPI around the COVID-19 supply-chain shock (indexed to 2019 = 100)."""
+    df = get_fred_series(DEEP_SEA_FREIGHT_FRED, start_date="2016-01-01")
+    levels = df.rename(columns={DEEP_SEA_FREIGHT_FRED: "Hochseefracht"})
+    baseline = levels.loc["2019"].mean()
+    if baseline.isna().any() or (baseline == 0).any():
+        raise ValueError(f"Invalid 2019 baseline for freight PPI: {baseline.to_dict()}")
+    data = levels.divide(baseline).multiply(100)
+    fig = create_plot(
+        data,
+        "Jahr",
+        "Frachtpreisindex (2019 = 100)",
+        "U.S. Bureau of Labor Statistics via FRED (Deep Sea Freight Transportation PPI)",
+        ymin=70,
+    )
+    save_figure(fig, file_path)
 
 
 def oil_prices_iran_2026(file_path: Path | str) -> None:
@@ -1042,19 +1100,13 @@ def build_all_figures() -> None:
         "% des BIP",
         "United Nations Conference on Trade and Development (UNCTAD) statistical data",
     )
-    csv_plot(
-        DATA_DIR / "world_co2.csv",
-        IMAGE_DIR / "world_co2_old.svg",
-        "Jahr",
-        "kt",
-        "Climate Watch",
-    )
     raw_materials(IMAGE_DIR / "raw_materials.svg")
 
     trade_openness_by_income_group(IMAGE_DIR / "trade-as-share-of-gdp.svg")
     poverty_by_income_group(IMAGE_DIR / "poverty-by-income-group.svg")
     asia_trade_openness(IMAGE_DIR / "trade-as-share-of-gdp-asia.svg")
     asia_gdp_per_capita(IMAGE_DIR / "gdp-per-capita-asia.svg")
+    trade_policy_uncertainty(IMAGE_DIR / "trade-policy-uncertainty.svg")
 
     india_catch_up(IMAGE_DIR / "india_catch_up.svg")
     india_tech(IMAGE_DIR / "india_tech_exports.svg")
@@ -1062,7 +1114,9 @@ def build_all_figures() -> None:
     thailand_forex(IMAGE_DIR / "thailand_forex.svg")
     thailand_ext_debt(IMAGE_DIR / "thailand_ext_debt.svg")
     thailand_gdp_per_capita(IMAGE_DIR / "thailand_gdp_per_capita.svg")
+    world_co2_total(IMAGE_DIR / "world_co2_total.svg")
     world_co2(IMAGE_DIR / "world_co2.svg")
+    container_freight_costs(IMAGE_DIR / "shipping-costs.svg")
     oil_prices_iran_2026(IMAGE_DIR / "oil_prices_iran_2026.svg")
 
     chokepoint_trade_volume(

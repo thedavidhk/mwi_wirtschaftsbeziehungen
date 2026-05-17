@@ -13,7 +13,7 @@
 | 11:15 - 12:00   | Finanzmärkte und Wirtschaftliche Entwicklung        |
 | *12:00 - 12:30* | *Pause*                                             |
 | 12:30 - 13:15   | Wechselkurse, Währungspolitik und Finanzkrisen      |
-| 13:15 - 14:00   | Nachhaltigkeit, Resilienz und Versorgungssicherheit |
+| 13:15 - 14:00   | Versorgungssicherheit in einer fragmentierten Weltwirtschaft |
 
 Notes:
 - In den ersten beiden Teilen erkunden wir, wie Globalisierung zu wirtschaftlicher Entwicklung beiträgt:
@@ -21,7 +21,7 @@ Notes:
     - Teil 2: Internationale Finanzmärkte
 - Das liefert uns die nötigen Grundlagen, um nach der Pause eine kritische Perspektive einzunehmen:
     - Teil 3: Herausforderungen durch finanzielle Globalisierung, insb. Finanzkrisen
-    - Teil 4: Aktuelle Herausforderungen: ökologisch, geopolitisch, Versorgungssicherheit
+    - Teil 4: Versorgungssicherheit in einer fragmentierten Weltwirtschaft (Geopolitik, Klima, Rohstoffe)
 
 ---
 <!-- .slide: data-background-image="images/trading-dock.png" -->
@@ -36,7 +36,8 @@ Notes:
 *Abbildung 1: Außenhandelsquote*
 
 Notes:
-Anteil des Internationalen Handels (Importe + Exporte) als Prozent des BIP
+- Quelle: World Bank WDI (Handelsquote nach Einkommensgruppe, ab 1980)
+- Anteil des Internationalen Handels (Importe + Exporte) als Prozent des BIP
 - Außenhandel hat in den letzten Jahrzehnten auf der ganzen Welt an Bedeutung gewonnen
 - Globalisierung besonders sichtbar in Entwicklungs- und Schwellenländern
 - Strukturbruch seit 2008 (Finanzkrise):
@@ -49,7 +50,8 @@ Anteil des Internationalen Handels (Importe + Exporte) als Prozent des BIP
 *Abbildung 2: Extreme Armut nach Einkommensgruppe*
 
 Notes:
-Anteil der Bevölkerung unterhalb der internationalen Armutsgrenze (2,15 USD/Tag, KKP)
+- Quelle: World Bank WDI (extreme Armut, 2,15 USD/Tag in KKP, nach Einkommensgruppe)
+- Anteil der Bevölkerung unterhalb der internationalen Armutsgrenze
 - Seit 1980 deutlicher Abwärtstrend in allen Einkommensgruppen (Daten für ärmste Länder erst ab ca. 2002)
 - Passt zur weltweit steigenden Handelsöffnung in Abbildung 1 — natürlich mit vielen weiteren Einflussfaktoren
 - Natürlich hat Armut viele komplexe Ursachen (politische, ökologische, wirtschaftliche)
@@ -67,30 +69,11 @@ Anteil der Bevölkerung unterhalb der internationalen Armutsgrenze (2,15 USD/Tag
 | *Adam Smith (1723-1790)*                      | *David Ricardo (1772-1823)*                      |
 
 Notes:
-- Im 17. und 18. Jh. war der Merkantilismus die gängige handelspolitische Strategie
-- Merkantilismus:
-    - Fokus auf Exporterlöse
-    - Anhäufung von Gold z. B. um Kriegskassen zu füllen
-    - Interessen der Zivilbevölkerung zweitrangig
-- Beide waren Vertreter eines liberaleren Ansatzes
-- Adam Smith: Handel nützt beiden Ländern, wenn sie absolute Kostenvorteile besitzen
-    - Land A kann Gut 1 günstiger produzieren und Land B kann Gut 2 günstiger produzieren
-- David Ricardo: Außenhandel lohnt sich auch dann, wenn ein Land keinen absoluten Effizienzvorteil hat
-
---
-
-![Ricardo Karte](images/ricardo-map-europe.png) \
-*Abbildung 3: Ricardos Außenhandelsmodell*
-
-Notes:
-- David Ricardo stellte 1817 eine Theorie auf, die heute als Ricardos Außenhandelsmodell bekannt ist
-- Kernidee: Länder sollten sich auf die Produktion von Gütern spezialisieren, bei denen sie einen komparativen Kostenvorteil haben
-- Dies führt zu effizienterer Produktion und mehr Wohlstand für alle beteiligten Länder
-- Beispiel: Wein- und Tuchhandel zwischen England und Portugal
-- Smith: Handel lohnt sich, wenn Portugal Wein, und England Tuch günstiger produzieren kann
-- Ricardo: Selbst wenn Portugal beide Güter effizienter produzieren kann, profitiert es von Spezialisierung und Handel
-- In anderen Worten: abgesehen von Transaktions- und Transportkosten lohnt sich Handel eigentlich immer
-- Am besten lässt sich das anhand eines einfachen Zahlenbeispiels zeigen.
+- Merkantilismus (17./18. Jh.): Exporterlöse, Goldreserven, wenig Rücksicht auf Verbraucherinteressen
+- Smith: Handel lohnt sich bei **absoluten** Kostenvorteilen (jedes Land produziert, was es relativ günstiger kann)
+- Ricardo (1817): Handel lohnt sich auch ohne absoluten Vorteil — **komparative** Kostenvorteile (Wein/Tuch, Portugal/England)
+- Kernidee: Spezialisierung nach relativen Kosten steigert Gesamtproduktion und Wohlstand
+- Nächste Folie: einfaches Zahlenbeispiel in der Tabelle
 
 --
 
@@ -111,28 +94,13 @@ Notes:
 
 --
 
-## Warum handeln Länder dann nicht einfach immer frei?
-
-- Handel schafft Effizienzgewinne, aber auch Verteilungskonflikte
-- Manche Branchen gelten als strategisch: Energie, Chips, Verteidigung, Pharma
-- Staaten wollen Abhängigkeiten von Rivalen begrenzen
-- Zölle können politisches Druckmittel sein
-- Klima, Arbeitsstandards und Subventionen verzerren Märkte
-
-Notes:
-- Ricardo erklärt, warum Handel gesamtwirtschaftlich Wohlstand schaffen kann.
-- Das Modell sagt aber wenig darüber, wer gewinnt und wer verliert.
-- Außerdem berücksichtigt es kaum geopolitische Risiken.
-- Genau hier setzen heutige Debatten über Zölle, Industriepolitik und Friendshoring an.
-
---
-
 |                                                                  |                                                             |
 | :-:                                                              | :-:                                                         |
 | ![](images/trade-as-share-of-gdp-asia.svg)                       | ![](images/gdp-per-capita-asia.svg)                         |
-| *Abbildung 4: Außenhandelsquote in asiatischen Schwellenländern* | *Abbildung 5: BIP pro Kopf in asiatischen Schwellenländern (1960 = 100)* |
+| *Abbildung 3: Außenhandelsquote in asiatischen Schwellenländern* | *Abbildung 4: BIP pro Kopf in asiatischen Schwellenländern (1960 = 100)* |
 
 Notes:
+- Quelle: World Bank WDI (beide Reihen)
 - Links: Außenhandelsquote in Südkorea, Indien und China seit 1960
 - Rechts: Reales BIP pro Kopf in Südkorea, Indien und China, indexiert (1960 = 100)
 - Südkorea: Schon seit den 1960ern und 1970ern stärkerer Fokus auf Außenhandel
@@ -143,6 +111,23 @@ Notes:
     - Außenhandelsquote kann nicht immer weiter steigen und hängt von vielen Faktoren ab
     - Niedrige globale Zinsen haben zu Aufwertungsdruck und finanzieller Instabilität in Schwellenländern geführt \
     -> Protektionismus wieder *en vogue*
+
+--
+
+## Warum handeln Länder dann nicht einfach immer frei?
+
+![Handelspolitische Unsicherheit](images/trade-policy-uncertainty.svg) \
+*Abbildung 5: Handelspolitische Unsicherheit (Index, monatlich)*
+
+Notes:
+- Ricardo: Handel schafft gesamtwirtschaftlich Wohlstand — das Modell sagt aber wenig über **Gewinner und Verlierer** und kaum über **geopolitische Risiken**
+- In der Praxis: Handel schafft Effizienzgewinne, aber auch Verteilungskonflikte; strategische Sektoren (Energie, Chips, Verteidigung, Pharma); Abhängigkeiten von Rivalen begrenzen; Zölle als Druckmittel; Klima, Arbeitsstandards, Subventionen
+- Quelle Grafik: Baker, Bloom, Davis — Economic Policy Uncertainty Index, Kategorie „Trade policy“ (FRED: EPUTRADE)
+- Monatlicher Index aus US-Zeitungsberichterstattung; höher = mehr Berichte über Zölle, Handelskonflikte, Handelsabkommen
+- **Nicht** dasselbe wie ein MFN-Zollsatz — misst Unsicherheit und mediale Aufmerkschaft, nicht den tatsächlichen Zollstand
+- Spitzen 2018–2019 (Handelskrieg USA–China), erneuter Anstieg ab 2025 (zweite Trump-Administration) — trotz Ricardos Logik kein „immer freier Handel“
+- Passt zu Abb. 3–4: Öffnung und Wachstum in Asien, aber seit den 2010ern wieder mehr Protektionismus und Unsicherheit (*en vogue*)
+- Brücke zu Kapitel 2: finanzielle Globalisierung und Krisenrisiken hängen oft mit politischer Unsicherheit zusammen
 
 ---
 <!-- .slide: data-background-image="images/currency-exchange-trade.png" -->
@@ -198,6 +183,7 @@ Notes:
 *Abbildung 8: Direktinvestitionen in Indien*
 
 Notes:
+- Quelle: UNCTAD über World Bank WDI
 - Anteil der Direktinvestitionen am BIP in Indien
 - **Direktinvestitionen:** meist langfristige Investitionen, bei denen ein
 Unternehmen oder eine Person direkt in ein Unternehmen in einem anderen Land
@@ -215,6 +201,7 @@ investiert
 *Abbildung 9: Pro-Kopf-Einkommen in Indien*
 
 Notes:
+- Quelle: World Bank WDI (BIP pro Kopf, aktuelle USD)
 - Interessante Statistik: Pro-Kopf-Einkommen relativ zu den USA
 - Während der 1980er Jahre wirtschaftliche Stagnation und Vergrößerung der Einkommenslücke
 - Seit 90ern wieder Wachstum und ein beachtlicher Aufholprozess
@@ -227,6 +214,7 @@ Notes:
 *Abbildung 10: Medium- und High-Tech Exporte in Indien*
 
 Notes:
+- Quelle: UNIDO / World Bank WDI
 - Anteil der Medium- und High-Tech Exporte an den gesamten Exporten von Industriegütern
 - Guter Indikator für langfristige Entwicklung
 - Seit Anfang der 1990er Jahre kontinuierlicher Anstieg
@@ -255,6 +243,7 @@ Notes:
 *Abbildung 11: Leistungsbilanzsaldo in Thailand*
 
 Notes:
+- Quelle: IMF Balance of Payments Statistics (STA)
 - Leistungsbilanzsaldo in Thailand in den 1990er und frühen 2000er Jahren
 - Leistungsbilanzsaldo: Nettoaußenbeitrag durch Zahlungen für Exporte, Importe, Kapitaleinkommen und laufende Übertragungen
 - Negativer Leistungsbilanzsaldo: Land baut Nettoverbindlichkeiten gegenüber dem Ausland auf ("Kapitalzuflüsse")
@@ -306,6 +295,7 @@ Notes:
 *Abbildung 14: Auslandsverschuldung Thailand*
 
 Notes:
+- Quelle: IMF STA (IIP und Wechselkurse)
 - Auslandsverschuldung aus Sicht des Weltmarkts (rot)
 - und aus Sicht der Unternehmen und Haushalte in Thailand (blau)
 - In Thai Baht ist die Auslandsverschuldung innerhalb eines Jahres um fast 60% gestiegen
@@ -340,6 +330,7 @@ Notes:
 *Abbildung 15: Währungsreserven der thailändischen Zentralbank*
 
 Notes:
+- Quelle: IMF STA (International Liquidity und Wechselkurse)
 - Rot: Währungsreserven der thailändischen Zentralbank
 - Blau: Wechselkurs Thai Baht
 - **Was bedeutet ein Anstieg der blauen Kurve hier?**
@@ -354,6 +345,7 @@ Notes:
 *Abbildung 16: Pro-Kopf-Einkommen in Thailand*
 
 Notes:
+- Quelle: World Bank WDI (BIP pro Kopf, aktuelle USD)
 - **Welche Auswirkungen hat das Ganze auf die Realwirtschaft?**
 - Kredite in USD konnten nicht mehr bedient werden
 - Finanzierung für viele Investitionsprojekte konnte nicht mehr aufrechterhalten werden
@@ -363,35 +355,35 @@ Notes:
 ---
 
 <!-- .slide: data-background-image="images/fragility.png" -->
-# Nachhaltigkeit, Resilienz und Versorgungssicherheit
+# Versorgungssicherheit in einer fragmentierten Weltwirtschaft
 
 Notes:
-- Im letzten Teil soll es um aktuelle Herausforderungen gehen
-- Wir leben in einer stark globalisierten Welt
-- Die Globalisierung hat Milliarden von Menschen aus der Armut geholfen
-- Internationale Wirtschaftsbeziehungen haben auch weiterhin das Potenzial, globale Herausforderungen zu lösen
-- Der Klimawandel ist jedoch nur ein Indikator, dass wir nicht weitermachen können wie bisher
-- Die globale Wirtschaftsordnung ist fragil, wie wir zuletzt durch die COVID-19-Pandemie und die aktuellen geopolitischen Herausforderungen gesehen haben
-- Wo geht die Reise hin, und wie kann ein nachhaltiges und resilientes Wirtschaftssystem geschaffen werden?
-- Welche Zielkonflikte gibt es?
-- Keine Patentlösungen. Ich möchte zum Denken und Diskutieren anregen
+- Im letzten Teil: Versorgungssicherheit unter Bedingungen fragmentierter Handels- und Lieferketten
+- Globalisierung hat Milliarden aus der Armut geholfen und bleibt ein Hebel für globale Problemlösung
+- Seit COVID-19 hat sich die Lage aber spürbar verschärft — die nächste Folie fasst das als Überblick zusammen
+- Anschließend: geopolitische Engpässe, Energie, Klima, Rohstoffe — und am Ende: Was heißt „nachhaltig“ und „resilient“?
+- Keine Patentlösungen; Ziel ist Denken und Diskutieren
 
 --
 
-## Globale Lieferketten während der COVID-19-Pandemie
+## Seit COVID-19: Globaler Handel unter neuem Regime
 
-<img src="images/shipping-costs.png" height="499"/> \
-*Abbildung 17: Global beobachtete 40-Fuß Container-Transportkosten (Quelle: BIZ)*
+![Seefracht-Preisindex](images/shipping-costs.svg) \
+*Abbildung 17: Seefracht-Preisindex (Hochsee, 2019 = 100; Quelle: FRED/BLS)*
 
 Notes:
-- **Was waren die Ursachen für die massiven Unterbrechungen der globalen Lieferketten?**
-- Lockdowns allein können das Ausmaß nicht erklären
-- Stichwort Spezialisierung: steigert die Produktivität, führt aber auch zu einer starken Fragmentierung der Wertschöpfungsketten
-- Mit steigender Spezialisierung steigt auch die Abhängigkeit von jedem einzelnen Glied in der Kette
-- **Welche Lehren kann man daraus ziehen?**
-    - Größere Sicherheitsbestände in der Lagerhaltung
-    - Größere Diversifizierung
-    - Stärkung lokaler Lieferketten
+- US-Erzeugerpreisindex für Hochseefracht (Proxy für globale Container-Logistikkosten), indexiert auf 2019 = 100
+- Die Kurve ist mehr als ein kurzer Schock — sie markiert einen **Einstieg in ein neues Regime** für globale Lieferketten
+- **Früh 2020 — Einbruch:** vor allem Nachfrageeinbruch (Lockdowns, weniger Handel), nicht „Öl wird billig, also sinken Frachten dauerhaft“
+- **2021 — steiler Anstieg:** Güterboom, Container- und Hafenengpässe, weniger effektive Schiffskapazität → Knappheitspreise
+- **Mitte/Ende 2022 — zweiter Anstieg:** anhaltende Störungen, Vertragsverlängerungen, Energie- und Unsicherheitsschocks (u. a. Ukraine)
+- **Seitdem erhöhtes Niveau:** Raten normalisierten sich vom Peak, blieben aber über dem alten „Normal“ — Logistik ist strukturell teurer und weniger verzeihend
+- **Was dahintersteckt (Vorschau auf dieses Kapitel):**
+    - Spezialisierung und lange Ketten: kleine Störungen wirken groß (Engpässe, Freundes-/Feindes-Shoring)
+    - Geopolitik: Routenrisiko (Suez, Hormus) und Energiepreise
+    - Klima: Transportemissionen, Wetterrisiken für Infrastruktur
+    - Rohstoffe: alte und neue Abhängigkeiten (Öl, Kupfer, Lithium, seltene Erden)
+- **Leitfrage fürs Kapitel:** Wie gestalten wir Handel so, dass er Wohlstand sichert — bei mehr Resilienz und Versorgungssicherheit?
 
 --
 
@@ -401,6 +393,7 @@ Notes:
 *Abbildung 18: Handelsvolumen durch globale Engpässe*
 
 Notes:
+- Quelle: IMF PortWatch / HDX (tägliches Transitvolumen, 28-Tage-Durchschnitt, indexiert 2019–2023 = 100)
 - Der starke Einbruch bedeutet nicht, dass der Welthandel entsprechend eingebrochen ist.
 - Der Suezkanal ist Teil einer Route durch das Rote Meer und die Bab-al-Mandab-Straße.
 - Seit Ende 2023 machen Angriffe auf Handelsschiffe und militärische Eskalationsrisiken diese Route für viele Reedereien unattraktiv.
@@ -412,12 +405,28 @@ Notes:
 
 --
 
+## Straße von Hormus: Handelsverkehr unter Druck
+
+![Transitvolumen Straße von Hormus](images/hormuz_trade_volume_2026.svg) \
+*Abbildung 19: Handelsvolumen durch die Straße von Hormus (2025–2026)*
+
+Notes:
+- Quelle: IMF PortWatch / HDX (geschätztes tägliches Transitvolumen, 7-Tage-Durchschnitt, indexiert auf Ø 2025 = 100)
+- Die Straße von Hormus ist einer der wichtigsten maritimen Engpässe — v. a. für Öl- und Gasmärkte, aber auch für containerisierten Welthandel
+- Die Grafik zeigt **nicht** den gesamten Welthandel, sondern das durch Hormus geschätzte Transitvolumen (in metrischen Tonnen)
+- Ab der akuten Krise 2026: deutlicher Einbruch oder starke Volatilität — Schifffahrt meidet die Route oder fährt mit Verzögerung und höherem Risiko
+- Parallel oft Umleitungen und höhere Versicherungs- und Treibstoffkosten; auf der nächsten Folie die Preisreaktion am Ölmarkt
+- **Frage:** Warum sinkt Transit manchmal stärker als das gesamte Handelsvolumen weltweit?
+
+--
+
 ## Straße von Hormus: Geopolitik wird zum Preisschock
 
 ![Ölpreise Iran/Hormus 2026](images/oil_prices_iran_2026.svg) \
-*Abbildung 19: Brent- und WTI-Ölpreise während der Iran-/Hormus-Krise 2026*
+*Abbildung 20: Brent- und WTI-Ölpreise während der Iran-/Hormus-Krise 2026*
 
 Notes:
+- Quelle: U.S. EIA via FRED (Brent und WTI, Spotpreise)
 - Die Straße von Hormus ist einer der wichtigsten Energie-Chokepoints der Welt.
 - Ein Ausfall oder auch nur ein glaubwürdiges Risiko kann sofort Ölpreise bewegen.
 - Der Effekt betrifft nicht nur direkte Importeure aus der Golfregion.
@@ -433,18 +442,30 @@ Notes:
 
 ## Klimawandel und Energiewende
 
-![Welt CO2-Emissionen](images/world_co2_old.svg) \
-*Abbildung 20: Weltweite CO₂-Emissionen (ältere Datenquelle)*
+![Welt CO2-Emissionen](images/world_co2_total.svg) \
+*Abbildung 21: Weltweite CO₂-Emissionen (exkl. LULUCF, 1990–2024)*
+
+Notes:
+- Globale CO₂-Gesamtemissionen in **Gigatonnen (Gt)**; Quelle: World Bank WDI / EDGAR (bis 2024)
+- **LULUCF** = *Land Use, Land-Use Change and Forestry* (Landnutzung, Landnutzungsänderung und Forstwirtschaft): Emissionen aus Abholzung, Entwaldung und Bodennutzung sind **nicht** in dieser Reihe enthalten — sie würden die Kurve stark verzerren
+- Langfristig steigender Trend trotz Effizienzgewinnen — mehr Wirtschaftsaktivität und Energieverbrauch
+- **2020:** spürbarer Rückgang (Pandemie, weniger Transport und Industrieaktivität), danach wieder Anstieg
+- Globalisierung erhöht Emissionen u. a. durch **Transport** und wachsende Güterproduktion; Abb. 22 zeigt, ob Wohlstand und Emissionen etwas entkoppeln
+- **Frage:** Reicht technologischer Fortschritt, oder brauchen wir auch weniger emissionsintensive Strukturen?
 
 --
 
 ## Klimawandel und Energiewende
 
 ![Welt CO2-Emissionen](images/world_co2.svg) \
-*Abbildung 21: Weltweite CO₂-Emissionen*
+*Abbildung 22: CO₂ pro Kopf und CO₂-Intensität des BIP*
 
 Notes:
-- Abbildung: Globale CO₂-Emissionen
+- Zwei Reihen: **CO₂-Emissionen pro Kopf** (links) und **CO₂-Intensität des BIP** (kg CO₂e pro USD BIP in KKP, rechts)
+- Quelle: World Bank WDI / EDGAR / IEA
+- Pro Kopf: in reichen Ländern höher, global seit Jahren eher seitwärts bis leicht fallend
+- Intensität des BIP: wie viel CO₂ pro Dollar Wertschöpfung — sinkt langsam → etwas „grüneres“ Wachstum möglich
+- **Kernpunkt:** Gesamtemissionen (Abb. 21) können steigen, während die Wirtschaft emissionsärmiger pro Dollar wird
 - **Was sind die Effekte von Globalisierung auf den Klimawandel?**
 - Erhöhte CO₂-Emissionen durch Transport
 - Aber auch durch Wirtschaftswachstum selbst: wir erreichen jetzt erst langsam
@@ -466,9 +487,10 @@ größeren CO₂-Emissionen einhergeht
 ## Alte und neue Abhängigkeiten
 
 ![Rohstoffabhängigkeiten](images/raw_materials.svg) \
-*Abbildung 22: Rohstoffpreise*
+*Abbildung 23: Rohstoffpreise*
 
 Notes:
+- Quelle: Federal Reserve Bank of St. Louis (Rohstoffpreisindizes, 1990 = 100)
 - Die Abhängigkeit von einigen (häufig politisch instabilen) ölexportierenden Ländern hat schon in der Vergangenheit oft für Konflikte gesorgt
 - Energiewende: Abhängigkeit von neuen Ressourcen (z. B. Kupfer, Lithium, seltene Erden, Kobalt)
 - Diese Ressourcen sind häufig noch stärker geographisch konzentriert
