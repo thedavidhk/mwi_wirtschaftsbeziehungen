@@ -9,11 +9,11 @@
 
 |                 |                                                              |
 |:---------------:|:-------------------------------------------------------------|
-|  09:30 - 10:15  | Außenhandel und Wirtschaftliche Entwicklung                  |
-| 10:15 - 11:00   | Finanzmärkte und Wirtschaftliche Entwicklung                 |
-| *11:00 - 11:30* | *Pause*                                                      |
-| 11:30 - 12:15   | Wechselkurse, Währungspolitik und Finanzkrisen               |
-| 12:15 - 13:00   | Versorgungssicherheit in einer fragmentierten Weltwirtschaft |
+|  8:30 -  9:15  | Außenhandel und Wirtschaftliche Entwicklung                  |
+|  9:15 - 10:00   | Finanzmärkte und Wirtschaftliche Entwicklung                 |
+| *10:00 - 10:15* | *Pause*                                                      |
+| 10:15 - 11:00   | Wechselkurse, Währungspolitik und Finanzkrisen               |
+| 11:00 - 11:45   | Versorgungssicherheit in einer fragmentierten Weltwirtschaft |
 
 Notes:
 - In den ersten beiden Teilen erkunden wir, wie Globalisierung zu wirtschaftlicher Entwicklung beiträgt:
