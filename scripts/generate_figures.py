@@ -10,9 +10,11 @@ under data/cache/ so repeated runs are fast and less dependent on external APIs.
 
 from __future__ import annotations
 
+import argparse
 import datetime as dt
 import io
 import json
+from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Iterable, Mapping, Sequence
 
@@ -31,6 +33,7 @@ register_matplotlib_converters()
 
 DATA_DIR = Path("data")
 IMAGE_DIR = Path("images")
+SCRIPT_IMAGE_DIR = Path("lecture/build/figure-svg")
 CACHE_DIR = DATA_DIR / "cache"
 
 HTTP_TIMEOUT = 60
@@ -56,28 +59,82 @@ SECONDARY_COLORS = [
     "#fb4934",
 ]
 
-plt.rcParams.update(
-    {
-        "figure.figsize": (10, 6),
+@dataclass(frozen=True)
+class PlotTheme:
+    """Colors for slides (dark background) or script PDF (white background)."""
+
+    name: str
+    rcparams: dict[str, Any]
+    label_color: str
+    tick_color: str
+    grid_color: str
+    annotation_color: str
+    source_color: str
+
+
+_COMMON_RCPARAMS: dict[str, Any] = {
+    "figure.figsize": (10, 6),
+    "axes.labelsize": "large",
+    "axes.titlesize": "x-large",
+    "font.family": "sans-serif",
+    "grid.linestyle": "--",
+    "legend.frameon": True,
+    "legend.framealpha": 0.7,
+    "path.simplify": True,
+}
+
+DARK_THEME = PlotTheme(
+    name="dark",
+    rcparams={
+        **_COMMON_RCPARAMS,
         "text.color": "#e6e6e6",
         "figure.facecolor": "#00000000",
         "axes.facecolor": "#00000000",
         "axes.edgecolor": "#333333",
         "axes.labelcolor": "#e6e6e6",
-        "axes.labelsize": "large",
-        "axes.titlesize": "x-large",
         "xtick.color": "#e6e6e6",
         "xtick.labelsize": "medium",
         "ytick.color": "#e6e6e6",
         "ytick.labelsize": "medium",
-        "font.family": "sans-serif",
         "grid.color": "#000000",
-        "grid.linestyle": "--",
-        "legend.frameon": True,
-        "legend.framealpha": 0.7,
-        "path.simplify": True,
-    }
+    },
+    label_color="lightgrey",
+    tick_color="white",
+    grid_color="gray",
+    annotation_color="#e6e6e6",
+    source_color="darkgrey",
 )
+
+LIGHT_THEME = PlotTheme(
+    name="light",
+    rcparams={
+        **_COMMON_RCPARAMS,
+        "text.color": "#333333",
+        "figure.facecolor": "#ffffff",
+        "axes.facecolor": "#ffffff",
+        "axes.edgecolor": "#666666",
+        "axes.labelcolor": "#333333",
+        "xtick.color": "#333333",
+        "xtick.labelsize": "medium",
+        "ytick.color": "#333333",
+        "ytick.labelsize": "medium",
+        "grid.color": "#cccccc",
+    },
+    label_color="#333333",
+    tick_color="#333333",
+    grid_color="#cccccc",
+    annotation_color="#333333",
+    source_color="#666666",
+)
+
+_active_theme: PlotTheme = DARK_THEME
+
+
+def use_theme(theme: PlotTheme) -> None:
+    """Switch matplotlib styling (slides vs. script PDF)."""
+    global _active_theme
+    _active_theme = theme
+    plt.rcParams.update(theme.rcparams)
 
 
 # -----------------------------------------------------------------------------
@@ -557,11 +614,12 @@ def create_plot(
             offset = (i - len(primary_cols) / 2) * bar_width + bar_width / 2
             ax.bar(x_values + offset, data[col], label=col, color=color, width=bar_width)
 
-    ax.set_xlabel(xlabel, fontsize=12, color="lightgrey")
-    ax.set_ylabel(ylabel, fontsize=12, color="lightgrey")
+    theme = _active_theme
+    ax.set_xlabel(xlabel, fontsize=12, color=theme.label_color)
+    ax.set_ylabel(ylabel, fontsize=12, color=theme.label_color)
     ax.set_ylim(bottom=ymin)
-    ax.grid(True, which="both", color="gray", linestyle="--", linewidth=0.5)
-    ax.tick_params(colors="white", which="both")
+    ax.grid(True, which="both", color=theme.grid_color, linestyle="--", linewidth=0.5)
+    ax.tick_params(colors=theme.tick_color, which="both")
 
     if plot_type == "bar" and isinstance(data.index, pd.DatetimeIndex):
         ax.set_xticks(x_values)
@@ -579,8 +637,12 @@ def create_plot(
                 offset = (i - len(secondary_y) / 2) * bar_width + bar_width / 2
                 ax2.bar(x_values + offset, data[col], label=col, color=color, width=bar_width, alpha=0.7)
         ax2.set_ylim(bottom=y2min)
-        ax2.set_ylabel(secondary_y_label or secondary_y[0], fontsize=12, color="lightgrey")
-        ax2.tick_params(colors="white", which="both")
+        ax2.set_ylabel(
+            secondary_y_label or secondary_y[0],
+            fontsize=12,
+            color=theme.label_color,
+        )
+        ax2.tick_params(colors=theme.tick_color, which="both")
 
     lines, labels = ax.get_legend_handles_labels()
     if ax2 is not None:
@@ -600,7 +662,7 @@ def create_plot(
             fontsize=8,
             va="bottom",
             ha="right",
-            color="darkgrey",
+            color=theme.source_color,
         )
 
     fig.tight_layout()
@@ -1059,7 +1121,7 @@ def raw_materials(file_path: Path | str, *, force: bool = False) -> None:
         data,
         "Jahr",
         "Index (Jun. 2012 = 100)",
-        "IMF Primary Commodity Prices (external-data.xlsx)",
+        "IMF Primary Commodity Prices",
         legend=True,
         ymin=0,
     )
@@ -1129,7 +1191,7 @@ def oil_prices_iran_2026(file_path: Path | str) -> None:
         event_label_date,
         ax.get_ylim()[1] * 0.1,
         "Beginn der akuten\nHormus-/Iran-Krise",
-        color="#e6e6e6",
+        color=_active_theme.annotation_color,
         fontsize=10,
         va="top",
     )
@@ -1168,52 +1230,50 @@ def chokepoint_trade_volume(
     save_figure(fig, file_path)
 
 
-def build_all_figures() -> None:
-    """Generate all lecture figures managed by this script."""
-    ensure_directories()
-
+def _generate_managed_figures(output_dir: Path) -> None:
+    """Write all matplotlib figures managed by this script."""
     csv_plot(
         DATA_DIR / "india_fdi_gdp.csv",
-        IMAGE_DIR / "india_fdi_gdp.svg",
+        output_dir / "india_fdi_gdp.svg",
         "Jahr",
         "% des BIP",
         "United Nations Conference on Trade and Development (UNCTAD) statistical data",
     )
-    raw_materials(IMAGE_DIR / "raw_materials.svg")
+    raw_materials(output_dir / "raw_materials.svg")
 
-    trade_openness_by_income_group(IMAGE_DIR / "trade-as-share-of-gdp.svg")
-    poverty_by_income_group(IMAGE_DIR / "poverty-by-income-group.svg")
-    asia_trade_openness(IMAGE_DIR / "trade-as-share-of-gdp-asia.svg")
-    asia_gdp_per_capita(IMAGE_DIR / "gdp-per-capita-asia.svg")
-    trade_policy_uncertainty(IMAGE_DIR / "trade-policy-uncertainty.svg")
+    trade_openness_by_income_group(output_dir / "trade-as-share-of-gdp.svg")
+    poverty_by_income_group(output_dir / "poverty-by-income-group.svg")
+    asia_trade_openness(output_dir / "trade-as-share-of-gdp-asia.svg")
+    asia_gdp_per_capita(output_dir / "gdp-per-capita-asia.svg")
+    trade_policy_uncertainty(output_dir / "trade-policy-uncertainty.svg")
 
-    india_catch_up(IMAGE_DIR / "india_catch_up.svg")
-    india_tech(IMAGE_DIR / "india_tech_exports.svg")
-    thailand_ca_balance(IMAGE_DIR / "thailand_ca_balance.svg")
-    thailand_forex(IMAGE_DIR / "thailand_forex.svg")
-    thailand_ext_debt(IMAGE_DIR / "thailand_ext_debt.svg")
-    thailand_gdp_per_capita(IMAGE_DIR / "thailand_gdp_per_capita.svg")
-    world_co2_total(IMAGE_DIR / "world_co2_total.svg")
-    world_co2(IMAGE_DIR / "world_co2.svg")
-    container_freight_costs(IMAGE_DIR / "shipping-costs.svg")
-    oil_prices_iran_2026(IMAGE_DIR / "oil_prices_iran_2026.svg")
+    india_catch_up(output_dir / "india_catch_up.svg")
+    india_tech(output_dir / "india_tech_exports.svg")
+    thailand_ca_balance(output_dir / "thailand_ca_balance.svg")
+    thailand_forex(output_dir / "thailand_forex.svg")
+    thailand_ext_debt(output_dir / "thailand_ext_debt.svg")
+    thailand_gdp_per_capita(output_dir / "thailand_gdp_per_capita.svg")
+    world_co2_total(output_dir / "world_co2_total.svg")
+    world_co2(output_dir / "world_co2.svg")
+    container_freight_costs(output_dir / "shipping-costs.svg")
+    oil_prices_iran_2026(output_dir / "oil_prices_iran_2026.svg")
 
     chokepoint_trade_volume(
-        IMAGE_DIR / "panama_suez_trade_volume.svg",
+        output_dir / "panama_suez_trade_volume.svg",
         selected_chokepoints=("panama", "suez"),
         start_date="2019-01-01",
         rolling=28,
         index_baseline=("2019-01-01", "2023-12-31"),
     )
     chokepoint_trade_volume(
-        IMAGE_DIR / "cape_trade_volume.svg",
+        output_dir / "cape_trade_volume.svg",
         selected_chokepoints=("cape",),
         start_date="2019-01-01",
         rolling=28,
         index_baseline=("2019-01-01", "2023-12-31"),
     )
     chokepoint_trade_volume(
-        IMAGE_DIR / "hormuz_trade_volume_2026.svg",
+        output_dir / "hormuz_trade_volume_2026.svg",
         selected_chokepoints=("hormuz",),
         start_date="2025-01-01",
         rolling=7,
@@ -1221,5 +1281,42 @@ def build_all_figures() -> None:
     )
 
 
+def build_all_figures() -> None:
+    """Generate slide figures (dark theme) into images/."""
+    ensure_directories()
+    use_theme(DARK_THEME)
+    _generate_managed_figures(IMAGE_DIR)
+
+
+def build_script_figures() -> None:
+    """Generate script-PDF figures (light theme) into lecture/build/figure-svg/."""
+    ensure_directories()
+    SCRIPT_IMAGE_DIR.mkdir(parents=True, exist_ok=True)
+    use_theme(LIGHT_THEME)
+    _generate_managed_figures(SCRIPT_IMAGE_DIR)
+    chokepoint_trade_volume(
+        SCRIPT_IMAGE_DIR / "panama_suez_trade_capacity.svg",
+        selected_chokepoints=("panama", "suez"),
+        start_date="2019-01-01",
+        rolling=28,
+        index_baseline=("2019-01-01", "2023-12-31"),
+    )
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--script",
+        action="store_true",
+        help="Build light-theme SVGs for the lecture script PDF (default: slide figures).",
+    )
+    args = parser.parse_args()
+    if args.script:
+        build_script_figures()
+    else:
+        build_all_figures()
+
+
 if __name__ == "__main__":
-    build_all_figures()
+    use_theme(DARK_THEME)
+    main()

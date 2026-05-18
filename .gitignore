@@ -11,3 +11,6 @@ node_modules/
 .sass-cache
 .venv/
 __pycache__
+lecture/build/
+lecture/script.build.md
+lecture/script.pdf
