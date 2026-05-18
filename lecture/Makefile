@@ -2,6 +2,7 @@
 SCRIPT_SRC  := script.md
 SCRIPT      := script.build.md
 PDF         := script.pdf
+TEX         := build/script.tex
 META        := metadata.yaml
 BIB         := references.bib
 PREPARE     := prepare_build.py
@@ -29,12 +30,18 @@ $(SCRIPT): $(SCRIPT_SRC) $(PREPARE) $(BIB)
 
 pdf: prepare $(PDF)
 
-$(PDF): $(SCRIPT) $(META) $(BIB)
-	$(PANDOC) $(SCRIPT) $(META) -o $(PDF) \
+$(TEX): $(SCRIPT) $(META) $(BIB)
+	$(PANDOC) $(SCRIPT) -o $(TEX) --standalone \
+	  --metadata-file=$(META) \
 	  --resource-path=.:.. \
 	  --bibliography=$(BIB) \
-	  --filter pandoc-citeproc \
-	  --pdf-engine=$(PDF_ENGINE)
+	  --filter pandoc-citeproc
+	$(PYTHON) $(PREPARE) --fix-tex $(TEX)
+
+$(PDF): $(TEX)
+	$(PDF_ENGINE) -interaction=nonstopmode -output-directory=build $(TEX)
+	$(PDF_ENGINE) -interaction=nonstopmode -output-directory=build $(TEX)
+	@test -f build/script.pdf && mv build/script.pdf $(PDF)
 
 clean:
 	rm -f $(PDF) $(SCRIPT)

@@ -32,7 +32,8 @@ Ergebnis: `lecture/script.pdf` (nicht versioniert; `make clean` entfernt Build-A
 
 ```bash
 python3 prepare_build.py
-pandoc script.build.md metadata.yaml -o script.html \
+pandoc script.build.md -o script.html \
+  --metadata-file=metadata.yaml \
   --resource-path=.:.. --bibliography=references.bib \
   --filter pandoc-citeproc --standalone
 ```
@@ -42,7 +43,7 @@ pandoc script.build.md metadata.yaml -o script.html \
 1. Folien geändert → passende Abschnitte in `script.md` anpassen.
 2. Neue Grafik → in `script.md` per `![](../images/….svg)` einbinden; `make pdf` konvertiert automatisch.
 3. Neue Quelle → Eintrag in `references.bib`, im Text `[@schlüssel]`.
-4. Verweise auf Abbildungen im Markdown **ohne** `@fig:…` formulieren (wird sonst von citeproc als Zitat gelesen). Stattdessen z. B. „die nachfolgende Abbildung“ oder „Abbildung zur Außenhandelsquote“.
+4. Abbildungsverweise in `script.md` als `@fig:…` (an die `{#fig:…}`-Labels der Bilder angelehnt). `prepare_build.py` wandelt sie für das PDF in LaTeX-Querverweise (`\autoref{fig:…}`) um, damit citeproc sie nicht als Zitate liest.
 
 Abbildungsdaten stammen dieselben Caches wie die Folien (`data/cache/`), wenn Sie `scripts/generate_figures.py` ausführen.
 

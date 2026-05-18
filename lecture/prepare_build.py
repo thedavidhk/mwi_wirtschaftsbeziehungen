@@ -71,6 +71,45 @@ def resolve_svg(name: str) -> Path:
     return source
 
 
+def fix_table_labels(text: str) -> str:
+    """Pandoc 2.9 does not apply {#tbl:…} on table captions; emit a LaTeX label instead."""
+    def repl(match: re.Match[str]) -> str:
+        caption = match.group(1).strip()
+        tbl_id = match.group(2)
+        return (
+            f": {caption}\n\n"
+            f"```{{=latex}}\n"
+            f"\\label{{tbl:{tbl_id}}}\n"
+            f"```\n"
+        )
+
+    return re.sub(
+        r"^: (.+?) \{#tbl:([a-z0-9-]+)\}\s*$",
+        repl,
+        text,
+        flags=re.MULTILINE,
+    )
+
+
+def fix_table_labels_in_tex(tex: str) -> str:
+    """Move \\label{tbl:…} into \\caption{…} so \\autoref uses the table counter.
+
+    Pandoc places the label block after \\end{longtable}, where it picks up the
+    section number (e.g. 2.2) instead of the table number (e.g. 1).
+    """
+    pattern = re.compile(
+        r"(\\begin\{longtable\}.*?\\caption\{)([^}]*)(\}\\tabularnewline"
+        r".*?\\end\{longtable\}\n\n)\\label\{tbl:([a-z0-9-]+)\}",
+        re.DOTALL,
+    )
+
+    def repl(match: re.Match[str]) -> str:
+        before, caption, after, tbl_id = match.groups()
+        return f"{before}{caption}\\label{{tbl:{tbl_id}}}{after}"
+
+    return pattern.sub(repl, tex)
+
+
 def convert_svg(svg: Path, pdf: Path) -> None:
     pdf.parent.mkdir(parents=True, exist_ok=True)
     if pdf.exists() and pdf.stat().st_mtime >= svg.stat().st_mtime:
@@ -94,9 +133,10 @@ def main() -> None:
     generate_script_figures()
     text = SCRIPT.read_text(encoding="utf-8")
 
-    # pandoc-citeproc treats @fig:… as citations; use neutral phrasing instead.
-    text = re.sub(r"@fig:[a-z0-9-]+", "die zugehörige Abbildung", text)
-    text = re.sub(r"@tbl:[a-z0-9-]+", "die folgende Tabelle", text)
+    # pandoc-citeproc treats @fig:… as citations; use LaTeX cross-refs instead.
+    text = re.sub(r"@fig:([a-z0-9-]+)", r"\\autoref{fig:\1}", text)
+    text = re.sub(r"@tbl:([a-z0-9-]+)", r"\\autoref{tbl:\1}", text)
+    text = fix_table_labels(text)
 
     for match in re.finditer(r"\.\./images/([a-zA-Z0-9_.-]+)\.svg", text):
         name = match.group(1)
@@ -109,5 +149,14 @@ def main() -> None:
     print(f"Wrote {BUILD_SCRIPT.relative_to(ROOT)}")
 
 
+def fix_tex_file(path: Path) -> None:
+    """Post-process Pandoc LaTeX so table cross-references use the table counter."""
+    text = fix_table_labels_in_tex(path.read_text(encoding="utf-8"))
+    path.write_text(text, encoding="utf-8")
+
+
 if __name__ == "__main__":
-    main()
+    if len(sys.argv) == 3 and sys.argv[1] == "--fix-tex":
+        fix_tex_file(Path(sys.argv[2]))
+    else:
+        main()
