@@ -39,7 +39,7 @@ Außenhandelsquote seitwärts, in einigen Entwicklungs- und Schwellenländern ge
 Jahrhunderts eine Phase starker Handelsintensivierung. Zweitens ist diese Dynamik nicht selbstverständlich.
 Globalisierung ist kein Naturgesetz, sondern ein politisch, technologisch und makroökonomisch geprägter Prozess.
 
-![Außenhandelsquote nach Einkommensgruppe (Importe + Exporte in Prozent des BIP). Quelle: World Bank WDI.](../images/trade-as-share-of-gdp.svg){#fig:trade-share width=85%}
+![Außenhandelsquote nach Einkommensgruppe (Importe + Exporte in Prozent des BIP). Quelle: World Bank WDI.](../images/trade-as-share-of-gdp.svg){#fig:trade-share width=95%}
 
 Parallel dazu fällt in @fig:poverty der Anteil der Bevölkerung in **extremer Armut**. Die internationale Armutsgrenze
 liegt hier bei 2,15 US-Dollar pro Tag in Kaufkraftparitäten. Für die ärmsten Länder beginnen die Daten erst um 2002,
@@ -53,7 +53,7 @@ Exporterlösen zu den wiederkehrenden Faktoren, die Produktivität und Lebenssta
 @rodrik2011]. Deshalb gehören die beiden Abbildungen zusammen: Sie zeigen nicht die fertige Antwort, sondern den
 Ausgangspunkt unserer Analyse.
 
-![Extreme Armut nach Einkommensgruppe (Anteil der Bevölkerung unter 2,15 USD/Tag, KKP). Quelle: World Bank WDI.](../images/poverty-by-income-group.svg){#fig:poverty width=85%}
+![Extreme Armut nach Einkommensgruppe (Anteil der Bevölkerung unter 2,15 USD/Tag, KKP). Quelle: World Bank WDI.](../images/poverty-by-income-group.svg){#fig:poverty width=95%}
 
 Zwei Mechanismen stehen im Mittelpunkt des ersten Blocks. Erstens kann Handel die Versorgung robuster machen. Wenn eine
 Ernte ausfällt, eine Fabrik stillsteht oder eine Region von einem Schock getroffen wird, können Importe Engpässe
@@ -131,7 +131,7 @@ Jahren stark am Export. China öffnete sich ab Ende der 1970er Jahre schrittweis
 Indien liberalisierte Handel und Finanzmärkte besonders nach den Reformen der frühen 1990er Jahre [@ahluwalia2002;
 @kochar2012].
 
-![Außenhandelsquote in ausgewählten asiatischen Schwellenländern. Quelle: World Bank WDI.](../images/trade-as-share-of-gdp-asia.svg){#fig:trade-asia width=85%}
+![Außenhandelsquote in ausgewählten asiatischen Schwellenländern. Quelle: World Bank WDI.](../images/trade-as-share-of-gdp-asia.svg){#fig:trade-asia width=95%}
 
 @fig:gdp-asia zeigt für dieselben Länder das reale BIP pro Kopf als Index. Die Kurven erzählen keine identische
 Geschichte, aber sie zeigen einen gemeinsamen Befund: Integration in die Weltwirtschaft und langfristiges Aufholwachstum
@@ -140,7 +140,7 @@ Infrastruktur, institutionelle Reformen und makroökonomische Stabilität waren 
 zu Exportmärkten, Kapitalgütern, Technologie und internationalen Lernprozessen wäre der Aufholprozess schwerer
 vorstellbar.
 
-![Reales BIP pro Kopf (Index 1960 = 100). Quelle: World Bank WDI.](../images/gdp-per-capita-asia.svg){#fig:gdp-asia width=85%}
+![Reales BIP pro Kopf (Index 1960 = 100). Quelle: World Bank WDI.](../images/gdp-per-capita-asia.svg){#fig:gdp-asia width=95%}
 
 Gerade diese Beispiele zeigen aber auch, warum die einfache Gleichung „mehr Handel = mehr Wohlstand“ zu kurz greift.
 Seit Mitte der 2000er Jahre steigt die Außenhandelsquote nicht mehr überall weiter. Das hat mehrere Gründe. Eine Quote
@@ -181,7 +181,7 @@ Lieferketten, Zölle oder Absatzmärkte morgen noch stabil sind. Der erste Block
 Theorie und Politik treffen: Handel kann Produktivität steigern, aber seine institutionellen und geopolitischen
 Voraussetzungen sind fragil.
 
-![Handelspolitische Unsicherheit (monatlicher Index, USA). Quelle: Baker, Bloom, Davis; FRED EPUTRADE.](../images/trade-policy-uncertainty.svg){#fig:epu-trade width=85%}
+![Handelspolitische Unsicherheit (monatlicher Index, USA). Quelle: Baker, Bloom, Davis; FRED EPUTRADE.](../images/trade-policy-uncertainty.svg){#fig:epu-trade width=95%}
 
 Diese Fragilität führt uns zum zweiten Block. Denn die Weltwirtschaft besteht nicht nur aus Güterströmen. Kapital bewegt
 sich oft schneller als Waren — und reagiert noch sensibler auf Erwartungen, Zinsen und politische Unsicherheit.
@@ -223,7 +223,7 @@ Summe aller Länder nahe null liegen; statistische Messfehler erklären Abweichu
 Ersparnisse, schwache Binneninvestitionen, Währungsinterventionen oder begrenzte Binnenabsorption hinweisen [@wdi2025;
 @imfsta2025].
 
-![Globale Leistungsbilanzsaldi. Quelle: IMF/WDI.](../images/global_ca_balances.svg){#fig:ca-balances width=85%}
+![Globale Leistungsbilanzsaldi. Quelle: IMF/WDI.](../images/global_ca_balances.svg){#fig:ca-balances width=95%}
 
 Kapitalströme sind also nicht abstrakt. Sie verbinden Sparer in einem Teil der Welt mit Investitionsprojekten in einem
 anderen. Die Entwicklungsfrage lautet: Wird daraus produktiver Strukturwandel? Indien liefert dafür ein wichtiges
@@ -245,21 +245,21 @@ Portfolioflüsse: Unternehmen beteiligen sich an Firmen, bauen Produktionsstätt
 Dienstleistungen [@unctad2025]. Der Ausschlag um 2009 dominiert die Skala, aber die eigentliche Entwicklungsgeschichte
 liegt im graduellen Anstieg der 1990er und 2000er Jahre.
 
-![Direktinvestitionen in Indien (Prozent des BIP). Quelle: UNCTAD über World Bank WDI.](../images/india_fdi_gdp.svg){#fig:india-fdi width=85%}
+![Direktinvestitionen in Indien (Prozent des BIP). Quelle: UNCTAD über World Bank WDI.](../images/india_fdi_gdp.svg){#fig:india-fdi width=95%}
 
 @fig:india-catchup zeigt das **Pro-Kopf-Einkommen** Indiens relativ zu den USA. In den 1980er Jahren vergrößert sich die
 Lücke. Nach den Reformen beginnt ein Aufholprozess. Das ist besonders bemerkenswert, weil es sich um Pro-Kopf-Größen
 handelt: Wachstum musste also stark genug sein, um nicht nur die Gesamtwirtschaft, sondern auch das Einkommen pro
 Einwohnerin und Einwohner zu erhöhen.
 
-![Pro-Kopf-Einkommen Indien relativ zu den USA. Quelle: World Bank WDI.](../images/india_catch_up.svg){#fig:india-catchup width=85%}
+![Pro-Kopf-Einkommen Indien relativ zu den USA. Quelle: World Bank WDI.](../images/india_catch_up.svg){#fig:india-catchup width=95%}
 
 Entwicklung ist jedoch nicht nur eine Frage der Menge an Kapital, sondern auch der Art wirtschaftlicher Aktivität.
 @fig:india-tech zeigt den Anteil mittel- und hochtechnologischer Exporte an den Industrieexporten. Die Linie steigt seit
 den frühen 1990er Jahren nahezu kontinuierlich. Das deutet auf eine qualitative Veränderung hin: Indien exportierte
 nicht nur mehr, sondern zunehmend komplexere Güter und Dienstleistungen.
 
-![Medium- und High-Tech-Exporte Indiens (Anteil an Industrieexporten). Quelle: UNIDO/WDI.](../images/india_tech_exports.svg){#fig:india-tech width=85%}
+![Medium- und High-Tech-Exporte Indiens (Anteil an Industrieexporten). Quelle: UNIDO/WDI.](../images/india_tech_exports.svg){#fig:india-tech width=95%}
 
 Mehrere Kanäle können diesen Strukturwandel erklären. Ausländische Direktinvestitionen bringen Kapital, Managementwissen
 und Technologie. Exportmärkte setzen Unternehmen stärkerem Wettbewerb aus. Reformen im Finanzsektor verbessern den
@@ -291,7 +291,7 @@ Importkompression, Rezession und einem abrupten Ende der Finanzierung [@imfsta20
 empirische Einstieg in eine allgemeine Mechanik: Ein Land, das lange Kapital importiert, kann in Schwierigkeiten
 geraten, wenn ausländische Investoren plötzlich höhere Risikoprämien verlangen oder ihr Kapital abziehen.
 
-![Leistungsbilanzsaldo Thailand. Quelle: IMF STA.](../images/thailand_ca_balance.svg){#fig:thailand-ca width=85%}
+![Leistungsbilanzsaldo Thailand. Quelle: IMF STA.](../images/thailand_ca_balance.svg){#fig:thailand-ca width=95%}
 
 @fig:capital-market-2 übersetzt diese Geschichte in ein Kapitalmarktdiagramm. Die Ausgangslage ist wie zuvor: Bei Zugang
 zu günstigem ausländischem Kapital gilt $I > S$. Das Land finanziert die Differenz durch Kapitalzuflüsse. Wenn aber der
@@ -323,7 +323,7 @@ Baht. In US-Dollar bewegt sich die Verschuldung relativ glatt. Aus Sicht inländ
 Baht-Last. Als der Baht in der Krise einbrach, stieg der lokale Wert der Dollarschulden sprunghaft. Innerhalb eines
 Jahres konnte die in Baht gemessene Schuldenlast um fast 60 Prozent steigen [@imfsta2025; @fischer1998].
 
-![Auslandsverschuldung Thailand (USD vs. THB). Quelle: IMF STA.](../images/thailand_ext_debt.svg){#fig:thailand-debt width=85%}
+![Auslandsverschuldung Thailand (USD vs. THB). Quelle: IMF STA.](../images/thailand_ext_debt.svg){#fig:thailand-debt width=95%}
 
 Das ist der Kern vieler Schwellenländerkrisen: Eine Abwertung hilft theoretisch den Exporten, verschlechtert aber
 gleichzeitig die Bilanzen derjenigen, die in Fremdwährung verschuldet sind. Unternehmen, die vorher solvent wirkten,
@@ -351,13 +351,13 @@ Nach 1997 brechen die Reserven ein, während die Währung stark fällt [@imfsta2
 Intervention: Eine Zentralbank kann Zeit kaufen, aber sie kann fundamentale Zweifel an Tragfähigkeit, Verschuldung und
 Kapitalflüssen nicht dauerhaft wegintervenieren.
 
-![Währungsreserven und Wechselkurs Thailand. Quelle: IMF STA.](../images/thailand_forex.svg){#fig:thailand-forex width=85%}
+![Währungsreserven und Wechselkurs Thailand. Quelle: IMF STA.](../images/thailand_forex.svg){#fig:thailand-forex width=95%}
 
 Die entscheidende Frage ist nun, ob solche Krisen „nur“ Finanzmärkte betreffen. @fig:thailand-gdp zeigt, dass die
 Antwort nein lautet. Das **Pro-Kopf-Einkommen** Thailands in aktuellen US-Dollar bricht um 1997/98 stark ein — um rund
 40 Prozent — und erholt sich danach nur langsam.
 
-![Pro-Kopf-Einkommen Thailand (aktuelle USD). Quelle: World Bank WDI.](../images/thailand_gdp_per_capita.svg){#fig:thailand-gdp width=85%}
+![Pro-Kopf-Einkommen Thailand (aktuelle USD). Quelle: World Bank WDI.](../images/thailand_gdp_per_capita.svg){#fig:thailand-gdp width=95%}
 
 Der Übertragungsmechanismus ist direkt. Unternehmen mit Dollarschulden konnten ihre Verbindlichkeiten nicht mehr
 bedienen. Banken mussten Kredite abschreiben. Investitionsprojekte wurden gestoppt. Arbeitsplätze gingen verloren. Aus
@@ -389,7 +389,7 @@ Hafenstaus, Containerknappheit und Kapazitätsengpässe treiben die Kosten. 2022
 geopolitische Unsicherheit den Druck. Seitdem normalisieren sich die Raten teilweise, bleiben aber über dem
 Vorkrisenniveau [@giovanni2022; @imf2023fragmentation].
 
-![Seefracht-Preisindex (Hochsee, 2019 = 100). Quelle: FRED/BLS.](../images/shipping-costs.svg){#fig:shipping width=85%}
+![Seefracht-Preisindex (Hochsee, 2019 = 100). Quelle: FRED/BLS.](../images/shipping-costs.svg){#fig:shipping width=95%}
 
 Die Grafik zeigt mehr als einen kurzen Pandemieeffekt. Sie steht für ein neues Regime höherer Aufmerksamkeit für
 Lieferkettenrisiken. Jahrzehntelang dominierte die Logik der Effizienz: niedrige Lagerbestände, Just-in-time-Produktion,
@@ -410,7 +410,7 @@ Ausmaß schrumpft. Es bedeutet, dass ein wichtiger Korridor gemieden wird. Der S
 Rote Meer und die Straße Bab al-Mandab. Angriffe auf Handelsschiffe und militärische Eskalation führten dazu, dass viele
 Reedereien um das Kap der Guten Hoffnung ausweichen mussten [@imfportwatch2025; @ft2024suez].
 
-![Handelsvolumen durch globale Engpässe (Suez, indexiert). Quelle: IMF PortWatch/HDX.](../images/panama_suez_trade_capacity.svg){#fig:suez width=85%}
+![Handelsvolumen durch globale Engpässe (Suez, indexiert). Quelle: IMF PortWatch/HDX.](../images/panama_suez_trade_capacity.svg){#fig:suez width=95%}
 
 Die ökonomischen Folgen entstehen nicht nur durch den Ausfall eines Kanals. Längere Routen bedeuten höhere
 Treibstoffkosten, längere Lieferzeiten, höhere Versicherungskosten und weniger verfügbare Schiffskapazität. Damit
@@ -422,14 +422,14 @@ Transitvolumen 2025–2026 als 7-Tage-gleitender Durchschnitt, indexiert auf 202
 Transit stärker als das globale Handelsvolumen, weil Schiffe Routen meiden, verzögert fahren oder Lieferungen aus
 Lagerbeständen ersetzt werden [@imfportwatch2025; @reuters2026hormuz].
 
-![Transitvolumen Straße von Hormus (7-Tage-Durchschnitt, Index 2025 = 100). Quelle: IMF PortWatch/HDX.](../images/hormuz_trade_volume_2026.svg){#fig:hormuz width=85%}
+![Transitvolumen Straße von Hormus (7-Tage-Durchschnitt, Index 2025 = 100). Quelle: IMF PortWatch/HDX.](../images/hormuz_trade_volume_2026.svg){#fig:hormuz width=95%}
 
 Öl ist ein global gehandelter Rohstoff. Risiken an Hormus wirken deshalb nicht nur regional, sondern auf
 Weltmarktpreise. @fig:oil-2026 zeigt Brent- und WTI-Spotpreise ab Mitte 2025. Die vertikale Markierung kennzeichnet den
 Beginn der akuten Hormus-/Iran-Krise Ende Februar 2026. Danach steigen die Preise deutlich [@fred2025;
 @reuters2026hormuz].
 
-![Brent- und WTI-Ölpreise während der Iran-/Hormus-Krise 2026. Quelle: EIA via FRED.](../images/oil_prices_iran_2026.svg){#fig:oil-2026 width=85%}
+![Brent- und WTI-Ölpreise während der Iran-/Hormus-Krise 2026. Quelle: EIA via FRED.](../images/oil_prices_iran_2026.svg){#fig:oil-2026 width=95%}
 
 Damit wird ein bekanntes Muster sichtbar: Ein lokales Risiko kann globale makroökonomische Folgen haben. Höhere
 Energiepreise erhöhen Transportkosten, treiben Inflation, verschlechtern die Leistungsbilanz energieimportierender
@@ -446,14 +446,14 @@ verteilt, und technologische Lösungen hängen selbst von Handel, Investitionen 
 Trotz Effizienzgewinnen in vielen Volkswirtschaften steigen die Gesamtemissionen langfristig mit Wirtschaftsaktivität
 und Energieverbrauch. Der pandemiebedingte Rückgang 2020 ist sichtbar, aber nur vorübergehend.
 
-![Weltweite CO\~2\~-Emissionen (exkl. LULUCF, 1990–2024). Quelle: World Bank WDI/EDGAR.](../images/world_co2_total.svg){#fig:co2-total width=85%}
+![Weltweite CO\~2\~-Emissionen (exkl. LULUCF, 1990–2024). Quelle: World Bank WDI/EDGAR.](../images/world_co2_total.svg){#fig:co2-total width=95%}
 
 @fig:co2-intensity ergänzt diese Perspektive. Sie zeigt **Emissionen pro Kopf** und die **CO~2~-Intensität des BIP**,
 also Emissionen pro Dollar Wertschöpfung in Kaufkraftparitäten. Die Intensität sinkt langsam. Pro Dollar
 Wirtschaftsleistung wird also weniger CO~2~ ausgestoßen. Gleichzeitig können die Gesamtemissionen weiter steigen, wenn
 die Weltwirtschaft schneller wächst als die Emissionsintensität sinkt [@ipcc2023; @dechezlepretre2023].
 
-![CO\~2\~ pro Kopf und CO\~2\~-Intensität des BIP. Quelle: World Bank WDI/EDGAR/IEA.](../images/world_co2.svg){#fig:co2-intensity width=85%}
+![CO\~2\~ pro Kopf und CO\~2\~-Intensität des BIP. Quelle: World Bank WDI/EDGAR/IEA.](../images/world_co2.svg){#fig:co2-intensity width=95%}
 
 Diese beiden Abbildungen zeigen die zentrale Spannung: Nachhaltiges Wachstum ist möglich, aber nicht automatisch. Es
 reicht nicht, dass Produktion effizienter wird. Die Entkopplung muss stark genug sein, um absolute Emissionen zu senken.
@@ -469,7 +469,7 @@ klassische und kritische Rohstoffe, indexiert auf Juni 2012 = 100 [@imfcommoditi
 und Kohle bleiben volatil, etwa im Zusammenhang mit dem Ukraine-Krieg. Lithium und seltene Erden schwanken ebenfalls
 stark und sind geografisch konzentriert; ein erheblicher Anteil der Verarbeitung liegt in China [@iea2024critical].
 
-![Rohstoffpreise: klassische und kritische Mineralien (Index Juni 2012 = 100). Quelle: IMF Primary Commodity Prices.](../images/raw_materials.svg){#fig:commodities width=85%}
+![Rohstoffpreise: klassische und kritische Mineralien (Index Juni 2012 = 100). Quelle: IMF Primary Commodity Prices.](../images/raw_materials.svg){#fig:commodities width=95%}
 
 Damit schließt sich der Bogen zur Handelspolitik. Auch grüne Technologien beseitigen Abhängigkeiten nicht automatisch.
 Sie verändern sie. Die Frage ist daher nicht, ob eine moderne Wirtschaft abhängig ist, sondern welche Abhängigkeiten sie
