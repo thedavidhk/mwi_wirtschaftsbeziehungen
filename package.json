@@ -8,7 +8,7 @@
     "node": ">=18.0.0"
   },
   "scripts": {
-    "build:css": "sass assets/css/custom.scss assets/css/custom.css --style=compressed",
+    "build:css": "sass assets/css/custom.scss assets/css/custom.css --style=compressed --no-source-map",
     "build:vendor": "node scripts/copy-vendor.mjs",
     "build": "npm run build:css && npm run build:vendor",
     "start": "npx --yes serve . -l 8000"
