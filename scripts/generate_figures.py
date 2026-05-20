@@ -1259,20 +1259,6 @@ def _generate_managed_figures(output_dir: Path) -> None:
     oil_prices_iran_2026(output_dir / "oil_prices_iran_2026.svg")
 
     chokepoint_trade_volume(
-        output_dir / "panama_suez_trade_volume.svg",
-        selected_chokepoints=("panama", "suez"),
-        start_date="2019-01-01",
-        rolling=28,
-        index_baseline=("2019-01-01", "2023-12-31"),
-    )
-    chokepoint_trade_volume(
-        output_dir / "cape_trade_volume.svg",
-        selected_chokepoints=("cape",),
-        start_date="2019-01-01",
-        rolling=28,
-        index_baseline=("2019-01-01", "2023-12-31"),
-    )
-    chokepoint_trade_volume(
         output_dir / "hormuz_trade_volume_2026.svg",
         selected_chokepoints=("hormuz",),
         start_date="2025-01-01",
