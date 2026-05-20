@@ -53,6 +53,26 @@ Older semesters used an embedded reveal.js fork. They remain on these branches (
 
 New semesters should branch from `main`.
 
+## GitHub Pages
+
+Slides are deployed from the `main` branch via [`.github/workflows/pages.yml`](.github/workflows/pages.yml).
+
+**One-time setup** (repo Settings on GitHub):
+
+1. **Settings → Pages → Build and deployment → Source:** choose **GitHub Actions** (not “Deploy from a branch”).
+2. **Settings → General → Default branch:** set to **`main`** (the old `master` branch is still upstream reveal.js and will not work for these slides).
+
+**After each push to `main`**, the workflow runs `npm ci`, `npm run build`, assembles `site/`, and publishes to Pages.
+
+Public URL (user/org site): `https://<user>.github.io/mwi_wirtschaftsbeziehungen/`
+
+Local check before pushing:
+
+```bash
+npm run build:site
+npx --yes serve site -l 8000
+```
+
 ## License
 
 Slide content: course materials. reveal.js: MIT (see [LICENSE](LICENSE)).
