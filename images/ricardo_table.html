@@ -1,0 +1,145 @@
+<style>
+.reveal .ricardo-table .unit { white-space: nowrap; }
+.reveal .ricardo-table .frac {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  vertical-align: middle;
+  line-height: 1;
+  margin: 0 0.15em;
+}
+.reveal .ricardo-table .frac > span:first-child {
+  border-bottom: 1px solid currentColor;
+  padding: 0 0.2em 0.08em;
+}
+.reveal .ricardo-table .frac > span:last-child {
+  padding: 0.08em 0.2em 0;
+}
+.reveal .ricardo-table .frac.sm {
+  font-size: 0.85em;
+  margin: 0 0.08em;
+}
+</style>
+<h4 class="fragment semi-fade-out" data-fragment-index="8">Kosten der Produktion</h4>
+<table class="ricardo-table fragment semi-fade-out" data-fragment-index="8">
+    <thead>
+        <tr>
+        <th></th>
+        <th colspan="2" align="center">Absolut (h/t)</th>
+        <th colspan="2" align="center">Relativ (t/t)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td></td>
+            <td align="center">Wein</td>
+            <td align="center">Tuch</td>
+            <td align="center" class="fragment" data-fragment-index="1">Wein</td>
+            <td align="center" class="fragment" data-fragment-index="1">Tuch</td>
+        </tr>
+        <tr>
+            <td>Portugal</td>
+            <td align="center"><span class="unit">80 <span class="frac"><span>h</span><span>t</span></span></span></td>
+            <td align="center"><span class="unit">90 <span class="frac"><span>h</span><span>t</span></span></span></td>
+            <td align="center" class="fragment" data-fragment-index="2">
+                <span class="r-stack">
+                    <span class="fragment fade-out" data-fragment-index="4">
+                        <span class="frac">
+                            <span class="unit">80 <span class="frac sm"><span>h</span><span>t</span></span></span>
+                            <span class="unit">90 <span class="frac sm"><span>h</span><span>t</span></span></span>
+                        </span>
+                    </span>
+                    <span class="fragment fade-in" data-fragment-index="4">0,889</span>
+                </span>
+            </td>
+            <td align="center" class="fragment" data-fragment-index="3">
+                <span class="r-stack">
+                    <span class="fragment fade-out" data-fragment-index="4">
+                        <span class="frac">
+                            <span class="unit">90 <span class="frac sm"><span>h</span><span>t</span></span></span>
+                            <span class="unit">80 <span class="frac sm"><span>h</span><span>t</span></span></span>
+                        </span>
+                    </span>
+                    <span class="fragment fade-in" data-fragment-index="4">1,125</span>
+                </span>
+            </td>
+        </tr>
+        <tr>
+            <td>England</td>
+            <td align="center"><span class="unit">120 <span class="frac"><span>h</span><span>t</span></span></span></td>
+            <td align="center"><span class="unit">100 <span class="frac"><span>h</span><span>t</span></span></span></td>
+            <td align="center" class="fragment" data-fragment-index="5">
+                <span class="r-stack">
+                    <span class="fragment fade-out" data-fragment-index="7">
+                        <span class="frac"><span>120</span><span>100</span></span>
+                    </span>
+                    <span class="fragment fade-in" data-fragment-index="7">1,2</span>
+                </span>
+            </td>
+            <td align="center" class="fragment" data-fragment-index="6">
+                <span class="r-stack">
+                    <span class="fragment fade-out" data-fragment-index="7">
+                        <span class="frac"><span>100</span><span>120</span></span>
+                    </span>
+                    <span class="fragment fade-in" data-fragment-index="7">0,833</span>
+                </span>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<h4 class="fragment" data-fragment-index="8">Gesamtproduktion</h4>
+<table class="ricardo-table fragment" data-fragment-index="8">
+    <tr>
+        <th></th>
+        <th colspan="2" align="center">ohne Handel</th>
+        <th colspan="2" align="center">mit Handel</th>
+    </tr>
+    <tr>
+        <th></th>
+        <th align="center">Wein</th>
+        <th align="center">Tuch</th>
+        <th align="center">Wein</th>
+        <th align="center">Tuch</th>
+    </tr>
+    <tr>
+        <td>Portugal<br>(170h)</td>
+        <td align="center" class="fragment" data-fragment-index="9">1 t</td>
+        <td align="center" class="fragment" data-fragment-index="9">1 t</td>
+        <td align="center" class="fragment" data-fragment-index="13">
+            <span class="r-stack">
+                <span class="fragment fade-out" data-fragment-index="14">
+                    <span class="frac">
+                        <span>170h</span>
+                        <span class="unit">80 <span class="frac sm"><span>h</span><span>t</span></span></span>
+                    </span>
+                </span>
+                <span class="fragment fade-in" data-fragment-index="14">2,125 t</span>
+            </span>
+        </td>
+        <td align="center" class="fragment" data-fragment-index="12">0 t</td>
+    </tr>
+    <tr>
+        <td>England<br>(220h)</td>
+        <td align="center" class="fragment" data-fragment-index="10">1 t</td>
+        <td align="center" class="fragment" data-fragment-index="10">1 t</td>
+        <td align="center" class="fragment" data-fragment-index="15">0 t</td>
+        <td align="center" class="fragment" data-fragment-index="16">
+            <span class="r-stack">
+                <span class="fragment fade-out" data-fragment-index="17">
+                    <span class="frac">
+                        <span>220h</span>
+                        <span class="unit">100 <span class="frac sm"><span>h</span><span>t</span></span></span>
+                    </span>
+                </span>
+                <span class="fragment fade-in" data-fragment-index="17">2,2 t</span>
+            </span>
+        </td>
+    </tr>
+    <tr class="fragment" data-fragment-index="11">
+        <th>Summe</th>
+        <th class="fragment" data-fragment-index="11" align="center">2 t</th>
+        <th class="fragment" data-fragment-index="11" align="center">2 t</th>
+        <th class="fragment" data-fragment-index="18" align="center">2,125 t</th>
+        <th class="fragment" data-fragment-index="18" align="center">2,2 t</th>
+    </tr>
+</table>

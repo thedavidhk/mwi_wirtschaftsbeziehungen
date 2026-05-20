@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="de">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Internationale Wirtschaftsbeziehungen</title>
+
+		<link rel="stylesheet" href="vendor/reveal.js/dist/reset.css">
+		<link rel="stylesheet" href="vendor/reveal.js/dist/reveal.css">
+		<link rel="stylesheet" href="vendor/reveal.js/dist/theme/night.css">
+		<link rel="stylesheet" href="assets/css/custom.css">
+
+		<link rel="stylesheet" href="vendor/reveal.js/plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-markdown="slides.md" data-separator="^---$" data-separator-vertical="^--$"
+					data-separator-notes="^Notes:$" data-charset="utf-8">
+				</section>
+			</div>
+		</div>
+
+		<script src="vendor/reveal.js/dist/reveal.js"></script>
+		<script src="vendor/reveal.js/plugin/notes/notes.js"></script>
+		<script src="vendor/reveal.js/plugin/markdown/markdown.js"></script>
+		<script src="vendor/reveal.js/plugin/highlight/highlight.js"></script>
+		<script src="vendor/reveal.js/plugin/math/math.js"></script>
+		<script src="assets/plugins/external-html.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js-plugins@4.2.5/chart/plugin.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js"></script>
+		<script>
+			Reveal.initialize({
+				hash: true,
+				plugins: [
+					RevealMarkdown,
+					RevealHighlight,
+					RevealNotes,
+					RevealMath.KaTeX,
+					RevealChart,
+					ExternalHtmlPlugin
+				]
+			});
+		</script>
+	</body>
+</html>

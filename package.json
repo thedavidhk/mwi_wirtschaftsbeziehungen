@@ -1,0 +1,22 @@
+{
+  "name": "mwi-wirtschaftsbeziehungen",
+  "version": "1.0.0",
+  "description": "Lecture slides: Internationale Wirtschaftsbeziehungen (reveal.js)",
+  "private": true,
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "build:css": "sass assets/css/custom.scss assets/css/custom.css --style=compressed",
+    "build:vendor": "node scripts/copy-vendor.mjs",
+    "build": "npm run build:css && npm run build:vendor",
+    "start": "npx --yes serve . -l 8000"
+  },
+  "dependencies": {
+    "reveal.js": "5.0.4"
+  },
+  "devDependencies": {
+    "sass": "^1.69.5"
+  }
+}

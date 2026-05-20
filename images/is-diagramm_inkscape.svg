@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="800"
+   height="600"
+   viewBox="0 0 800 600"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   sodipodi:docname="is-diagramm_inkscape.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#000000"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="false"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="0.86686054"
+     inkscape:cx="332.23337"
+     inkscape:cy="263.59488"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="1920"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <marker
+       style="overflow:visible;"
+       id="Arrow1Mend"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.4) rotate(180) translate(10,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt;"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path2390" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mstart"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mstart"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.4) translate(10,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path2387" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="axes">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#e7e7e7;fill-opacity:1;stroke:none"
+         x="650"
+         y="580"
+         id="x_axis_label"><tspan
+           sodipodi:role="line"
+           id="tspan92897"
+           x="650"
+           y="580"
+           style="fill:#e7e7e7;fill-opacity:1">$</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#e6e6e6;fill-opacity:1;stroke:none"
+         x="25"
+         y="60"
+         id="y_axis_label"><tspan
+           sodipodi:role="line"
+           id="tspan66315"
+           x="25"
+           y="60"
+           style="font-style:normal;fill:#e6e6e6;fill-opacity:1">i</tspan></text>
+      <path
+         style="fill:none;stroke:#cdcdcd;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+         d="M 50,550 H 650"
+         id="x_axis" />
+      <path
+         style="fill:none;stroke:#cdcdcd;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow1Mstart)"
+         d="M 50,50 V 550"
+         id="y_axis" />
+    </g>
+    <g
+       id="savings">
+      <path
+         style="fill:none;stroke:#5599ff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 524.26914,75 c 0,0 -75,250 -449.999997,450"
+         id="s_curve" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#5599ff;fill-opacity:1;stroke:none"
+         x="530"
+         y="80"
+         id="s_label"><tspan
+           sodipodi:role="line"
+           id="tspan19250"
+           x="530"
+           y="80"
+           style="fill:#5599ff;fill-opacity:1">S</tspan></text>
+    </g>
+    <g
+       id="investment">
+      <path
+         style="fill:none;stroke:#ff5555;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 75,75 c 0,0 75,250 450,450"
+         id="i_curve" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#ff5555;fill-opacity:1;stroke:none"
+         x="530"
+         y="530"
+         id="i_label"><tspan
+           sodipodi:role="line"
+           id="tspan31860"
+           x="530"
+           y="530"
+           style="fill:#ff5555;fill-opacity:1">I</tspan></text>
+    </g>
+    <g
+       id="interest_local">
+      <path
+         style="fill:#e6e6e6;stroke:#e6e6e6;stroke-width:2.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:7.5, 7.5;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 300,372 c -80,0 -160,0 -250,0"
+         id="interest_local_line" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#e4e4e4;fill-opacity:1;stroke:none"
+         x="14"
+         y="385"
+         id="interest_local_label"><tspan
+           sodipodi:role="line"
+           id="tspan58245"
+           x="14"
+           y="385"
+           style="font-style:normal;fill:#e4e4e4;fill-opacity:1">i*</tspan></text>
+    </g>
+    <g
+       id="si_amount">
+      <path
+         style="fill:none;stroke:#e5e5e5;stroke-width:2.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:7.5, 7.5;stroke-dashoffset:0;stroke-opacity:1"
+         d="M 300,372 V 549.91553"
+         id="si_amount_line" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"
+         x="252.28438"
+         y="586.16901"
+         id="si_amount_label"><tspan
+           sodipodi:role="line"
+           id="tspan133486"
+           x="252.28438"
+           y="586.16901"
+           style="font-size:40px;fill:#e6e6e6;fill-opacity:1">S*=I*</tspan></text>
+    </g>
+    <g
+       id="world_market">
+      <path
+         style="fill:none;stroke:#aade87;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         d="M 75,435 H 576.47"
+         id="a_curve"
+         sodipodi:nodetypes="cc" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#aade87;fill-opacity:1;stroke:none"
+         x="580.97589"
+         y="444.4245"
+         id="a_label"><tspan
+           sodipodi:role="line"
+           id="tspan111731"
+           x="580.97589"
+           y="444.4245">A</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#e4e4e4;fill-opacity:1;stroke:none"
+       x="14"
+       y="449.47778"
+       id="interest_world_label"><tspan
+         sodipodi:role="line"
+         id="tspan101320"
+         x="14"
+         y="449.47778"
+         style="font-style:normal;fill:#e4e4e4;fill-opacity:1">i'</tspan></text>
+    <g
+       id="s_amount">
+      <path
+         style="fill:none;stroke:#e5e5e5;stroke-width:2.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:7.5, 7.5;stroke-dashoffset:0;stroke-opacity:1"
+         d="M 218.17732,437.66768 V 549.4192"
+         id="s_amount_line" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"
+         x="204.17531"
+         y="586.16901"
+         id="s_amount_label"><tspan
+           sodipodi:role="line"
+           id="tspan152396"
+           x="204.17531"
+           y="586.16901"
+           style="font-size:40px;fill:#e6e6e6;fill-opacity:1">S'</tspan></text>
+    </g>
+    <g
+       id="i_amount">
+      <path
+         style="fill:none;stroke:#e5e5e5;stroke-width:2.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:7.5, 7.5;stroke-dashoffset:0;stroke-opacity:1"
+         d="M 381.35238,437.55267 V 550.15535"
+         id="i_amount_line" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"
+         x="374.82016"
+         y="586.16901"
+         id="i_amount_label"><tspan
+           sodipodi:role="line"
+           id="tspan161922"
+           x="374.82016"
+           y="586.16901"
+           style="font-size:40px;fill:#e6e6e6;fill-opacity:1">I'</tspan></text>
+    </g>
+  </g>
+</svg>

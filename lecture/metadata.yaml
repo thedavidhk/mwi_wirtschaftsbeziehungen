@@ -1,0 +1,34 @@
+---
+title: "Internationale Wirtschaftsbeziehungen"
+subtitle: "Begleitscript zur Vorlesung"
+author: "David Joshua Cardoso Herok"
+institute: "Hochschule Anhalt"
+lang: de-DE
+documentclass: scrartcl
+classoption:
+  - 12pt
+  - a4paper
+  - DIV=12
+geometry: margin=2.8cm
+fontsize: 12pt
+linestretch: 1.15
+link-citations: true
+colorlinks: true
+toc: true
+toc-depth: 2
+numbersections: true
+bibliography: references.bib
+header-includes:
+  - \usepackage{graphicx}
+  - \usepackage{float}
+  - \floatplacement{figure}{H}
+  - \usepackage{booktabs}
+  - \usepackage{longtable}
+  - \usepackage{caption}
+  - \captionsetup{font=small,labelfont=bf}
+  - \usepackage{fontspec}
+  - \setmainfont{Latin Modern Roman}
+  - \usepackage[ngerman]{babel}
+  - \usepackage{microtype}
+  - \usepackage{hyperref}
+---
