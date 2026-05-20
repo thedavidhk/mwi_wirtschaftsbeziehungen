@@ -12,6 +12,8 @@ vendor/
 .sass-cache
 .venv/
 __pycache__
+assets/css/*.css
+assets/css/*.map
 lecture/build/
 lecture/script.build.md
 lecture/script.pdf
