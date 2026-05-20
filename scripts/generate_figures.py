@@ -369,6 +369,7 @@ def get_wdi_data(
             payload = json.loads(cache_path.read_text(encoding="utf-8"))
         else:
             payload = request_json(url, params=params)
+            cache_path.parent.mkdir(parents=True, exist_ok=True)
             cache_path.write_text(json.dumps(payload), encoding="utf-8")
 
         if not isinstance(payload, list) or len(payload) < 2 or payload[1] is None:
@@ -877,22 +878,39 @@ def india_tech(file_path: Path | str) -> None:
 
 
 
-def csv_plot(
-    csv_path: Path | str,
-    output_path: Path | str,
-    xlabel: str,
-    ylabel: str,
-    source: str,
-    *,
-    y2: Sequence[str] | None = None,
-    y2label: str | None = None,
-) -> None:
-    """Create a simple line plot from a local CSV file with a date index."""
-    df = pd.read_csv(csv_path, index_col=0)
-    df.index = pd.to_datetime(df.index)
-    fig = create_plot(df, xlabel, ylabel, source, secondary_y=y2, secondary_y_label=y2label)
-    save_figure(fig, output_path)
+# India: net direct investment inflows (financial account, USD, annual, millions).
+# Key verified against legacy chart: 100 * series / WDI GDP ≈ FDI net inflows (% of GDP).
+INDIA_FDI_BOP_KEY = "IND.L_NIL_T.D_F.USD.A"
 
+
+def india_fdi_gdp(file_path: Path | str, *, force: bool = False) -> None:
+    """Plot FDI net inflows as a share of GDP for India (IMF BOP + WDI GDP)."""
+    fdi_usd_m = imf_sta_series("BOP", INDIA_FDI_BOP_KEY, 1990, 2024, freq="A", force=force)
+    fdi_by_year = pd.Series(
+        fdi_usd_m.to_numpy(),
+        index=fdi_usd_m.index.year,
+        dtype="float64",
+    )
+
+    gdp = get_wdi_data(
+        ["NY.GDP.MKTP.CD"],
+        ["IN"],
+        start_year=1990,
+        end_year=2024,
+        force=force,
+    )
+    gdp_usd_m = gdp[("NY.GDP.MKTP.CD", "IND")] / 1e6
+    gdp_usd_m.index = gdp_usd_m.index.year
+
+    ratio = 100 * fdi_by_year / gdp_usd_m
+    data = pd.DataFrame({"Indien": ratio}).dropna().sort_index()
+    fig = create_plot(
+        data,
+        "Jahr",
+        "% des BIP",
+        "IMF Balance of Payments (BPM6); World Bank WDI (GDP, current USD)",
+    )
+    save_figure(fig, file_path)
 
 
 def thailand_ca_balance(file_path: Path | str) -> None:
@@ -1232,13 +1250,7 @@ def chokepoint_trade_volume(
 
 def _generate_managed_figures(output_dir: Path) -> None:
     """Write all matplotlib figures managed by this script."""
-    csv_plot(
-        DATA_DIR / "india_fdi_gdp.csv",
-        output_dir / "india_fdi_gdp.svg",
-        "Jahr",
-        "% des BIP",
-        "United Nations Conference on Trade and Development (UNCTAD) statistical data",
-    )
+    india_fdi_gdp(output_dir / "india_fdi_gdp.svg")
     raw_materials(output_dir / "raw_materials.svg")
 
     trade_openness_by_income_group(output_dir / "trade-as-share-of-gdp.svg")

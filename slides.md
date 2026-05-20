@@ -183,7 +183,7 @@ Notes:
 *Abbildung 8: Direktinvestitionen in Indien*
 
 Notes:
-- Quelle: UNCTAD über World Bank WDI
+- Quelle: IMF Balance of Payments; World Bank WDI (GDP)
 - Anteil der Direktinvestitionen am BIP in Indien
 - **Direktinvestitionen:** meist langfristige Investitionen, bei denen ein
 Unternehmen oder eine Person direkt in ein Unternehmen in einem anderen Land

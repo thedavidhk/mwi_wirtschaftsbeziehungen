@@ -245,7 +245,7 @@ Portfolioflüsse: Unternehmen beteiligen sich an Firmen, bauen Produktionsstätt
 Dienstleistungen [@unctad2025]. Der Ausschlag um 2009 dominiert die Skala, aber die eigentliche Entwicklungsgeschichte
 liegt im graduellen Anstieg der 1990er und 2000er Jahre.
 
-![Direktinvestitionen in Indien (Prozent des BIP). Quelle: UNCTAD über World Bank WDI.](../images/india_fdi_gdp.svg){#fig:india-fdi width=95%}
+![Direktinvestitionen in Indien (Prozent des BIP). Quelle: IMF Balance of Payments; World Bank WDI (GDP).](../images/india_fdi_gdp.svg){#fig:india-fdi width=95%}
 
 @fig:india-catchup zeigt das **Pro-Kopf-Einkommen** Indiens relativ zu den USA. In den 1980er Jahren vergrößert sich die
 Lücke. Nach den Reformen beginnt ein Aufholprozess. Das ist besonders bemerkenswert, weil es sich um Pro-Kopf-Größen
