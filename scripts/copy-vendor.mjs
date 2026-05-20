@@ -1,5 +1,6 @@
 /**
- * Copy a minimal reveal.js subset from node_modules into vendor/reveal.js/
+ * Copy a minimal reveal.js subset from node_modules into assets/reveal/
+ * (under assets/ so it ships with the rest of the static site).
  * for static serving (no node_modules in deployment).
  */
 import { cpSync, mkdirSync, rmSync, existsSync } from 'fs';
@@ -8,7 +9,7 @@ import { fileURLToPath } from 'url';
 
 const root = join( dirname( fileURLToPath( import.meta.url ) ), '..' );
 const srcRoot = join( root, 'node_modules', 'reveal.js' );
-const destRoot = join( root, 'vendor', 'reveal.js' );
+const destRoot = join( root, 'assets', 'reveal' );
 
 if( !existsSync( srcRoot ) ) {
 	console.error( 'reveal.js not found. Run: npm install' );
@@ -44,4 +45,4 @@ for( const [ from, to ] of copies ) {
 	console.log( `copied ${to}` );
 }
 
-console.log( 'vendor/reveal.js ready' );
+console.log( 'assets/reveal ready' );

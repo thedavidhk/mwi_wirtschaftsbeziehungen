@@ -10,7 +10,7 @@ Requirements: Node.js 18+
 
 ```bash
 npm install
-npm run build    # compile custom CSS + copy reveal.js into vendor/
+npm run build    # compile custom CSS + copy reveal.js into assets/reveal/
 npm start        # http://localhost:8000 — open index.html
 ```
 
@@ -39,7 +39,7 @@ See [`lecture/README.md`](lecture/README.md) for the Pandoc/XeLaTeX workflow (`m
 | `slides.md` | Slide content (Markdown) |
 | `index.html` | Deck shell and plugin config |
 | `assets/` | Custom CSS and plugins |
-| `vendor/reveal.js/` | Generated from `npm run build` (gitignored) |
+| `assets/reveal/` | Generated from `npm run build` (gitignored; published via `gh-pages` branch) |
 | `images/` | Figures and photos |
 | `lecture/` | Printable script (`script.md` → PDF) |
 
@@ -55,16 +55,19 @@ New semesters should branch from `main`.
 
 ## GitHub Pages
 
-Slides are deployed from the `main` branch via [`.github/workflows/pages.yml`](.github/workflows/pages.yml).
+Slides are deployed via [`.github/workflows/pages.yml`](.github/workflows/pages.yml): each push to `main` builds `site/` and pushes it to the **`gh-pages`** branch.
 
 **One-time setup** (repo Settings on GitHub):
 
-1. **Settings → Pages → Build and deployment → Source:** choose **GitHub Actions** (not “Deploy from a branch”).
-2. **Settings → General → Default branch:** set to **`main`** (the old `master` branch is still upstream reveal.js and will not work for these slides).
+1. **Settings → Pages → Build and deployment → Source:** **Deploy from a branch**
+2. **Branch:** **`gh-pages`** · **Folder:** **`/ (root)`**
+3. **Settings → General → Default branch:** **`main`** (lecture sources; `gh-pages` is generated only by CI)
 
-**After each push to `main`**, the workflow runs `npm ci`, `npm run build`, assembles `site/`, and publishes to Pages.
+Do **not** point Pages at `main` — that branch has no built `assets/reveal/` or `custom.css` (they are generated in CI).
 
-Public URL (user/org site): `https://<user>.github.io/mwi_wirtschaftsbeziehungen/`
+**After each push to `main`**, wait for the **deploy-pages** workflow, then open:
+
+`https://thedavidhk.github.io/mwi_wirtschaftsbeziehungen/`
 
 Local check before pushing:
 
@@ -72,6 +75,8 @@ Local check before pushing:
 npm run build:site
 npx --yes serve site -l 8000
 ```
+
+`index.html` sets a `<base href="/<repo>/">` on `*.github.io` so asset paths work on project Pages.
 
 ## License
 
