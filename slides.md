@@ -503,24 +503,24 @@ Notes:
 --
 
 <!-- .slide: data-background-image="images/healing_world.png" -->
-## Wie sichert man Versorgung in einer fragmentierten Weltwirtschaft?
+## Leitfragen
 
-- Effizienz vs. Resilienz — was priorisieren?
-- Zölle, Unsicherheit, Friend-shoring
-- Energie, Klima, Rohstoffe — alte und neue Abhängigkeiten
-- Welche Rolle für Handel — und wofür Finanzmärkte?
+- Wieviel Spezialisierung ist sinnvoll?
+- Welche Rolle soll Handelspolitik spielen?
+- Wie werden lokale Schocks zu globalen Risiken?
+- Wie passt Globalisierung in eine klimaneutrale Weltwirtschaft?
+- Wie können Handel und Finanzmärkte Risiken verteilen, ohne sie zu verstärken?
 
 Notes:
-- Leitfrage: Versorgung sichern, ohne die Vorteile des Welthandels zu verlieren — Spannungsfeld Effizienz vs. Resilienz (Abb. 17)
-- Teurere Logistik, Lager, Doppelbeschaffung, Reshoring: wer trägt die Kosten, wer profitiert?
-- Zölle und handelspolitische Unsicherheit (Abb. 5, Trump II): Schutzindustrie, Druckmittel, Preise, Gegenmaßnahmen
-- Friend-shoring und Fragmentierung: weniger Exposure oder neue Abhängigkeiten?
-- Suez, Hormus, Ölpreise (Abb. 18–20): lokales Risiko, globale Märkte; Versorgung vs. Inflation
-- Klima und Rohstoffe (Abb. 21–23): Emissionen trotz grünerem Wachstum; Öl, Gas, Lithium, seltene Erden
-- Handel: mehr Partner und Diversifikation — oder weniger Handel und mehr Eigenversorgung?
-- Finanzmärkte: Versicherungen, Cat Bonds, Rohstoffmärkte — Stabilisator oder zusätzliches Risiko?
-- Globalisierung als Entwicklungsmotor; heute Rivalität und Kooperation zugleich (z. B. USA–China, Klima)
-- Klimaschutz und Armut mitdenken, aber Fokus Versorgungssicherheit unter Fragmentierung
+- Abschluss als Diskussionsfolie: Es geht nicht um „mehr“ oder „weniger“ Globalisierung, sondern um bessere Gestaltung.
+- Spezialisierung: Ricardo erklärt Effizienzgewinne; Covid zeigt, warum Redundanz trotzdem wertvoll sein kann.
+- Diskussionsfrage: Welche Güter sind wirklich „kritisch“ — Halbleiter, Medikamente, Energie, Nahrung?
+- Handelspolitik: Zölle können Druckmittel sein, aber auch Preise erhöhen und Gegenmaßnahmen auslösen.
+- Friend-shoring: weniger Abhängigkeit von Rivalen, aber möglicherweise neue Klumpenrisiken in „befreundeten“ Ländern.
+- Lokale Schocks: Suez, Hormus oder Dürre am Panamakanal zeigen, wie geografisch konkrete Risiken globale Preise bewegen.
+- Klima: Energiewende reduziert fossile Abhängigkeiten, schafft aber neue Rohstoff- und Verarbeitungsketten.
+- Finanzmärkte: Versicherungen, Rohstoffmärkte und Cat Bonds können Risiken verteilen, aber auch Spekulation und Volatilität verstärken.
+- Schlussfrage: Wie viel Effizienz sind wir bereit aufzugeben, um widerstandsfähiger zu werden — und wer trägt die Kosten?
 
 ---
 
