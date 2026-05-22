@@ -67,24 +67,25 @@ zu Adam Smith und David Ricardo.
 
 ## Von Smith und Ricardo zur Spezialisierung
 
-Im 17. und 18. Jahrhundert prägte der Merkantilismus das handelspolitische Denken. Exporte galten als Quelle nationaler
-Stärke, Goldreserven als Ausdruck politischer Macht, und Handel wurde häufig als Nullsummenspiel verstanden: Was ein
-Land gewinnt, verliert ein anderes. Die Interessen der Verbraucherinnen und Verbraucher standen dabei selten im
+Im 17. und frühen 18. Jahrhundert prägte der Merkantilismus das handelspolitische Denken. Exporte galten als Quelle
+nationaler Stärke, Goldreserven als Ausdruck politischer Macht, und Handel wurde häufig als Nullsummenspiel verstanden:
+Was ein Land gewinnt, verliert ein anderes. Die Interessen der Verbraucherinnen und Verbraucher standen dabei selten im
 Mittelpunkt.
 
 Adam Smith widersprach dieser Sicht. Für ihn lag der Wohlstand einer Nation nicht in möglichst großen Goldbeständen,
-sondern in der Fähigkeit, Güter effizient zu produzieren und zu konsumieren. Handel lohnt sich nach Smith, wenn Länder
-dort produzieren, wo sie **absolute Kostenvorteile** haben — also mit gegebenen Ressourcen günstiger produzieren können
-als andere [@smith1776].
+sondern in der Fähigkeit, Güter effizient zu produzieren und zu konsumieren. Handel lohnt sich nach Smith, wenn dort
+produziert wird, wo **absolute Kostenvorteile** bestehen — wo also mit gegebenem Ressourceneinsatz mehr produziert
+werden kann [@smith1776].
 
-David Ricardo machte das Argument 1817 noch radikaler. Handel kann sich sogar dann für beide Seiten lohnen, wenn ein
-Land in allen Gütern absolut effizienter ist. Entscheidend sind nicht absolute Kosten, sondern **komparative
+David Ricardo machte das Argument 1817 noch radikaler. Handel kann sich sogar dann für beide Seiten lohnen, wenn in
+einem Land alle Güter günstiger produziert werden können. Entscheidend sind nicht absolute Kosten, sondern **komparative
 Kostenvorteile**: also die Frage, worauf ein Land verzichten muss, wenn es mehr von einem Gut produziert [@ricardo1817;
 @krugman2018].
 
-Ricardos berühmtes Beispiel handelt von Wein und Tuch in Portugal und England. @tbl:ricardo fasst eine vereinfachte
-Version zusammen. Portugal benötigt für eine Tonne Wein 80 Arbeitsstunden und für eine Tonne Tuch 90 Arbeitsstunden.
-England benötigt 120 Stunden für Wein und 100 Stunden für Tuch. Portugal ist also in beiden Gütern absolut produktiver.
+Ricardos klassisches Beispiel handelt von Wein- und Tuchhandel zwischen Portugal und England. @tbl:ricardo fasst eine
+vereinfachte Version zusammen. Portugal benötigt für eine Tonne Wein 80 Arbeitsstunden und für eine Tonne Tuch 90
+Arbeitsstunden. England benötigt 120 Stunden für Wein und 100 Stunden für Tuch. Portugal ist also in beiden Gütern
+absolut produktiver.
 
 Der entscheidende Punkt liegt in den relativen Kosten. Für Portugal kostet eine zusätzliche Tonne Wein 0,889 Tonnen
 Tuch. Für England kostet sie 1,2 Tonnen Tuch. Wein ist für Portugal relativ günstiger; Tuch ist für England relativ
