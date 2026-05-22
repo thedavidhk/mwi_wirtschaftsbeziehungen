@@ -95,16 +95,16 @@ Portugal — bei beiden Gütern den absoluten Kostenvorteil hat.
 
 : Ricardo-Beispiel: absolute und relative Produktionskosten {#tbl:ricardo}
 
-Der Wohlfahrtseffekt wird sichtbar, sobald wir ein einfaches Arbeitsbudget ergänzen: Portugal verfügt über 170
-Arbeitsstunden, England über 220. Ohne Handel produziert jedes Land jeweils eine Tonne Wein und eine Tonne Tuch. Bei
-Spezialisierung produziert Portugal nur Wein, England nur Tuch. Die gesamte Weltproduktion steigt dadurch bei gleichem
-Arbeitsaufwand.
+Der Wohlfahrtseffekt wird sichtbar, sobald wir ein einfaches Arbeitsbudget ergänzen: Portugal verfügt über 170 (80 + 90)
+Arbeitsstunden, England über 220 (120 + 100). Ohne Handel produziert jedes Land jeweils eine Tonne Wein und eine Tonne
+Tuch. Mit Spezialisierung setzt jedes Land seine Arbeit dort ein, wo es den komparativen Vorteil hat: Portugal
+produziert Wein, England produziert Tuch. Die Weltproduktion verändert sich dadurch wie folgt:
 
-| Szenario | Portugal | England | Weltproduktion Wein | Weltproduktion Tuch |
-| :------- | :------- | :------ | :-----------------: | :----------------: |
-| Autarkie | 1 t Wein, 1 t Tuch | 1 t Wein, 1 t Tuch | 2,000 t | 2,000 t |
-| Spezialisierung | 2,125 t Wein | 2,200 t Tuch | 2,125 t | 2,200 t |
-| Gewinn | — | — | +0,125 t | +0,200 t |
+| Weltproduktion | Wein | Tuch |
+| :------------- | ---: | ---: |
+| Ohne Handel | 2,000 t | 2,000 t |
+| Mit Spezialisierung | 2,125 t | 2,200 t |
+| Zusätzliche Produktion | +0,125 t | +0,200 t |
 
 : Weltproduktion mit und ohne Spezialisierung {#tbl:ricardo-output}
 
