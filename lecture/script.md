@@ -82,15 +82,11 @@ einem Land alle Güter günstiger produziert werden können. Entscheidend sind n
 Kostenvorteile**: also die Frage, worauf ein Land verzichten muss, wenn es mehr von einem Gut produziert [@ricardo1817;
 @krugman2018].
 
-Ricardos klassisches Beispiel handelt von Wein- und Tuchhandel zwischen Portugal und England. @tbl:ricardo fasst eine
-vereinfachte Version zusammen. Portugal benötigt für eine Tonne Wein 80 Arbeitsstunden und für eine Tonne Tuch 90
-Arbeitsstunden. England benötigt 120 Stunden für Wein und 100 Stunden für Tuch. Portugal ist also in beiden Gütern
-absolut produktiver.
-
-Der entscheidende Punkt liegt in den relativen Kosten. Für Portugal kostet eine zusätzliche Tonne Wein 0,889 Tonnen
-Tuch. Für England kostet sie 1,2 Tonnen Tuch. Wein ist für Portugal relativ günstiger; Tuch ist für England relativ
-günstiger. Portugal sollte sich deshalb auf Wein spezialisieren, England auf Tuch — und beide können durch Tausch
-gewinnen, obwohl Portugal in beiden Gütern absolut produktiver ist.
+Ricardos klassisches Beispiel handelt von Wein und Tuch in Portugal und England. @tbl:ricardo zeigt eine vereinfachte
+Version. Portugal benötigt für beide Güter weniger Arbeitsstunden und ist damit in beiden Bereichen absolut produktiver.
+Der entscheidende Punkt liegt aber nicht in diesen absoluten Kosten, sondern in den relativen Kosten: Wein ist für
+Portugal relativ günstiger, Tuch für England. Genau deshalb lohnt sich Spezialisierung auch dann, wenn ein Land — hier
+Portugal — bei beiden Gütern den absoluten Kostenvorteil hat.
 
 |          | Wein (h/t) | Tuch (h/t) | Tuch/Wein | Wein/Tuch |
 | :------- | :--------: | :--------: | :-------: | :-------: |
@@ -99,17 +95,23 @@ gewinnen, obwohl Portugal in beiden Gütern absolut produktiver ist.
 
 : Ricardo-Beispiel: absolute und relative Produktionskosten {#tbl:ricardo}
 
-Um den Wohlfahrtseffekt sichtbar zu machen, ergänzen wir das Beispiel um ein einfaches Arbeitsbudget. Portugal verfügt
-über 170 Arbeitsstunden, England über 220. In Autarkie kann Portugal damit 1 Tonne Wein und 1 Tonne Tuch produzieren,
-denn $80 + 90 = 170$. England kann ebenfalls 1 Tonne Wein und 1 Tonne Tuch produzieren, denn $120 + 100 = 220$. Ohne
-Handel entstehen insgesamt also 2 Tonnen Wein und 2 Tonnen Tuch.
+Der Wohlfahrtseffekt wird sichtbar, sobald wir ein einfaches Arbeitsbudget ergänzen: Portugal verfügt über 170
+Arbeitsstunden, England über 220. Ohne Handel produziert jedes Land jeweils eine Tonne Wein und eine Tonne Tuch. Bei
+Spezialisierung produziert Portugal nur Wein, England nur Tuch. Die gesamte Weltproduktion steigt dadurch bei gleichem
+Arbeitsaufwand.
 
-Bei Spezialisierung nach komparativen Kostenvorteilen produziert Portugal nur Wein und England nur Tuch. Portugal kann
-mit 170 Arbeitsstunden $170/80 = 2{,}125$ Tonnen Wein herstellen; England kann mit 220 Arbeitsstunden $220/100 = 2{,}2$
-Tonnen Tuch produzieren. Die Weltproduktion steigt damit von 2 auf 2,125 Tonnen Wein und von 2 auf 2,2 Tonnen Tuch —
-ohne mehr Arbeit, ohne neue Maschinen und ohne technologischen Fortschritt. Genau darin liegt der statische
-Wohlfahrtsgewinn des Ricardo-Modells: Handel schafft keinen Wohlstand aus dem Nichts, sondern erlaubt eine
-Arbeitsteilung, bei der dieselben Ressourcen produktiver eingesetzt werden.
+| Szenario | Portugal | England | Weltproduktion Wein | Weltproduktion Tuch |
+| :------- | :------- | :------ | :-----------------: | :----------------: |
+| Autarkie | 1 t Wein, 1 t Tuch | 1 t Wein, 1 t Tuch | 2,000 t | 2,000 t |
+| Spezialisierung | 2,125 t Wein | 2,200 t Tuch | 2,125 t | 2,200 t |
+| Gewinn | — | — | +0,125 t | +0,200 t |
+
+: Weltproduktion mit und ohne Spezialisierung {#tbl:ricardo-output}
+
+Genau darin liegt der statische Wohlfahrtsgewinn des Ricardo-Modells: Handel schafft keinen Wohlstand aus dem Nichts,
+sondern erlaubt eine Arbeitsteilung, bei der dieselben Ressourcen produktiver eingesetzt werden. Das Beispiel zeigt
+also nicht, dass jedes Land in allem absolut wettbewerbsfähig sein muss. Es zeigt, dass Unterschiede bei relativen
+Kosten ausreichen, um gegenseitige Handelsgewinne zu ermöglichen.
 
 Das Modell ist bewusst einfach. Es blendet Transportkosten, Wechselkurse, Marktmacht, Skaleneffekte, Innovation,
 politische Konflikte und Verteilungseffekte aus. Gerade deshalb ist es didaktisch so stark: Es isoliert den
