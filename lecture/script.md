@@ -113,17 +113,19 @@ sondern erlaubt eine Arbeitsteilung, bei der dieselben Ressourcen produktiver ei
 also nicht, dass jedes Land in allem absolut wettbewerbsfähig sein muss. Es zeigt, dass Unterschiede bei relativen
 Kosten ausreichen, um gegenseitige Handelsgewinne zu ermöglichen.
 
-Das Modell ist bewusst einfach. Es blendet Transportkosten, Wechselkurse, Marktmacht, Skaleneffekte, Innovation,
-politische Konflikte und Verteilungseffekte aus. Gerade deshalb ist es didaktisch so stark: Es isoliert den
-Grundmechanismus. Spezialisierung kann die Gesamtproduktion erhöhen, selbst wenn die Welt nicht aus symmetrischen
-Partnern besteht.
+Damit liefert Ricardo ein erstes Zwischenfazit: Handel kann die Weltproduktion erhöhen, weil Länder ihre knappen
+Ressourcen dort einsetzen, wo ihre relativen Kosten am niedrigsten sind. Das Modell ist gerade deshalb nützlich, weil es
+diesen Mechanismus isoliert. Es zeigt den statischen Effizienzgewinn durch Spezialisierung — klarer, als es eine
+realistischere, aber unübersichtlichere Darstellung könnte. In der Realität kommen weitere Mechanismen hinzu: Größere
+Märkte ermöglichen Skaleneffekte, internationaler Wettbewerb kann Innovation beschleunigen, Unternehmen lernen durch
+Exportmärkte und ausländische Investoren, und Technologietransfer kann Produktivität erhöhen [@krugman2018]. Diese
+dynamischen Effekte können das Freihandelsargument verstärken. Zugleich bestimmen Transportkosten, Wechselkurse,
+Marktmacht, Verteilungskonflikte und politische Risiken, wie groß die Gewinne tatsächlich sind, wer von ihnen profitiert
+und wo neue Verwundbarkeiten entstehen.
 
-In der Realität sind die Gewinne aus Handel oft komplexer. Größere Märkte ermöglichen Skaleneffekte. Wettbewerb kann
-Innovation beschleunigen. Unternehmen lernen durch Exportmärkte und ausländische Investoren. Technologietransfer kann
-Produktivität erhöhen [@krugman2018]. Ricardos Modell zeigt also den statischen Kern. Die Entwicklungsgeschichte
-moderner Schwellenländer zeigt, wie dieser Kern durch dynamische Effekte ergänzt wird.
-
-Damit kommen wir nach Asien.
+Ricardos Modell ist also kein vollständiges Bild der Weltwirtschaft. Aber es ist ein guter Ausgangspunkt: Es macht den
+Grundmechanismus sichtbar, den die Entwicklungsgeschichte moderner Schwellenländer anschließend erweitert, konkretisiert
+und teilweise auch relativiert.
 
 ## Asien: Öffnung, Wachstum und Gegenbewegung
 
@@ -150,9 +152,9 @@ vorstellbar.
 Gerade diese Beispiele zeigen aber auch, warum die einfache Gleichung „mehr Handel = mehr Wohlstand“ zu kurz greift.
 Seit Mitte der 2000er Jahre steigt die Außenhandelsquote nicht mehr überall weiter. Das hat mehrere Gründe. Eine Quote
 kann nicht unbegrenzt wachsen. Globale Wertschöpfungsketten haben sich teilweise ausgereift. Nach der Finanzkrise nahm
-die Skepsis gegenüber globalen Märkten zu. Niedrige globale Zinsen erzeugten in manchen Schwellenländern
-Aufwertungsdruck und finanzielle Instabilität. Gleichzeitig gewannen Protektionismus und industriepolitische
-Schutzmaßnahmen wieder an Bedeutung [@rodrik2011; @autor2016china].
+die Skepsis gegenüber globalen Märkten zu. Niedrige globale Zinsen erzeugten in vielen Schwellenländern Aufwertungsdruck
+und finanzielle Instabilität. Gleichzeitig gewannen Protektionismus und industriepolitische Schutzmaßnahmen wieder an
+Bedeutung [@rodrik2011; @autor2016china].
 
 Damit verschiebt sich unsere Frage. Wenn Handel in der Theorie und in vielen historischen Fällen Wohlstand schafft:
 Warum handeln Länder dann nicht einfach immer frei?
@@ -163,7 +165,7 @@ Ricardos Modell zeigt, warum Handel die Gesamtproduktion erhöhen kann. Es sagt 
 Landes gewinnt und wer verliert. Genau dort beginnt die Politik.
 
 Wenn ein Land sich öffnet, profitieren häufig Verbraucherinnen und Verbraucher durch niedrigere Preise.
-Exportorientierte Unternehmen gewinnen neue Märkte. Produktive Firmen können wachsen. Gleichzeitig geraten geschützte
+Exportorientierte Unternehmen gewinnen neue Märkte. Produktive Firmen können wachsen. Gleichzeitig geraten andere
 Branchen unter Druck. Beschäftigte in importkonkurrierenden Sektoren verlieren möglicherweise Einkommen, Status oder
 Arbeitsplätze. Der gesamtwirtschaftliche Gewinn aus Handel kann also real sein — und trotzdem können einzelne Gruppen
 reale Verluste erleiden.
@@ -254,9 +256,8 @@ liegt im graduellen Anstieg der 1990er und 2000er Jahre.
 ![Direktinvestitionen in Indien (Prozent des BIP). Quelle: IMF Balance of Payments; World Bank WDI (GDP).](../images/india_fdi_gdp.svg){#fig:india-fdi width=95%}
 
 @fig:india-catchup zeigt das **Pro-Kopf-Einkommen** Indiens relativ zu den USA. In den 1980er Jahren vergrößert sich die
-Lücke. Nach den Reformen beginnt ein Aufholprozess. Das ist besonders bemerkenswert, weil es sich um Pro-Kopf-Größen
-handelt: Wachstum musste also stark genug sein, um nicht nur die Gesamtwirtschaft, sondern auch das Einkommen pro
-Einwohnerin und Einwohner zu erhöhen.
+Lücke. Nach den Reformen beginnt ein Aufholprozess. Das ist auch deshalb bemerkenswert, weil es sich um Pro-Kopf-Größen
+handelt und Indien im gleichen Zeitraum ein erhebliches Bevölkerungswachstum verzeichnet.
 
 ![Pro-Kopf-Einkommen Indien relativ zu den USA. Quelle: World Bank WDI.](../images/india_catch_up.svg){#fig:india-catchup width=95%}
 
@@ -273,11 +274,14 @@ Zugang heimischer Firmen und Haushalte zum formalen Bankensystem [@kochar2012]. 
 vorsichtig optimistischen Note: Finanzielle Integration kann Entwicklung unterstützen, wenn sie langfristige
 Investitionen und Strukturwandel ermöglicht.
 
-Doch diese Optimismus hat eine Grenze. Kapital kann nicht nur kommen. Es kann auch gehen — manchmal sehr plötzlich.
+Doch dieser Optimismus hat eine Grenze. Internationale Finanzmärkte können Investitionen ermöglichen, aber sie machen
+Volkswirtschaften auch abhängig von Erwartungen, Risikoprämien und globalen Finanzierungsbedingungen. Kapitalzuflüsse
+sind deshalb nicht automatisch stabil: Was heute Entwicklung finanziert, kann morgen unter Druck geraten, wenn Vertrauen
+schwindet oder sich die Zinsen ändern. Genau diese Dynamik führt uns nach Thailand in die 1990er Jahre.
 
 # Wechselkurse, Währungspolitik und Finanzkrisen
 
-## Von Kapitalzuflüssen zur Krise: Thailand
+## Wenn Kapitalzuflüsse versiegen: Thailand
 
 Wenn Globalisierung Wachstum und Armutsreduktion fördern kann, warum ist sie dann politisch so umkämpft? Eine Antwort
 lautet: Weil Integration nicht nur Chancen verteilt, sondern auch Risiken beschleunigt.
@@ -303,7 +307,8 @@ geraten, wenn ausländische Investoren plötzlich höhere Risikoprämien verlang
 zu günstigem ausländischem Kapital gilt $I > S$. Das Land finanziert die Differenz durch Kapitalzuflüsse. Wenn aber der
 Zins für ausländisches Kapital steigt — etwa durch höhere US-Zinsen, politische Unsicherheit, Zweifel an Banken oder
 eine veränderte Risikowahrnehmung —, verändert sich die Rechnung. Projekte, die bei niedrigen Finanzierungskosten
-rentabel wirkten, erscheinen plötzlich riskant oder unrentabel. Kapital wird abgezogen. Kurzfristig kann $S > I$ gelten.
+rentabel wirkten, erscheinen plötzlich riskant oder unrentabel. Kapital wird abgezogen und Investitionen fallen hinter
+Ersparnissen zurück.
 
 ![Kapitalmarktdynamik bei Kapitalflucht.](../images/capital_market2.svg){#fig:capital-market-2 width=75%}
 
@@ -340,8 +345,13 @@ Damit stellt sich die naheliegende Frage: Kann eine Zentralbank den Wechselkurs 
 
 ## Währungspolitik und ihre Grenzen
 
-Zentralbanken können Wechselkurse beeinflussen, aber sie können sie nicht beliebig kontrollieren. Bei
-**Aufwertungsdruck** kaufen sie Devisen und geben eigene Währung aus. Dadurch steigt die Nachfrage nach ausländischer
+Bei einem vollständig flexiblen Wechselkurs kann die Währung stärker schwanken; die Anpassung läuft dann eher über den
+Marktpreis der Währung als über Devisenreserven. Das vermeidet zwar die Notwendigkeit, einen bestimmten Kurs zu
+verteidigen, beseitigt aber nicht alle Risiken: Wechselkursschwankungen können Inflation, Exportwettbewerbsfähigkeit und
+Fremdwährungsschulden weiterhin stark beeinflussen.
+
+Wenn eine Zentralbank den Wechselkurs stabilisieren will, kann sie am Devisenmarkt intervenieren. Bei
+**Aufwertungsdruck** kauft sie Devisen und gibt eigene Währung aus. Dadurch steigt die Nachfrage nach ausländischer
 Währung, und die eigene Währung wird tendenziell geschwächt. Gleichzeitig kann die heimische Geldmenge wachsen, was
 Kreditboom und Inflation begünstigen kann.
 
@@ -419,10 +429,9 @@ Reedereien um das Kap der Guten Hoffnung ausweichen mussten [@imfportwatch2025; 
 
 ![Handelsvolumen durch globale Engpässe (Suez, indexiert). Quelle: IMF PortWatch/HDX.](../images/panama_suez_trade_capacity.svg){#fig:suez width=95%}
 
-Die ökonomischen Folgen entstehen nicht nur durch den Ausfall eines Kanals. Längere Routen bedeuten höhere
-Treibstoffkosten, längere Lieferzeiten, höhere Versicherungskosten und weniger verfügbare Schiffskapazität. Damit
-verbindet sich @fig:suez unmittelbar mit @fig:shipping: Engpässe an einer Stelle können Kosten und Planbarkeit im
-gesamten Netz verändern.
+Längere Routen bedeuten höhere Treibstoffkosten, längere Lieferzeiten, höhere Versicherungskosten und weniger verfügbare
+Schiffskapazität. Damit verbindet sich @fig:suez unmittelbar mit @fig:shipping: Engpässe an einer Stelle können Kosten
+und Planbarkeit im gesamten Netz verändern.
 
 Die **Straße von Hormus** ist ein zweiter zentraler Engpass, besonders für Öl und Gas. @fig:hormuz zeigt das geschätzte
 Transitvolumen 2025–2026 als 7-Tage-gleitender Durchschnitt, indexiert auf 2025 = 100. In akuten Krisenphasen sinkt der
@@ -439,9 +448,9 @@ Beginn der akuten Hormus-/Iran-Krise Ende Februar 2026. Danach steigen die Preis
 ![Brent- und WTI-Ölpreise während der Iran-/Hormus-Krise 2026. Quelle: EIA via FRED.](../images/oil_prices_iran_2026.svg){#fig:oil-2026 width=95%}
 
 Damit wird ein bekanntes Muster sichtbar: Ein lokales Risiko kann globale makroökonomische Folgen haben. Höhere
-Energiepreise erhöhen Transportkosten, treiben Inflation, verschlechtern die Leistungsbilanz energieimportierender
-Länder und können geldpolitische Reaktionen auslösen. Die Themen des zweiten und dritten Blocks — Leistungsbilanz,
-Kapitalmärkte, Wechselkurse und Krisen — kehren hier in anderer Form zurück.
+Energiepreise erhöhen Transportkosten, treiben Inflation, setzen den Leistungsbilanzsaldo energieimportierender
+Länder unter Druck und können geldpolitische Reaktionen auslösen. Die Themen des zweiten und dritten Blocks —
+Leistungsbilanz, Kapitalmärkte, Wechselkurse und Krisen — kehren hier in anderer Form zurück.
 
 ## Klimawandel, Emissionen und die Energiewende
 
@@ -484,44 +493,57 @@ eingeht, wie diversifiziert sie sind und wie politisch riskant sie werden könne
 
 ## Versorgungssicherheit unter Fragmentierung: Leitfragen
 
-Am Ende der Vorlesung stehen keine Patentlösungen. Stattdessen verdichten sich mehrere Zielkonflikte, die internationale
-Wirtschaftsbeziehungen in den kommenden Jahren prägen werden.
+Am Ende der Vorlesung stehen keine Patentlösungen. Aber es bleiben fünf Leitfragen, die zeigen, worum es bei
+internationalen Wirtschaftsbeziehungen heute geht: nicht um ein einfaches Für oder Gegen Globalisierung, sondern um die
+Gestaltung von Offenheit unter Bedingungen von Unsicherheit.
 
-**Effizienz und Resilienz.** Just-in-time-Lieferketten reduzieren Lagerkosten und erhöhen Produktivität. Resilienz
-verlangt dagegen Redundanz, Vorräte, mehrere Bezugsquellen oder regionale Produktion. Diese Sicherheit ist nicht
-kostenlos. Güter können teurer werden, Unternehmen verlieren Skalenvorteile, und politische Konflikte verschieben sich
-[@baldwin2022; @giovanni2022]. Die Spannung reicht über Ricardo hinaus: Spezialisierung steigert Effizienz und kann durch
-breitere Märkte lokale Schocks abfedern. Problematisch wird sie vor allem dort, wo sie in enge, politisch riskante oder
-schwer ersetzbare Abhängigkeiten führt.
+**Erstens: Wie viel Spezialisierung ist sinnvoll?** Ricardo zeigt, warum Spezialisierung Wohlstand schaffen kann:
+Ressourcen werden dort eingesetzt, wo ihre relativen Kosten am niedrigsten sind. Moderne Lieferketten treiben diese
+Logik weiter. Just-in-time-Produktion, globale Arbeitsteilung und internationale Skaleneffekte senken Kosten und erhöhen
+Produktivität. Gleichzeitig kann hohe Spezialisierung verwundbar machen, wenn Lieferketten eng, konzentriert oder
+politisch exponiert sind [@baldwin2022; @giovanni2022]. Resilienz verlangt deshalb Redundanz, Lagerhaltung, mehrere
+Bezugsquellen oder regionale Alternativen. Diese Sicherheit ist nicht kostenlos. Die Leitfrage lautet also nicht:
+Effizienz oder Resilienz? Sie lautet: Welche Effizienzgewinne sind es wert, welche Abhängigkeiten einzugehen?
 
-**Handelspolitik.** Zölle und Unsicherheit können heimische Industrien schützen, aber sie verteuern Importe, schwächen
-Wettbewerb und provozieren Gegenmaßnahmen [@piie2025tariffs; @wto2024]. Friend-shoring reduziert Abhängigkeiten von
-politischen Rivalen, kann aber neue Konzentrationsrisiken schaffen, wenn zu viele Lieferketten auf eine kleine Gruppe
-politisch vertrauter Länder verlagert werden [@imf2023fragmentation].
+**Zweitens: Welche Rolle soll Handelspolitik spielen?** Zölle, Exportkontrollen, Subventionen und Standards können
+heimische Industrien schützen oder strategische Abhängigkeiten reduzieren. Gleichzeitig verteuern sie Importe, schwächen
+Wettbewerb, verringern Spezialisierungsgewinne und provozieren Gegenmaßnahmen [@piie2025tariffs; @wto2024].
+Friend-shoring kann Abhängigkeiten von politischen Rivalen reduzieren, aber neue Konzentrationsrisiken schaffen, wenn zu
+viele Lieferketten auf eine kleine Gruppe politisch vertrauter Länder verlagert werden [@imf2023fragmentation]. Die
+Leitfrage lautet daher: Wo korrigiert Handelspolitik reale Verwundbarkeiten — und wo schafft sie vor allem neue Kosten?
 
-**Energie und Engpässe.** Lokale Routenrisiken wie Suez und Hormus können globale Preis- und Inflationswirkungen
-auslösen. Energiepreise beeinflussen Leistungsbilanzen, Wechselkurse, Staatshaushalte und Geldpolitik. Damit sind
-Lieferkettenfragen zugleich makroökonomische Fragen.
+**Drittens: Wie werden lokale Schocks zu globalen Risiken?** Suez, Hormus, Energiepreise und Lieferketten zeigen, dass
+internationale Wirtschaftsbeziehungen geografische Knotenpunkte haben. Ein regionaler Konflikt, ein blockierter
+Seeweg oder eine knappe Ressource kann globale Preis- und Inflationswirkungen auslösen. Energiepreise beeinflussen
+Leistungsbilanzen, Wechselkurse, Staatshaushalte und Geldpolitik. Lieferkettenfragen sind deshalb nicht nur betriebliche
+Logistikprobleme, sondern makroökonomische Fragen. Die Leitfrage lautet: Wie kann eine offene Weltwirtschaft so
+organisiert werden, dass lokale Störungen nicht unkontrolliert globale Krisendynamiken auslösen?
 
-**Klima und Rohstoffe.** Die Weltwirtschaft wird pro Dollar Wertschöpfung emissionsärmer, aber das genügt nicht, solange
-absolute Emissionen hoch bleiben. Die Energiewende braucht Handel und Investitionen, erzeugt aber neue
-Rohstoffabhängigkeiten. Klimaschutz, Versorgungssicherheit und Entwicklungspolitik lassen sich deshalb nicht getrennt
-denken.
+**Viertens: Wie passt Globalisierung in eine klimaneutrale Weltwirtschaft?** Die Weltwirtschaft wird pro Dollar
+Wertschöpfung emissionsärmer, aber das genügt nicht, solange absolute Emissionen hoch bleiben. Klimaschutz erfordert
+Investitionen, Technologietransfer und internationale Kooperation. Gleichzeitig verschiebt die Energiewende
+Abhängigkeiten: weniger Kohle, Öl und Gas bedeutet mehr Nachfrage nach Lithium, Kupfer, Kobalt und seltenen Erden. Auch
+grüne Technologien brauchen Handel, Rohstoffe und stabile Lieferketten. Die Leitfrage lautet daher: Wie verbinden wir
+Klimaschutz, Versorgungssicherheit und Entwicklung, ohne neue Abhängigkeiten einfach zu ignorieren?
 
-**Rolle von Handel und Finanzmärkten.** Mehr Handel kann Diversifikation erhöhen und regionale Schocks abfedern. Weniger
-Handel kann bestimmte Abhängigkeiten reduzieren, aber zugleich Kosten erhöhen und ärmere Länder von Entwicklungswegen
-abschneiden. Finanzmärkte können Risiken verteilen — etwa über Versicherungen, Derivate oder Katastrophenanleihen —, sie
-können aber auch prozyklische Bewegungen verstärken, wie die Thailand-Folge gezeigt hat [@krugman2018;
-@eichengreen2008].
+**Fünftens: Wie können Handel und Finanzmärkte Risiken verteilen, ohne sie zu verstärken?** Mehr Handel kann
+Diversifikation erhöhen und regionale Schocks abfedern. Weniger Handel kann einzelne Abhängigkeiten reduzieren, aber
+zugleich Kosten erhöhen und ärmere Länder von Entwicklungswegen abschneiden. Finanzmärkte können Risiken verteilen —
+etwa über Versicherungen, Derivate oder Katastrophenanleihen —, sie können aber auch prozyklische Bewegungen verstärken,
+wie die Thailand-Folge gezeigt hat [@krugman2018; @eichengreen2008]. Die Leitfrage lautet: Unter welchen institutionellen
+Bedingungen machen internationale Märkte Volkswirtschaften widerstandsfähiger — und wann machen sie sie verletzlicher?
 
-Die Schlussfolgerung ist ambivalent, aber nicht beliebig. Globalisierung bleibt ein Entwicklungsmotor. Sie kann Märkte
-öffnen, Wissen verbreiten, Kapital mobilisieren und Armut reduzieren. Gleichzeitig verlangt eine Welt aus geopolitischer
-Rivalität, Klimarisiken und fragilen Lieferketten eine neue Balance: zwischen Effizienz und Resilienz, Offenheit und
-strategischer Autonomie, Wettbewerb und Kooperation [@rodrik2011; @imf2023fragmentation].
+Damit kehren wir zur Ausgangsfrage zurück. Globalisierung ist weder ein automatischer Fortschrittsmotor noch die Ursache
+aller Verwundbarkeit. Sie ist ein Rahmen, in dem Wohlstand, Abhängigkeit, Macht und Risiko gleichzeitig entstehen.
+Internationale Wirtschaftsbeziehungen können Märkte öffnen, Wissen verbreiten, Kapital mobilisieren und Armut
+reduzieren. Sie können aber auch Risiken beschleunigen, Abhängigkeiten vertiefen und politische Konflikte verschärfen.
 
-Die entscheidende Frage für die Zukunft lautet daher nicht, ob die Weltwirtschaft offen oder geschlossen sein sollte.
-Sie lautet: Wie gestalten wir internationale Wirtschaftsbeziehungen so, dass sie Wohlstand schaffen, ohne Verwundbarkeit
-zu ignorieren?
+Die zentrale Aufgabe besteht deshalb nicht darin, Offenheit durch Abschottung zu ersetzen. Sie besteht darin, Offenheit
+gestaltbar zu machen: mit diversifizierten Lieferketten, stabileren Finanzstrukturen, glaubwürdigen Institutionen,
+klimapolitischer Kooperation und einem klaren Blick dafür, wo Effizienzgewinne reale Verwundbarkeiten erzeugen. Die
+entscheidende Frage für die Zukunft lautet daher nicht, ob die Weltwirtschaft offen oder geschlossen sein sollte. Sie
+lautet: Wie gestalten wir internationale Wirtschaftsbeziehungen so, dass sie Entwicklung ermöglichen, Risiken verteilen
+und Verwundbarkeit nicht ignorieren?
 
 # Anhang: Leistungsnachweis
 
