@@ -11,8 +11,8 @@ Finanzmärkte: Wie kann ausländisches Kapital Investitionen ermöglichen — un
 Instabilität? Nach der Pause rücken Wechselkurse, Währungspolitik und Finanzkrisen in den Mittelpunkt. Thailand in den
 1990er Jahren dient dabei als Fallstudie dafür, wie schnell finanzielle Integration in eine Krise umschlagen kann. Den
 Abschluss bildet die Versorgungssicherheit in einer fragmentierteren Weltwirtschaft: Lieferketten, geopolitische
-Engpässe, Klima und Rohstoffe zeigen, dass Effizienz allein nicht mehr das einzige Ziel internationaler
-Wirtschaftsbeziehungen sein kann.
+Engpässe, Klima und Rohstoffe zeigen, dass Offenheit und Spezialisierung nicht nur Effizienzgewinne bringen, sondern
+auch neue Fragen nach Resilienz, Abhängigkeit und strategischer Autonomie aufwerfen.
 
 Die Leitfrage der Vorlesung lautet daher nicht einfach: Ist Globalisierung gut oder schlecht? Die bessere Frage lautet:
 Unter welchen Bedingungen schafft sie Entwicklung — und wann erzeugt sie Verwundbarkeit?
@@ -55,12 +55,14 @@ Ausgangspunkt unserer Analyse.
 
 ![Extreme Armut nach Einkommensgruppe (Anteil der Bevölkerung unter 2,15 USD/Tag, KKP). Quelle: World Bank WDI.](../images/poverty-by-income-group.svg){#fig:poverty width=95%}
 
-Zwei Mechanismen stehen im Mittelpunkt des ersten Blocks. Erstens kann Handel die Versorgung robuster machen. Wenn eine
-Ernte ausfällt, eine Fabrik stillsteht oder eine Region von einem Schock getroffen wird, können Importe Engpässe
-abfedern. Zweitens kann Handel die Produktivität erhöhen, weil Länder sich auf Tätigkeiten spezialisieren, bei denen sie
-relativ effizient sind.
+Im ersten Block steht zunächst der klassische Effizienzmechanismus im Mittelpunkt: Handel kann die Produktivität erhöhen,
+weil Länder sich auf Tätigkeiten spezialisieren, bei denen sie relativ effizient sind. Daneben gibt es einen zweiten,
+praktisch wichtigen Effekt, den wir später wieder aufnehmen: Offene Märkte können auch Risiken streuen. Wenn eine Ernte
+ausfällt, eine Fabrik stillsteht oder eine Region von einem Schock getroffen wird, können Importe Engpässe abfedern.
+Handel steht also nicht automatisch im Gegensatz zu Resilienz. Er kann lokale Risiken verringern — und zugleich neue
+Abhängigkeiten schaffen.
 
-Dieser zweite Mechanismus ist der klassische Kern der Handelstheorie. Um ihn zu verstehen, lohnt sich ein Blick zurück —
+Der Effizienzmechanismus ist der klassische Kern der Handelstheorie. Um ihn zu verstehen, lohnt sich ein Blick zurück —
 zu Adam Smith und David Ricardo.
 
 ## Von Smith und Ricardo zur Spezialisierung
@@ -164,10 +166,11 @@ Arbeitsplätze. Der gesamtwirtschaftliche Gewinn aus Handel kann also real sein 
 reale Verluste erleiden.
 
 Hinzu kommen strategische Fragen. Energie, Halbleiter, Pharmazeutika, Nahrungsmittel oder Rüstungsgüter werden selten
-wie beliebige Standardprodukte behandelt. Wer bei kritischen Gütern stark von politischen Rivalen abhängig ist, erlebt
-Handel nicht nur als Effizienzgewinn, sondern auch als Risiko. Zölle, Exportkontrollen, Sanktionen, Klima- und
-Arbeitsstandards oder industriepolitische Subventionen sind deshalb nicht bloß Abweichungen von der Theorie. Sie sind
-Ausdruck der Tatsache, dass Handel immer auch Macht, Sicherheit und Verteilung berührt [@rodrik2011;
+wie beliebige Standardprodukte behandelt. Handel kann Versorgung stabilisieren, wenn er Bezugsquellen verbreitert und
+lokale Ausfälle auffängt. Wer bei kritischen Gütern aber stark von einzelnen Lieferanten oder politischen Rivalen
+abhängig ist, erlebt Handel nicht nur als Effizienzgewinn, sondern auch als Risiko. Zölle, Exportkontrollen, Sanktionen,
+Klima- und Arbeitsstandards oder industriepolitische Subventionen sind deshalb nicht bloß Abweichungen von der Theorie.
+Sie sind Ausdruck der Tatsache, dass Handel immer auch Macht, Sicherheit und Verteilung berührt [@rodrik2011;
 @imf2023fragmentation].
 
 @fig:epu-trade zeigt den **Economic Policy Uncertainty Index** für Handelspolitik. Er misst, wie häufig US-Zeitungen
@@ -376,8 +379,9 @@ sondern auch Lieferketten, Energie, Klima und Rohstoffe.
 
 Globalisierung hat Milliarden Menschen aus extremer Armut geholfen und bleibt ein wichtiger Hebel für internationale
 Kooperation — etwa bei Klimaschutz, Technologietransfer und Versorgung mit kritischen Gütern [@ipcc2023; @rodrik2011].
-Aber die letzten Jahre haben gezeigt, dass globale Vernetzung nicht nur Effizienz erzeugt. Sie kann auch Verwundbarkeit
-sichtbar machen.
+Zugleich haben die letzten Jahre gezeigt, dass globale Vernetzung ambivalent ist: Sie kann lokale Ausfälle durch Handel
+und Diversifikation abfedern, aber sie kann Verwundbarkeit auch sichtbar machen oder verstärken, wenn Lieferketten eng,
+konzentriert und politisch exponiert sind.
 
 Die COVID-19-Pandemie war dafür ein Wendepunkt. Unternehmen und Politik erkannten, wie abhängig moderne
 Produktionssysteme von reibungslosen Lieferketten sind: von Häfen, Containern, Vorprodukten, Energie, Halbleitern,
@@ -483,8 +487,9 @@ Wirtschaftsbeziehungen in den kommenden Jahren prägen werden.
 **Effizienz und Resilienz.** Just-in-time-Lieferketten reduzieren Lagerkosten und erhöhen Produktivität. Resilienz
 verlangt dagegen Redundanz, Vorräte, mehrere Bezugsquellen oder regionale Produktion. Diese Sicherheit ist nicht
 kostenlos. Güter können teurer werden, Unternehmen verlieren Skalenvorteile, und politische Konflikte verschieben sich
-[@baldwin2022; @giovanni2022]. Der Konflikt ist derselbe, der schon bei Ricardo angelegt war: Spezialisierung steigert
-Effizienz, aber sie erzeugt Abhängigkeit.
+[@baldwin2022; @giovanni2022]. Die Spannung reicht über Ricardo hinaus: Spezialisierung steigert Effizienz und kann durch
+breitere Märkte lokale Schocks abfedern. Problematisch wird sie vor allem dort, wo sie in enge, politisch riskante oder
+schwer ersetzbare Abhängigkeiten führt.
 
 **Handelspolitik.** Zölle und Unsicherheit können heimische Industrien schützen, aber sie verteuern Importe, schwächen
 Wettbewerb und provozieren Gegenmaßnahmen [@piie2025tariffs; @wto2024]. Friend-shoring reduziert Abhängigkeiten von
