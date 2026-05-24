@@ -21,7 +21,8 @@
         {
           default = pkgs.mkShell {
             packages = with pkgs; [
-              nodejs_20
+              # nodejs_20 is often marked insecure on nixpkgs-unstable; 22 satisfies package.json (>=18)
+              nodejs_22
               python3
               pandoc
               librsvg
