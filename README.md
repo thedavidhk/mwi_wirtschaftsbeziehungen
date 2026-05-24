@@ -7,12 +7,12 @@ This repository is a **lecture project**. [reveal.js](https://revealjs.com/) is 
 ## Build environment (Nix)
 
 ```bash
-nix develop   # Node, Python venv, pandoc, XeLaTeX, rsvg-convert
+nix develop   # Node, Python (matplotlib/pandas/… from nixpkgs), pandoc, XeLaTeX, rsvg-convert
 make site     # GitHub Pages artifact in site/
 make script-pdf
 ```
 
-Without Nix: Node.js 18+, Python 3, `pip install -r requirements.txt`, plus pandoc, XeLaTeX, and `rsvg-convert` (librsvg).
+Without Nix: Node.js 18+, Python 3.11–3.12, `pip install -r requirements.txt`, plus pandoc, XeLaTeX, and `rsvg-convert` (librsvg). The Nix shell does **not** use a pip `.venv` (avoids broken wheels on Python 3.13 in CI).
 
 ## Quick start (slides)
 
