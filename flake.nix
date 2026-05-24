@@ -26,9 +26,8 @@
               python3
               pandoc
               librsvg
-              # XeLaTeX + latexmk for multi-pass PDF (citations, longtable)
+              # XeLaTeX + latexmk (included in scheme-medium)
               texlive.combined.scheme-medium
-              texlive.packages.latexmk
             ];
 
             shellHook = ''
