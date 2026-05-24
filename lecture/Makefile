@@ -1,4 +1,4 @@
-# PDF aus dem Begleitscript erzeugen (Pandoc + pandoc-citeproc + XeLaTeX + Inkscape)
+# PDF aus dem Begleitscript erzeugen (Pandoc + pandoc-citeproc + XeLaTeX + rsvg-convert)
 SCRIPT_SRC  := script.md
 SCRIPT      := script.build.md
 PDF         := script.pdf
@@ -6,27 +6,22 @@ TEX         := build/script.tex
 META        := metadata.yaml
 BIB         := references.bib
 PREPARE     := prepare_build.py
-FIG_SRC1    := ../images/capital_market1.html
-FIG_OUT1    := ../images/capital_market1.svg
-FIG_SRC2    := ../images/capital_market2.html
-FIG_OUT2    := ../images/capital_market2.svg
 
 PANDOC      ?= pandoc
 PDF_ENGINE  ?= xelatex
 PYTHON      ?= python3
 
-.PHONY: all pdf figures prepare clean
+# Default: offline figure regen from data/cache/ (no API calls).
+PREPARE_FLAGS ?=
+
+.PHONY: all pdf prepare clean
 
 all: pdf
 
-figures:
-	@test -f $(FIG_OUT1) || cp $(FIG_SRC1) $(FIG_OUT1)
-	@test -f $(FIG_OUT2) || cp $(FIG_SRC2) $(FIG_OUT2)
-
-prepare: figures $(SCRIPT)
+prepare: $(SCRIPT)
 
 $(SCRIPT): $(SCRIPT_SRC) $(PREPARE) $(BIB)
-	$(PYTHON) $(PREPARE)
+	$(PYTHON) $(PREPARE) $(PREPARE_FLAGS)
 
 pdf: prepare $(PDF)
 

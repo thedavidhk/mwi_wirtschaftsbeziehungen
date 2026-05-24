@@ -8,17 +8,33 @@ permissions:
   contents: read
 
 jobs:
-  build:
+  slides:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: npm
 
-      - run: npm install
+      - run: npm ci
       - run: npm run build
-
       - run: python3 -m compileall scripts/
+
+  script-pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: DeterminateSystems/nix-installer-action@main
+      - uses: DeterminateSystems/magic-nix-cache-action@main
+
+      - name: Build script PDF (offline)
+        run: nix develop -c make script-pdf
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: lecture-script-pdf
+          path: lecture/script.pdf
+          if-no-files-found: error

@@ -14,6 +14,7 @@ import argparse
 import datetime as dt
 import io
 import json
+import os
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Iterable, Mapping, Sequence
@@ -38,6 +39,50 @@ CACHE_DIR = DATA_DIR / "cache"
 
 HTTP_TIMEOUT = 60
 CACHE_MAX_AGE_DAYS = 7
+
+_OFFLINE = False
+_FORCE_REFRESH = False
+
+
+class OfflineCacheError(RuntimeError):
+    """Raised when a network fetch is required but offline mode is enabled."""
+
+
+def offline_mode() -> bool:
+    return _OFFLINE
+
+
+def force_refresh() -> bool:
+    return _FORCE_REFRESH
+
+
+def configure_runtime(*, offline: bool, force: bool) -> None:
+    global _OFFLINE, _FORCE_REFRESH
+    _OFFLINE = offline
+    _FORCE_REFRESH = force
+
+
+def _effective_force(force: bool) -> bool:
+    return force or _FORCE_REFRESH
+
+
+def _cache_hit(path: Path, *, force: bool, max_age_days: int | None) -> bool:
+    if not path.exists():
+        return False
+    if _OFFLINE:
+        return True
+    if _effective_force(force):
+        return False
+    if max_age_days is None:
+        return True
+    return cache_is_fresh(path, max_age_days)
+
+
+def _require_cache(path: Path, *, context: str) -> None:
+    if _OFFLINE and not path.exists():
+        raise OfflineCacheError(
+            f"Offline mode: missing cache for {context} (expected {path})"
+        )
 
 PRIMARY_COLORS = [
     "#cc241d",
@@ -184,9 +229,10 @@ def download_file(
     path = Path(cache_path)
     path.parent.mkdir(parents=True, exist_ok=True)
 
-    if not force and path.exists():
-        if max_age_days is None or cache_is_fresh(path, max_age_days):
-            return path
+    if _cache_hit(path, force=force, max_age_days=max_age_days):
+        return path
+
+    _require_cache(path, context=url)
 
     response = requests.get(url, timeout=timeout)
     response.raise_for_status()
@@ -285,9 +331,10 @@ def imf_sta_series(
     safe_key = key.replace("/", "_")
     cache_path = CACHE_DIR / f"imf_sta_{dataflow}_{safe_key}_{start_period}_{end_period}.csv"
 
-    if cache_path.exists() and not force and cache_is_fresh(cache_path):
+    if _cache_hit(cache_path, force=force, max_age_days=CACHE_MAX_AGE_DAYS):
         text = cache_path.read_text(encoding="utf-8")
     else:
+        _require_cache(cache_path, context=f"IMF STA {dataflow}/{key}")
         r = requests.get(
             url,
             params=params,
@@ -365,9 +412,10 @@ def get_wdi_data(
             )
         )
 
-        if cache_path.exists() and not force and cache_is_fresh(cache_path):
+        if _cache_hit(cache_path, force=force, max_age_days=CACHE_MAX_AGE_DAYS):
             payload = json.loads(cache_path.read_text(encoding="utf-8"))
         else:
+            _require_cache(cache_path, context=f"World Bank WDI {indicator}")
             payload = request_json(url, params=params)
             cache_path.parent.mkdir(parents=True, exist_ok=True)
             cache_path.write_text(json.dumps(payload), encoding="utf-8")
@@ -439,9 +487,10 @@ def get_hdx_package(package_id: str, *, force: bool = False) -> dict[str, Any]:
     """Fetch HDX/CKAN package metadata with a small JSON cache."""
     cache_path = CACHE_DIR / f"hdx_package_{package_id}.json"
 
-    if cache_path.exists() and not force and cache_is_fresh(cache_path):
+    if _cache_hit(cache_path, force=force, max_age_days=CACHE_MAX_AGE_DAYS):
         return json.loads(cache_path.read_text(encoding="utf-8"))
 
+    _require_cache(cache_path, context=f"HDX package {package_id}")
     payload = request_json(HDX_PACKAGE_URL, params={"id": package_id})
     if not payload.get("success"):
         raise RuntimeError(f"HDX package lookup failed: {payload}")
@@ -1308,7 +1357,25 @@ def main() -> None:
         action="store_true",
         help="Build light-theme SVGs for the lecture script PDF (default: slide figures).",
     )
+    parser.add_argument(
+        "--offline",
+        action="store_true",
+        help="Use only data/cache/; never call external APIs (also FIGURES_OFFLINE=1).",
+    )
+    parser.add_argument(
+        "--force",
+        action="store_true",
+        help="Refresh cached downloads from the network (ignored with --offline).",
+    )
     args = parser.parse_args()
+    offline = args.offline or os.environ.get("FIGURES_OFFLINE", "").lower() in (
+        "1",
+        "true",
+        "yes",
+    )
+    if args.force and offline:
+        parser.error("--force cannot be used with --offline")
+    configure_runtime(offline=offline, force=args.force)
     if args.script:
         build_script_figures()
     else:

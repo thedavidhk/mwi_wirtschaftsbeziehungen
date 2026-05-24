@@ -1,0 +1,44 @@
+{
+  description = "Build environment for MWI lecture (slides, figures, script PDF)";
+
+  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+
+  outputs = { self, nixpkgs }:
+    let
+      systems = [
+        "x86_64-linux"
+        "aarch64-linux"
+        "x86_64-darwin"
+        "aarch64-darwin"
+      ];
+      forEachSystem = nixpkgs.lib.genAttrs systems;
+    in
+    {
+      devShells = forEachSystem (system:
+        let
+          pkgs = nixpkgs.legacyPackages.${system};
+        in
+        {
+          default = pkgs.mkShell {
+            packages = with pkgs; [
+              nodejs_20
+              python3
+              pandoc
+              librsvg
+              # XeLaTeX + common packages for the script PDF
+              texlive.combined.scheme-medium
+            ];
+
+            shellHook = ''
+              if [ ! -d .venv ]; then
+                python3 -m venv .venv
+              fi
+              source .venv/bin/activate
+              pip install -q -r requirements.txt 2>/dev/null \
+                || pip install -r requirements.txt
+              echo "MWI lecture shell: make site | make figures | make script-pdf"
+            '';
+          };
+        });
+    };
+}

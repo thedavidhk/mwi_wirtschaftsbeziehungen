@@ -4,9 +4,17 @@ Lecture slides (reveal.js) and accompanying script (Pandoc/PDF) for the course *
 
 This repository is a **lecture project**. [reveal.js](https://revealjs.com/) is used as an npm dependency, not vendored as a fork.
 
-## Quick start (slides)
+## Build environment (Nix)
 
-Requirements: Node.js 18+
+```bash
+nix develop   # Node, Python venv, pandoc, XeLaTeX, rsvg-convert
+make site     # GitHub Pages artifact in site/
+make script-pdf
+```
+
+Without Nix: Node.js 18+, Python 3, `pip install -r requirements.txt`, plus pandoc, XeLaTeX, and `rsvg-convert` (librsvg).
+
+## Quick start (slides)
 
 ```bash
 npm install
@@ -20,17 +28,34 @@ Edit [`slides.md`](slides.md). Speaker notes use `Notes:` blocks (see reveal.js 
 
 ## Figures and data
 
+Committed **`images/`** and **`data/cache/`** are the source of truth for builds. External APIs are only called when you explicitly refresh data.
+
 ```bash
-python3 -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
-python3 scripts/generate_figures.py
+make figures              # slide SVGs → images/ (uses cache when fresh)
+make refresh-data         # --force: re-download caches, regenerate all figures
 ```
 
 Caches live under `data/cache/`; SVGs are written to `images/`.
 
+**Static diagrams:** `capital_market1` / `capital_market2` are still Inkscape SVGs (slides embed the matching `.html` files). All other plot figures are produced by [`scripts/generate_figures.py`](scripts/generate_figures.py).
+
 ## Lecture script (PDF)
 
-See [`lecture/README.md`](lecture/README.md) for the Pandoc/XeLaTeX workflow (`make pdf` in `lecture/`).
+See [`lecture/README.md`](lecture/README.md). Summary:
+
+```bash
+make script-pdf           # offline from cache (CI uses this)
+make script-pdf-refresh   # allow API/cache refresh while building
+```
+
+## Make targets
+
+| Target | Purpose |
+|--------|---------|
+| `make site` | Build static site for GitHub Pages |
+| `make figures` | Regenerate slide figures |
+| `make refresh-data` | Force-refresh caches and figures |
+| `make script-pdf` | Lecture script PDF (offline) |
 
 ## Project layout
 
@@ -41,7 +66,9 @@ See [`lecture/README.md`](lecture/README.md) for the Pandoc/XeLaTeX workflow (`m
 | `assets/` | Custom CSS and plugins |
 | `assets/reveal/` | Generated from `npm run build` (gitignored; published via `gh-pages` branch) |
 | `images/` | Figures and photos |
+| `data/cache/` | Pinned API responses for figure generation |
 | `lecture/` | Printable script (`script.md` → PDF) |
+| `flake.nix` | Reproducible dev shell |
 
 ## Archived semesters (reveal.js fork layout)
 
@@ -56,6 +83,8 @@ New semesters should branch from `main`.
 ## GitHub Pages
 
 Slides are deployed via [`.github/workflows/pages.yml`](.github/workflows/pages.yml): each push to `main` builds `site/` and pushes it to the **`gh-pages`** branch.
+
+The [`build`](.github/workflows/build.yml) workflow also builds `lecture/script.pdf` offline and uploads it as a CI artifact.
 
 **One-time setup** (repo Settings on GitHub):
 
@@ -72,7 +101,7 @@ Do **not** point Pages at `main` — that branch has no built `assets/reveal/` o
 Local check before pushing:
 
 ```bash
-npm run build:site
+make site
 npx --yes serve site -l 8000
 ```
 
