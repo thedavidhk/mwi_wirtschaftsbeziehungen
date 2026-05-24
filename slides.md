@@ -538,7 +538,7 @@ Notes:
 - Datei im .pdf-, .docx- oder .odt-Format abgeben
 - Namen und Matrikelnummer angeben
 - Wortanzahl vermerken
-- Abgabe bis 14.07.2026 über Moodle
+- Abgabe bis 23.07.2026 über Moodle
 
 --
 
