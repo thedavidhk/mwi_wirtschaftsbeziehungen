@@ -14,7 +14,7 @@ Textbuchartiges Vorlesungsscript zu den Folien in `slides.md`: Fließtext, Abbil
 
 ## PDF erzeugen
 
-Voraussetzungen: `pandoc`, `pandoc-citeproc`, `xelatex` (TeX Live), `rsvg-convert` (librsvg), `python3`.
+Voraussetzungen: `pandoc` (≥ 2.11, mit eingebautem `--citeproc`), `xelatex` (TeX Live), `rsvg-convert` (librsvg), `python3`.
 
 Empfohlen: `nix develop` im Repo-Root (siehe `flake.nix`), dann:
 
@@ -38,7 +38,7 @@ Ergebnis: `lecture/script.pdf` (nicht versioniert; `make clean` entfernt Build-A
 
 1. `prepare_build.py` baut matplotlib-Abbildungen für den Druck (`generate_figures.py --script --offline` standardmäßig), wandelt SVGs nach `build/figures/*.pdf`, schreibt `script.build.md`.
 2. Statische Diagramme (`capital_market1.svg`, `capital_market2.svg`) werden für helles Papier angepasst (kein API-Aufruf).
-3. Pandoc + `pandoc-citeproc` erzeugen das PDF mit Literaturverzeichnis.
+3. Pandoc (`--citeproc`) erzeugt das PDF mit Literaturverzeichnis.
 
 ### HTML (ohne LaTeX)
 
@@ -47,7 +47,7 @@ python3 prepare_build.py --offline
 pandoc script.build.md -o script.html \
   --metadata-file=metadata.yaml \
   --resource-path=.:.. --bibliography=references.bib \
-  --filter pandoc-citeproc --standalone
+  --citeproc --standalone
 ```
 
 ## Pflege

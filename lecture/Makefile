@@ -1,4 +1,4 @@
-# PDF aus dem Begleitscript erzeugen (Pandoc + pandoc-citeproc + XeLaTeX + rsvg-convert)
+# PDF aus dem Begleitscript erzeugen (Pandoc --citeproc + XeLaTeX + rsvg-convert)
 SCRIPT_SRC  := script.md
 SCRIPT      := script.build.md
 PDF         := script.pdf
@@ -30,13 +30,13 @@ $(TEX): $(SCRIPT) $(META) $(BIB)
 	  --metadata-file=$(META) \
 	  --resource-path=.:.. \
 	  --bibliography=$(BIB) \
-	  --filter pandoc-citeproc
+	  --citeproc
 	$(PYTHON) $(PREPARE) --fix-tex $(TEX)
 
 $(PDF): $(TEX)
-	$(PDF_ENGINE) -interaction=nonstopmode -output-directory=build $(TEX)
-	$(PDF_ENGINE) -interaction=nonstopmode -output-directory=build $(TEX)
+	latexmk -$(PDF_ENGINE) -interaction=nonstopmode -output-directory=build $(TEX)
 	@test -f build/script.pdf && mv build/script.pdf $(PDF)
+	@latexmk -c -output-directory=build $(TEX) 2>/dev/null || true
 
 clean:
 	rm -f $(PDF) $(SCRIPT)

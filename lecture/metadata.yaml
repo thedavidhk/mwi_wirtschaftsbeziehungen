@@ -6,29 +6,22 @@ institute: "Hochschule Anhalt"
 lang: de-DE
 documentclass: scrartcl
 classoption:
-  - 12pt
   - a4paper
   - DIV=12
 geometry: margin=2.8cm
 fontsize: 12pt
 linestretch: 1.15
+mainfont: Latin Modern Roman
 link-citations: true
 colorlinks: true
 toc: true
 toc-depth: 2
 numbersections: true
 bibliography: references.bib
+# Only KOMA/layout tweaks here — pandoc already loads babel (via lang), hyperref,
+# fontspec (via mainfont), graphicx, booktabs, longtable, microtype.
 header-includes:
-  - \usepackage{graphicx}
   - \usepackage{float}
   - \floatplacement{figure}{H}
-  - \usepackage{booktabs}
-  - \usepackage{longtable}
   - \usepackage{caption}
   - \captionsetup{font=small,labelfont=bf}
-  - \usepackage{fontspec}
-  - \setmainfont{Latin Modern Roman}
-  - \usepackage[ngerman]{babel}
-  - \usepackage{microtype}
-  - \usepackage{hyperref}
----

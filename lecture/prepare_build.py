@@ -139,7 +139,7 @@ def prepare_script(*, offline: bool, refresh: bool) -> None:
     generate_script_figures(offline=offline, refresh=refresh)
     text = SCRIPT.read_text(encoding="utf-8")
 
-    # pandoc-citeproc treats @fig:… as citations; use LaTeX cross-refs instead.
+    # Pandoc citeproc treats @fig:… as citations; use LaTeX cross-refs instead.
     text = re.sub(r"@fig:([a-z0-9-]+)", r"\\autoref{fig:\1}", text)
     text = re.sub(r"@tbl:([a-z0-9-]+)", r"\\autoref{tbl:\1}", text)
     text = fix_table_labels(text)
