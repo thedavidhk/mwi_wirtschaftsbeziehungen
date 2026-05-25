@@ -23,6 +23,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import requests
+import squarify
 from pandas.plotting import register_matplotlib_converters
 from pandas.tseries.offsets import QuarterEnd
 
@@ -377,6 +378,198 @@ def imf_sta_frame(
         for name, (flow, key) in series.items()
     }
     return pd.concat(parts, axis=1).sort_index()
+
+
+# Annual net current account (goods, services, primary & secondary income), USD.
+# Bulk key: all countries in one SDMX request (COUNTRY dimension left open).
+IMF_CA_BULK_KEY = ".NETCD_T.CAB.USD.A"
+
+# Regional / composite codes in older WDI-based charts (not ISO economies).
+CA_BALANCE_EXCLUDE_NAMES = (
+    "Euro area",
+    "Arab World",
+    "East Asia & Pacific",
+    "European Union",
+    "Latin America & Caribbean",
+    "Middle East & North Africa",
+    "North America",
+    "South Asia",
+    "Sub-Saharan Africa",
+)
+
+# IMF codes missing from the World Bank country list.
+IMF_CA_COUNTRY_NAME_OVERRIDES: dict[str, str] = {
+    "AIA": "Anguilla",
+    "CWX": "Curaçao",
+    "KOS": "Kosovo",
+    "MSR": "Montserrat",
+    "WBG": "West Bank and Gaza",
+}
+
+
+def _imf_obs_values_usd(df: pd.DataFrame) -> pd.Series:
+    """Convert IMF STA ``OBS_VALUE`` + ``SCALE`` to levels in US dollars."""
+    obs = pd.to_numeric(df["OBS_VALUE"], errors="coerce")
+    if "SCALE" in df.columns:
+        sc = pd.to_numeric(df["SCALE"], errors="coerce").fillna(0).astype("int64")
+    else:
+        sc = 0
+    return obs * np.power(10.0, -sc)
+
+
+def imf_bop_current_accounts(
+    year: int,
+    *,
+    force: bool = False,
+) -> pd.DataFrame:
+    """Current-account balances for all reporting economies in one calendar year.
+
+    Returns a DataFrame with columns ``iso3``, ``country``, and ``balance_usd``.
+    """
+    url = f"{IMF_SDMX_21_DATA}/BOP/{IMF_CA_BULK_KEY}"
+    params = {"startPeriod": str(year), "endPeriod": str(year)}
+    safe_key = IMF_CA_BULK_KEY.replace("/", "_")
+    cache_path = CACHE_DIR / f"imf_sta_BOP_{safe_key}_{year}_{year}.csv"
+
+    if _cache_hit(cache_path, force=force, max_age_days=CACHE_MAX_AGE_DAYS):
+        text = cache_path.read_text(encoding="utf-8")
+    else:
+        _require_cache(cache_path, context=f"IMF BOP bulk CA {year}")
+        r = requests.get(
+            url,
+            params=params,
+            headers={"Accept": "text/csv", "User-Agent": "mwi-generate_figures/1.0"},
+            timeout=HTTP_TIMEOUT,
+        )
+        r.raise_for_status()
+        text = r.text
+        cache_path.write_text(text, encoding="utf-8")
+
+    raw = pd.read_csv(io.StringIO(text))
+    if raw.empty or "COUNTRY" not in raw.columns:
+        raise ValueError(f"No IMF current-account data for {year}.")
+
+    raw = raw.dropna(subset=["OBS_VALUE"]).copy()
+    # STA scale for USD BOP series is millions; convert to US dollars.
+    raw["balance_usd"] = _imf_obs_values_usd(raw) * 1_000_000
+    raw = raw.dropna(subset=["balance_usd"])
+    raw = raw.loc[raw["COUNTRY"].astype(str).str.match(r"^[A-Z]{3}$", na=False)]
+
+    by_country = (
+        raw.groupby("COUNTRY", as_index=False)["balance_usd"]
+        .sum()
+        .rename(columns={"COUNTRY": "iso3"})
+    )
+    names = get_imf_country_names(force=force)
+    by_country["country"] = by_country["iso3"].map(names)
+    missing = by_country["country"].isna()
+    if missing.any():
+        unknown = sorted(by_country.loc[missing, "iso3"].astype(str))
+        raise ValueError(f"No country labels for IMF codes: {unknown}")
+
+    exclude = {n.casefold() for n in CA_BALANCE_EXCLUDE_NAMES}
+    by_country = by_country.loc[
+        ~by_country["country"].str.casefold().isin(exclude)
+    ]
+    return by_country.sort_values("balance_usd", key=np.abs, ascending=False)
+
+
+def get_imf_country_names(*, force: bool = False) -> dict[str, str]:
+    """Map ISO3 codes to English economy names (World Bank list + IMF overrides)."""
+    cache_path = CACHE_DIR / "wb_country_names.json"
+    if _cache_hit(cache_path, force=force, max_age_days=CACHE_MAX_AGE_DAYS):
+        names = json.loads(cache_path.read_text(encoding="utf-8"))
+    else:
+        _require_cache(cache_path, context="World Bank country list")
+        payload = request_json(
+            "https://api.worldbank.org/v2/country",
+            params={"format": "json", "per_page": 500},
+        )
+        if not isinstance(payload, list) or len(payload) < 2:
+            raise ValueError(f"Unexpected World Bank country response: {payload!r}")
+        names = {
+            item["id"]: item["name"]
+            for item in payload[1]
+            if (item.get("region") or {}).get("value") != "Aggregates"
+        }
+        cache_path.write_text(json.dumps(names), encoding="utf-8")
+
+    return {**names, **IMF_CA_COUNTRY_NAME_OVERRIDES}
+
+
+def imf_latest_ca_year(
+    *,
+    probe_years: int = 6,
+    coverage_ratio: float = 0.9,
+    min_countries: int = 120,
+    force: bool = False,
+) -> int:
+    """Newest year with near-complete IMF current-account coverage."""
+    current = dt.date.today().year
+    counts: dict[int, int] = {}
+    for year in range(current, current - probe_years, -1):
+        try:
+            counts[year] = len(imf_bop_current_accounts(year, force=force))
+        except (OfflineCacheError, ValueError):
+            counts[year] = 0
+
+    if not counts or max(counts.values()) == 0:
+        raise ValueError("Could not determine a year with IMF current-account data.")
+
+    threshold = max(int(max(counts.values()) * coverage_ratio), min_countries)
+    for year in sorted(counts, reverse=True):
+        if counts[year] >= threshold:
+            return year
+    return max(counts, key=counts.get)
+
+
+def prepare_global_ca_treemap(
+    year: int | None = None,
+    *,
+    min_countries: int = 20,
+    max_countries: int = 40,
+    force: bool = False,
+) -> tuple[pd.DataFrame, int]:
+    """Top economies by |CA| plus an aggregated *Other* row for the treemap."""
+    if year is None:
+        year = imf_latest_ca_year(force=force)
+
+    data = imf_bop_current_accounts(year, force=force)
+    data = data.assign(abs_balance=data["balance_usd"].abs()).sort_values(
+        "abs_balance", ascending=False
+    )
+
+    best_num: int | None = None
+    min_other = float("inf")
+    for num in range(min_countries, max_countries + 1):
+        top = data.head(num)
+        rest = data.iloc[num:]
+        if rest.empty:
+            best_num = num
+            break
+        other_size = abs(rest["balance_usd"].sum())
+        if other_size < min_other:
+            best_num = num
+            min_other = other_size
+
+    if best_num is None:
+        raise ValueError("Could not select a country count for the treemap.")
+
+    top = data.head(best_num)
+    rest = data.iloc[best_num:]
+    if not rest.empty:
+        other = pd.DataFrame(
+            [
+                {
+                    "iso3": "OTH",
+                    "country": "Other",
+                    "balance_usd": rest["balance_usd"].sum(),
+                }
+            ]
+        )
+        top = pd.concat([top[["iso3", "country", "balance_usd"]], other], ignore_index=True)
+
+    return top[["country", "balance_usd"]], year
 
 
 
@@ -962,6 +1155,79 @@ def india_fdi_gdp(file_path: Path | str, *, force: bool = False) -> None:
     save_figure(fig, file_path)
 
 
+def create_ca_treemap(
+    data: pd.DataFrame,
+    year: int,
+    data_source: str,
+) -> plt.Figure:
+    """Treemap of current-account surpluses (green) and deficits (red) in billion USD."""
+    wrap_length = 11
+    surplus_color = PRIMARY_COLORS[1]
+    deficit_color = PRIMARY_COLORS[0]
+    theme = _active_theme
+
+    surplus = data[data["balance_usd"] > 0].copy()
+    deficit = data[data["balance_usd"] < 0].copy()
+
+    def label_rows(frame: pd.DataFrame) -> pd.Series:
+        names = frame["country"].astype(str).str.wrap(wrap_length)
+        billions = (frame["balance_usd"] / 1e9).round(0).astype(int).astype(str)
+        return names + "\n" + billions
+
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(20, 10))
+    plt.subplots_adjust(left=0.01, right=0.99, top=0.99, bottom=0.06, wspace=0.1)
+
+    if not surplus.empty:
+        squarify.plot(
+            sizes=surplus["balance_usd"],
+            label=label_rows(surplus),
+            alpha=0.8,
+            ax=ax1,
+            pad=True,
+            color=surplus_color,
+            text_kwargs={"color": theme.annotation_color},
+        )
+    ax1.axis("off")
+
+    if not deficit.empty:
+        squarify.plot(
+            sizes=-deficit["balance_usd"],
+            label=label_rows(deficit),
+            alpha=0.7,
+            ax=ax2,
+            pad=True,
+            color=deficit_color,
+            text_kwargs={"color": theme.annotation_color},
+        )
+    ax2.axis("off")
+
+    fig.text(
+        0.99,
+        0.04,
+        f"Leistungsbilanzsaldo {year} (Mrd. USD). Quelle: {data_source}",
+        ha="right",
+        fontsize=12,
+        color=theme.source_color,
+    )
+    return fig
+
+
+def global_ca_balances(
+    file_path: Path | str,
+    *,
+    year: int | None = None,
+    force: bool = False,
+) -> None:
+    """Treemap of global current-account balances (IMF BOP, latest widely available year)."""
+    plot_data, plot_year = prepare_global_ca_treemap(year=year, force=force)
+    fig = create_ca_treemap(
+        plot_data,
+        plot_year,
+        "IMF Balance of Payments (STA, BPM6)",
+    )
+    save_figure(fig, file_path)
+
+
 def thailand_ca_balance(file_path: Path | str) -> None:
     """Plot Thailand's current-account balance around the Asian financial crisis."""
     data = imf_sta_frame(
@@ -1299,6 +1565,7 @@ def chokepoint_trade_volume(
 
 def _generate_managed_figures(output_dir: Path) -> None:
     """Write all matplotlib figures managed by this script."""
+    global_ca_balances(output_dir / "global_ca_balances.svg")
     india_fdi_gdp(output_dir / "india_fdi_gdp.svg")
     raw_materials(output_dir / "raw_materials.svg")
 

@@ -231,7 +231,7 @@ Summe aller Länder nahe null liegen; statistische Messfehler erklären Abweichu
 Ersparnisse, schwache Binneninvestitionen, Währungsinterventionen oder begrenzte Binnenabsorption hinweisen [@wdi2025;
 @imfsta2025].
 
-![Globale Leistungsbilanzsaldi. Quelle: IMF/WDI.](../images/global_ca_balances.svg){#fig:ca-balances width=95%}
+![Globale Leistungsbilanzsaldi. Quelle: IMF Balance of Payments (STA).](../images/global_ca_balances.svg){#fig:ca-balances width=95%}
 
 Kapitalströme sind also nicht abstrakt. Sie verbinden Sparer in einem Teil der Welt mit Investitionsprojekten in einem
 anderen. Die Entwicklungsfrage lautet: Wird daraus produktiver Strukturwandel? Indien liefert dafür ein wichtiges
